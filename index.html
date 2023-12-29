@@ -112,7 +112,7 @@
                 <li><a href="#part43">Create alignment</a>
             </ul>
         </li>
-        <li><a href="#part5">Setings</a></li>
+        <li><a href="#part5">LandXML Settings</a></li>
         <li><a href="#part6">Best practices</a></li>
     </ul>
 
@@ -173,7 +173,7 @@
     Otherwise no transformation of coordinates is done and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs please double check the result and contact author for 
     coordinate system implementaion. 
     </p>
-    <img src="Pictures/EPSGError.gif" alt="Coordinate system warning"/>>
+    <img src="Pictures/EPSGError.gif" alt="Coordinate system warning"/>
     </section>        
     <section id="part3">
         <h2>Surface</h2>
@@ -208,7 +208,10 @@
             <p>If import is performed correctly message "Done" with the information about the computational time is shown below component. In case of large surfaces it is convenient to import surface first as a mesh 
             or unjoined surfaces and then aplly boundary curve. Please keep in mind, joining surface into one large brep is the most CPU time consuming operation.
             </p> 
-            <img src="Pictures/ImportSurface.gif" alt="Import surface">      
+            <video width="800" height="400" controls>
+                <source src="Videos/ImportSurface.mp4" type="video/mp4">
+                <source src="Videos/ImportSurface.ogg" type="video/ogg">              
+            </video>  
             </section> 
     </section>
     <section id="part4">
@@ -274,8 +277,27 @@
         </section> 
     </section>
     <section id="part5">
-        <h2>Setings</h2>
-        <p>This is the content of Part 5.</p>
+        <h2>LandXML Settings</h2>
+        <p>Plugin settings option dialog is shown after button <i>LandXML Settings</i> in top menu bar is clicked. Different options for surface and alignemnt can be set up. Various import settings
+        can be created and save for future use.</p>
+        <img src="Pictures/OpenSettings.gif" alt="OpenSettings" width="600">
+        <p>
+        Dialog consists of two tabs with various settings for surface and aligment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
+        To aply settings or save/load/delete profile use buttons at the bottom of the dialog. New profiles can be easily created and save for further 
+        <ul class="paragraph-list-bullets">
+            <li><b>Set</b> button will aply current settings and keep dialog open. These settings will be lost if Rhino is closed.
+            <li><b>Set and close</b> button will aply current settings and close dialog. These settings will be lost if Rhino is closed.
+            <li><b>Close</b> button will close dialog.
+            <li><b>Load</b> button will load import settings accordint to selected profile in top dropdown menu.
+            <li><b>Set and save</b> button will aply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed. 
+            <li><b>Delete</b> button will delete current selected profile permanently.                                          
+        </ul>
+        </p>
+        <video width="306" height="342" controls>
+            <source src="Videos/SettingsProfile.mp4" type="video/mp4">
+            <source src="Videos/SettingsProfile.ogg" type="video/ogg">              
+        </video>
+        <p><!-- přídat popis jednotlivých nastavení. Přidat co a jak a když je nula v nastavení. --></p>
     </section>
 
     <section id="part6">
@@ -293,7 +315,7 @@
             <li>Define and limit start and end stationing for alignment if possible. It will save your time.
             <li>Some uncommon rules (national code rules) may not be taken into account in LandXML files (personal experience). Always check result before desing.
             <li>Always check imported alignment correctness. There are three basic checks you can do (check length difference, check curve curvature graph smothness, check coordinates of important points at specific stationing)                
-            <li>If you are not sure, feel free to contact plugin author.
+            <li>If you are not sure, feel free to contact <a href="#part11">author</a>.
         </ul>
 
     </section>
