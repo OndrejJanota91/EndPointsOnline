@@ -83,7 +83,7 @@
 </head>
 <body>
     <div class="header-container"></div>
-        <img id="header-image" src="/Pictures/EndPointsLogo.png" width="150" height="150"  alt="Header Image">
+        <img id="header-image" src="Pictures\EndPointsLogo.png" width="150" height="150"  alt="Header Image">
         <h1>Endpoints</h1>
     </div>
     <ul class="main-list">
@@ -152,7 +152,7 @@
         <section id="part15">
             <h3>Orientation in plugin</h3>
             <p>With the instalation of the EndPoints plugin two new features will appear in the Grasshopper.</p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\Image1.png" alt="Parts of EndPoints plugins">
+            <img src="Pictures\Image1.png" alt="Parts of EndPoints plugins">
             <p>New tab in the top menu bar (1) with the plugin <a href="#part4">settings</a> and new tab in the ribbon menu (2) with four components.</p>
             </p>
         </section>
@@ -173,7 +173,7 @@
     Otherwise no transformation of coordinates is done and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs please double check the result and contact author for 
     coordinate system implementaion. 
     </p>
-    <img src="C:\Users\Janot\Desktop\EndPointGuid\EPSGError.gif" alt="Coordinate system warning"/>>
+    <img src="Pictures\EPSGError.gif" alt="Coordinate system warning"/>>
     </section>        
     <section id="part3">
         <h2>Surface</h2>
@@ -183,7 +183,7 @@
         <section id="part31">
             <h3>Load .XML file with surfaces</h3>
             <p>Every .XML file surface import must start by selecting surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>    
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\SurfaceNames.png" alt="Read surface names" width="600">
+            <img src="Pictures\SurfaceNames.png" alt="Read surface names" width="600">
             <p><b>SurfaceNames</b> component has two inputs and two outputs. First input parameter <i>PathToXML</i> is string containing path to .XML file.
                 Input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas see <a href="#part12">About LandXML</a> section.</p>
             <p>Output  parameter <i>SurfaceNames</i> is list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a 
@@ -192,13 +192,13 @@
         <section id="part32">
             <h3>Select surface</h3>
             <p>Next step is to select which surfaces user want to import. This is fully up to user and selection should be performed according to users habits.</p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\SurfaceSelection.png" alt="Different surface selection" width="700">
+            <img src="Pictures\SurfaceSelection.png" alt="Different surface selection" width="700">
         </section>
         <section id="part33">
             <h3>Create surface</h3>           
             <p>Surface can be created in multiple ways but always with <b>CreateSurface</b> component. Final surface can be represented by mesh (fast but less accurate),
             unjoined triangle/quad surfaces (fast and accurate) or by joined surface (slow and accurate). For more information see <a href = "#part5">settings</a> section.</p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\SurfaceCreation.png" alt="Different surface selection" width="800">
+            <img src="Pictures\SurfaceCreation.png" alt="Different surface selection" width="800">
             <p><b>CreateSurface</b> component has three inputs and one output. First input parameter <i>SurfaceNames</i> is list of selected surface names which will be created.
                 Parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
                 point location is assessed according to projection to word XY plane. Z coodinate is neglected. If boundary is applied, imported surface can be divided into multiple parts in some cases. If whole surface is outside 
@@ -208,7 +208,7 @@
             <p>If import is performed correctly message "Done" with the information about the computational time is shown below component. In case of large surfaces it is convenient to import surface first as a mesh 
             or unjoined surfaces and then aplly boundary curve. Please keep in mind, joining surface into one large brep is the most CPU time consuming operation.
             </p> 
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\ImportSurface.gif" alt="Import surface">      
+            <img src="Pictures\ImportSurface.gif" alt="Import surface">      
             </section> 
     </section>
     <section id="part4">
@@ -217,13 +217,13 @@
         Transition curves are named <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F13238">spirals</a> in LandXML. <b>Please note, only spiral "Clothoid" type is implemented in EndPoints plugin.</b>
         Other possible spiral types can be found <a href ="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F16770"> here</a>. If unimplemented spiral type is present component <b> CreateAlignment</b> will produce 
         a warning message. In that case please contact author and provide a .XML file to author. I will gladly implement new spiral types to EndPoints if possible.</p>
-        <img src="C:\Users\Janot\Desktop\EndPointGuid\UnimplementeSubCurve.gif" alt="Unimplemente SubCurve">    
+        <img src="Pictures\UnimplementeSubCurve.gif" alt="Unimplemente SubCurve">    
         <p><a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Profile.html#Link07F62A90">Vertical profile</a> (XZ plane profile curve) is be represented by <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfAlign.html#Link07F630D0">ProfAlign</a> or <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfSurf.html#Link07F62DB0">ProfSurf</a> type curve.
         ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road, rail profile curve. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typicaly used for exporting intersetion of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities are implemented in EndPoints.
         <section id="part41">
             <h3>Load .XML file with alignment</h3>
             <p>Every .XML file alignment import must start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file use <b>AlignmentNames</b> component.</p>    
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\AlignmentNames.png" alt="Read alignment names" width="600">
+            <img src="Pictures\AlignmentNames.png" alt="Read alignment names" width="600">
             <p><b>AlignmentNames</b> component has two inputs and five outputs. First input parameter <i>PathToXML</i> is string containing path to .XML file.
             Input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas see <a href="#part12">About LandXML</a> section.</p>
             <p>Output parameter <i>AlignmentNames</i> is a list of all alignments (horizontal profiles) present in the .XML file. Second output parameter <i>ProfileNames</i> is a tree of all profiles (vertical profiles) present in .XML file. 
@@ -239,15 +239,15 @@
             <p>Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to users habits. However, order of alignment and profile 
             should always respect following rule. Alignment's list index is always equal to first index of branch in the profile's Data Tree. 
             </p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\AlignmentSelection.png" alt="Alignment and profile selection" width="800">
+            <img src="Pictures\AlignmentSelection.png" alt="Alignment and profile selection" width="800">
             <p>Of course you can select multiple profiles for one alignment.</p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\AlignmentSelection2.png" alt="Alignment and multiple profile selection" width="800">
+            <img src="Pictures\AlignmentSelection2.png" alt="Alignment and multiple profile selection" width="800">
 
         </section>
         <section id="part43">
             <h3>Create alignment</h3>
             <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a nurbcurves on a proper coordinates.</p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\AlignmentCreation.png" alt="Alignment creation" width="800">
+            <img src="Pictures\AlignmentCreation.png" alt="Alignment creation" width="800">
             <p><b>CreateAlignment</b> component has six inputs and outputs. First input parameter <i>AlignmentNames</i> is list of selected alignment names. Second input 
             <i>ProfileNames</i> is a Data Tree of selected profiles associated to each alignment. If abovementioned alignment and profile order convention is not repsected 
             and profile name does not match associated alignment name, warning message is shown. Input <i>StartSta</i> and <i>EndSta</i> are optional input. It is Data Tree of required start and end stationing for each
@@ -264,9 +264,9 @@
             Last parameter <i>Difference</i> is a Data Tree of values with calculated length deviation bewtween <a href="#part41"> min./max.</a> stationing and length of particular <i>Alignment3D</i> curve projection to XY plane. 
             If <i> Step </i> value is set correctly and import was performed correctly <i> Difference</i> should be close to zero. With greater values of <i>Step</i>, deviation can increase. 
             It is up to the user to define limit which can be considered as sufficient.</p>      
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\ImportAlignment.gif" alt="Alignment import" width="800">
+            <img src="Pictures\ImportAlignment.gif" alt="Alignment import" width="800">
             <p></p>
-            <img src="C:\Users\Janot\Desktop\EndPointGuid\ImportMultipleAlignments.gif" alt="Alignment import" width="800">
+            <img src="Pictures\ImportMultipleAlignments.gif" alt="Alignment import" width="800">
         </section> 
     </section>
     <section id="part5">
