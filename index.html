@@ -281,23 +281,43 @@
         <p>Plugin settings option dialog is shown after button <i>LandXML Settings</i> in top menu bar is clicked. Different options for surface and alignemnt can be set up. Various import settings
         can be created and save for future use.</p>
         <img src="Pictures/OpenSettings.gif" alt="OpenSettings" width="600">
-        <p>
-        Dialog consists of two tabs with various settings for surface and aligment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
-        To aply settings or save/load/delete profile use buttons at the bottom of the dialog. New profiles can be easily created and save for further 
+        <p>Dialog consists of two tabs with various settings for surface and aligment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
+        New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile use buttons at the bottom of the dialog. 
         <ul class="paragraph-list-bullets">
-            <li><b>Set</b> button will aply current settings and keep dialog open. These settings will be lost if Rhino is closed.
-            <li><b>Set and close</b> button will aply current settings and close dialog. These settings will be lost if Rhino is closed.
-            <li><b>Close</b> button will close dialog.
-            <li><b>Load</b> button will load import settings accordint to selected profile in top dropdown menu.
-            <li><b>Set and save</b> button will aply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed. 
-            <li><b>Delete</b> button will delete current selected profile permanently.                                          
+            <li><b>Set</b>: apply current settings and keep dialog open. These settings will be lost if Rhino is closed.
+            <li><b>Set and close</b>: apply current settings and close dialog. These settings will be lost if Rhino is closed.
+            <li><b>Close</b>: close dialog.
+            <li><b>Load</b>: load saved settings according to selected profile in top dropdown menu.
+            <li><b>Set and save</b>: apply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed. 
+            <li><b>Delete</b>: delete current selected profile from saved profiles.                                          
         </ul>
         </p>
         <video width="306" height="342" controls>
             <source src="Videos/SettingsProfile.mp4" type="video/mp4">
             <source src="Videos/SettingsProfile.ogg" type="video/ogg">              
         </video>
-        <p><!-- přídat popis jednotlivých nastavení. Přidat co a jak a když je nula v nastavení. --></p>
+        <p>In <i>Surface</i> tab following options are present:
+            <ul class="paragraph-list-bullets">
+                <li><b>Mesh/Brep</b>: if checked surfaces are imported as meshes. Otherwise surfaces are imported as surface or breps.     
+                <li><b>Join to polysurface</b>: surface triangles/quads are joined into one single polysurface. Applied only if Brep are selected as a product of surface import. If surface is incorrectly defined in .XML file. Joining can result in multiple polysurfaces.
+                If surface consist of huge amount of triangles/quads joining can be very demanings to computational time.  
+                <li><b>Tolerance</b>: tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                <li><b>Parallel</b>: if checked multiple processors are used for surface import.*
+                <li><b>Number of precessors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.** 
+            </ul></p>
+        <p> In <i>Alignment</i> tab following options are present:
+            <ul class="paragraph-list-bullets">
+                <li><b>Initial curve division</b>: number of divisions of vertical profile curve during alignment point's XYZ coordinates calculation.***     
+                <li><b>Flow step</b>: default distance of consecutive alignemnt's points. Values is overwriten by <i>Step</i> input parameter if defined.
+                <li><b>Parabolic curve step</b>: distance (stationing difference) between points used during calculation of parabolic curve (vertical profile). If length of parabolic curve is smaller, step is automatically changed to 1/10 curve length. 
+                <li><b>Transition curve step</b>: distance (stationing difference) between points used during calculation of transition curves (horizontal profile). If length of transition curve is smaller, step is automatically changed to 1/10 curve length. 
+                <li><b>Tolerance Z</b>: tolerance used for Z coordination of alignment's defining points. If 0 is inserted then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                <li><b>Parallel</b>: if checked multiple processors are used for alignment import.*
+                <li><b>Number of precessors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is alowed for alignment import.***                                                  
+            </ul></p>
+        <p>*Parallel computing is used in specific parts of import. Using parallel computing may not lead to speed up import. See time result under the <b> CreateAlignment/CreateSurface</b> component.</p>
+        <p>**If value equal or smaller then 0 is inserted, maximum number of processors is used.</p>
+        <p>***Allignment's defining points are calculated from horizontal (X,Y coordinates) and horizontal (Z coordinate) profile with specific algorithm. Algorithm divide profile curve to defined number of segments where Z coordinates are searched.</p>
     </section>
 
     <section id="part6">
