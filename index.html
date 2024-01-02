@@ -129,7 +129,7 @@
             <h3>About EndPoints</h3>
             <p>Hello dear Grasshopper user. Thank you for your interest in EndPoints plugin. The EndPoints plugin was developed for the
             purpose of importing alignment and digital terrain model (DTM) into Rhino/Grasshopper. Imported elements are intended to serve
-            as initial input for design of different infrastructure parts (e.g. bridges, tunels, rail and road structure). However, how the
+            as initial input for design of different infrastructure parts (e.g. bridges, tunnels, rail and road structure). However, how the
             plugin is used is fully up to the user.
             </p>
             <p class="paragraph-list">
@@ -139,10 +139,10 @@
         </section>
         <section id="part12">
             <h3>About LandXML</h3>
-            <p>LandXML schema is a open-source project for sharing topography of terrain data. It is widely used in civil engineering, especially in transportation
-            sector. Most of the software used in civil enginering is able to import and export data to LandXML format.  The official LandXML schema website 
+            <p>LandXML schema is an open-source project for sharing topography of terrain data. It is widely used in civil engineering, especially in transportation
+            sector. Most of the software used in civil engineering is able to import and export data to LandXML format.  The official LandXML schema website 
             can be found at <a href = "http://www.landxml.org/">http://www.landxml.org/</a>. There are multiple LandXML schemas. The EndPoints plugin was tested against
-            schema 1.0 and 1.2. Schema 1.1 and 2.0 (working draft since 2014) should work as well, but was no tested. In case of any inconveniece with schema 1.1 and 
+            schema 1.0 and 1.2. Schema 1.1 and 2.0 (working draft since 2014) should work as well but was no tested. In case of any inconvenience with schema 1.1 and 
             2.0, please contact author. 
             </p>   
         </section>
@@ -153,12 +153,12 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">Current version: 1.0.0<br>
-            Developed for Rhino 6 and higher<br>
+            Developed for Rhino 6 and higher.<br>
             </p>
         </section>
         <section id="part15">
             <h3>Orientation in plugin</h3>
-            <p>With the instalation of the EndPoints plugin two new features will appear in the Grasshopper.</p>
+            <p>With the installation of the EndPoints plugin two new features will appear in the Grasshopper.</p>
             <img src="Pictures/Image1.png" alt="Parts of EndPoints plugins">
             <p>New tab in the top menu bar (1) with the plugin <a href="#part4">settings</a> and new tab in the ribbon menu (2) with four components.</p>
             </p>
@@ -167,25 +167,25 @@
     <section id="part2">
         <h2>Coordinate system and units</h2>
     <p>Grasshopper is unitless and units depend on the actual unit system setting in Rhino. However, LandXML is not 
-        unitless, and automatic unit conversion was not included into LandXML import engine. It is up to user to know LandXML units
+        unitless, and automatic unit conversion was not included into LandXML import engine. It is up to the user to know LandXML units
         and set similar units in the Rhino.
     </p>
-    <p>Used coordiante systems are country/region dependend It is not possible to include general approach for all coordiante systems. Therefore, only most commonly used coordinate system
-    were implemented. Commonly used coordiante system for different regions can be found at <a href = "https://epsg.io/">https://epsg.io/</a> website. 
+    <p>Used coordinate systems are country/region dependend. It is not possible to include general approach for all coordinate systems. Therefore, only most commonly used coordinate systems
+    were implemented. Commonly used coordinate system for different regions can be found at <a href = "https://epsg.io/">https://epsg.io/</a> website. 
     Currently, the following coordinate systems are implemented and automatically transformed if applied in LandXML:
     <ul class="main-list2">
         <li><a href="https://epsg.io/2065">S-JTSK (Ferro) / Krovak (EPSG: 2065)</a>
         <li><a href="https://epsg.io/5111">ETRS89 / NTM zone 11 (EPSG: 5111)</a><br>
     </ul>    
-    Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs, please double check the result and contact author for 
-    coordinate system implementaion. 
+    Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs, please double check the result and contact the author for 
+    coordinate system implementation 
     </p>
     <img src="Pictures/EPSGError.gif" alt="Coordinate system warning"/>
     </section>        
     <section id="part3">
         <h2>Surface</h2>
-    <p>Surface in LandXML is be represented by TIN surface or GRID surface. Both cases are implemented in EndPoints plugin. A surface in LandXML is written as a colletion of numbered points and faces. Faces can be 
-    defined by 3 or 4 points. Surface source data (boudaries, breaklines, contours .etc) are not imported to Grasshopper as they are not important for our cause.
+    <p>Surface in LandXML is be represented by TIN surface or GRID surface. Both cases are implemented in EndPoints plugin. A surface in LandXML is written as a collection of numbered points and faces. Faces can be 
+    defined by 3 or 4 points. Surface source data (boundaries, breaklines, contours etc.) are not imported to Grasshopper as they are not important for our cause.
     </p>
         <section id="part31">
             <h3>Load .XML file with surfaces</h3>
@@ -208,12 +208,12 @@
             <img src="Pictures/SurfaceCreation.png" alt="Different surface selection" width="800">
             <p>The <b>CreateSurface</b> component has three inputs and one output. The first input parameter, <i>SurfaceNames</i>, is list of selected surface names which will be created.
                 The parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter, only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
-                point location is assessed according to projection to word XY plane. Z coodinate is neglected. If a boundary is applied, the imported surface can be divided into multiple parts in some cases. If the whole surface is outside 
+                point location is assessed according to projection to word XY plane. Z coordinate is neglected. If a boundary is applied, the imported surface can be divided into multiple parts in some cases. If the whole surface is outside 
                 curve nothing is created. Note that only closed curves can be used as boundary curves. If open curve is a boundary curve, it is ignored.
-                The parameter <i>Namespace</i> is mandatory and corresponds to the <b>SurfaceNames</b> output parametr <i>Namespaces</i>. It provides component with the information about .XML file so file does not have to be reopend. 
+                The parameter <i>Namespace</i> is mandatory and corresponds to the <b>SurfaceNames</b> output parameter <i>Namespaces</i>. It provides component with the information about .XML file so file does not have to be reopened. 
             <p>The output parameter <i>Surface</i> is list of all imported surfaces represented by mesh/list of surfaces or signel brep. 
             <p>If the import is performed correctly, the  message "Done" with the information about the computational time is shown below component. In case of large surfaces, it is convenient to import surface first as a mesh 
-            or unjoined surfaces and then aplly the boundary curve. Please keep in mind that joining the surface into one large brep is the most CPU time consuming operation.
+            or unjoined surfaces and then apply the boundary curve. Please keep in mind that joining the surface into one large brep is the most CPU time consuming operation.
             </p> 
             <video width="800" height="400" controls>
                 <source src="Videos/ImportSurface.mp4" type="video/mp4">
@@ -229,7 +229,7 @@
         a warning message. In that case please contact author and provide a .XML file to author. I will gladly implement new spiral types to EndPoints if possible.</p>
         <img src="Pictures/UnimplementeSubCurve.gif" alt="Unimplemente SubCurve">    
         <p><a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Profile.html#Link07F62A90">Vertical profile</a> (XZ plane profile curve) is be represented by <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfAlign.html#Link07F630D0">ProfAlign</a> or <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfSurf.html#Link07F62DB0">ProfSurf</a> type curve.
-        ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road, rail profile curve. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typicaly used for exporting intersetion of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities are implemented in EndPoints.
+        ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymmetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road, rail profile curve. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typically used for exporting intersection of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities are implemented in EndPoints.
         <section id="part41">
             <h3>Load .XML file with alignment</h3>
             <p>Every .XML file alignment import must start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file use <b>AlignmentNames</b> component.</p>    
@@ -246,32 +246,32 @@
         </section>
         <section id="part42">
             <h3>Select alignment (horizontal profile) and profile (vertical profile)</h3>
-            <p>Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to users habits. However, order of alignment and profile 
+            <p>Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to user's habits. However, order of alignment and profile 
             should always respect following rule. Alignment's list index is always equal to first index of branch in the profile's Data Tree. 
             </p>
             <img src="Pictures/AlignmentSelection.png" alt="Alignment and profile selection" width="800">
-            <p>Of course you can select multiple profiles for one alignment.</p>
+            <p>Of course, you can select multiple profiles for one alignment.</p>
             <img src="Pictures/AlignmentSelection2.png" alt="Alignment and multiple profile selection" width="800">
 
         </section>
         <section id="part43">
             <h3>Create alignment</h3>
-            <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a nurbcurves on a proper coordinates.</p>
+            <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a nurbscurve on a proper coordinate.</p>
             <img src="Pictures/AlignmentCreation.png" alt="Alignment creation" width="800">
             <p><b>CreateAlignment</b> component has six inputs and outputs. First input parameter <i>AlignmentNames</i> is list of selected alignment names. Second input 
             <i>ProfileNames</i> is a Data Tree of selected profiles associated to each alignment. If abovementioned alignment and profile order convention is not repsected 
             and profile name does not match associated alignment name, warning message is shown. Input <i>StartSta</i> and <i>EndSta</i> are optional input. It is Data Tree of required start and end stationing for each
             imported curve. If stationing inputs are not used alignment curves are created in their whole length according to <a href="#part41">min./max.</a> valid stationing.<p> If start or end stationing input is defined 
-            by user it must present as a Data Tree with value for each required profile. If user set stationing which is outside min./max. valid stationing warning message will appear and input will be ignored.
-            Parameter <i>Namespace</i> is mandatory and corresponds to the <b>AlignmentNames</b> output parameter <i>Namespaces</i>. It provides component with the info about .XML file so file does not have to be reopend. 
+            by user, it must present as a Data Tree with value for each required profile. If user set stationing which is outside min./max. valid stationing warning message will appear and input will be ignored.
+            Parameter <i>Namespace</i> is mandatory and corresponds to the <b>AlignmentNames</b> output parameter <i>Namespaces</i>. It provides component with the info about .XML file so file does not have to be reopened. 
             Last input parameter <i>Step</i> is optional and represents distance between consecutive points which are used for alignment curve creation as well as calculation of transition curves points. If <i>Step</i> value  
-            is not defined, value defined in <a href="#part5"> settings</a> is used. Otherwives, input paramneter overrides value defined in settings and can be set induvidaly for each component. 
-            <b>Plase note, if step value is too small it can increase computation time needed for alignment import. If step value is too large it will decrese precision of imported curve.</b>
+            is not defined, value defined in <a href="#part5"> settings</a> is used. Otherwise, input parameter overrides value defined in settings and can be set individually for each component. 
+            <b>Please note, if step value is too small it can increase computation time needed for alignment import. If step value is too large it will decrease precision of imported curve.</b>
             <p>Output parameter <i>Alignment3D</i> is a Data Tree of all alignment 3D curves imported from .XML file. Second output parameter <i>AlignmentXY</i> is a Data Tree of all alignment (horizontal profiles) imported from .XML file. Horizontal
             profile curves are placed in world XY plane according to its coordinates in .XML file. Output parameter <i>Profile</i> is a Data Tree of all profiles (vertical profiles) imported from .XML file. Vertical profile curves 
-            are located in world XZ plane. Their X coordinate correspond with the stationing and Z coordinte with the elevation stated in .XML file. <i>AlignmentXY</i> and <i>Profile</i> outputs are always imported in full length which is present in 
+            are located in world XZ plane. Their X coordinate correspond with the stationing and Z coordinate with the elevation stated in .XML file. <i>AlignmentXY</i> and <i>Profile</i> outputs are always imported in full length which is present in 
             .XML file. On the other hand, <i>Alignment3D</i> is imported only between <a href="#part41">min. and max.</a> stationing. Moreover, each vertical and horizontal profiles are imported as a list of sub curves which represent profile <a href="#part4">parts</a>.
-            Last parameter <i>Difference</i> is a Data Tree of values with calculated length deviation bewtween <a href="#part41"> min./max.</a> stationing and length of particular <i>Alignment3D</i> curve projection to XY plane. 
+            Last parameter <i>Difference</i> is a Data Tree of values with calculated length deviation between <a href="#part41"> min./max.</a> stationing and length of particular <i>Alignment3D</i> curve projection to XY plane. 
             If <i> Step </i> value is set correctly and import was performed correctly <i> Difference</i> should be close to zero. With greater values of <i>Step</i>, deviation can increase. 
             It is up to the user to define limit which can be considered as sufficient.</p>      
             <video width="800" height="400" controls>
@@ -285,10 +285,10 @@
     </section>
     <section id="part5">
         <h2>LandXML Settings</h2>
-        <p>Plugin settings option dialog is shown after button <i>LandXML Settings</i> in top menu bar is clicked. Different options for surface and alignemnt can be set up. Various import settings
+        <p>Plugin settings option dialog is shown after button <i>LandXML Settings</i> in top menu bar is clicked. Different options for surface and alignment can be set up. Various import settings
         can be created and save for future use.</p>
         <img src="Pictures/OpenSettings.gif" alt="OpenSettings" width="600">
-        <p>Dialog consists of two tabs with various settings for surface and aligment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
+        <p>Dialog consists of two tabs with various settings for surface and alignment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
         New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile use buttons at the bottom of the dialog. 
         <ul class="paragraph-list-bullets">
             <li><b>Set</b>: apply current settings and keep dialog open. These settings will be lost if Rhino is closed.
@@ -305,43 +305,43 @@
         </video>
         <p>In <i>Surface</i> tab following options are present:
             <ul class="paragraph-list-bullets">
-                <li><b>Mesh/Brep</b>: if checked surfaces are imported as meshes. Otherwise surfaces are imported as surface or breps.     
+                <li><b>Mesh/Brep</b>: if checked surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.     
                 <li><b>Join to polysurface</b>: surface triangles/quads are joined into one single polysurface. Applied only if Brep are selected as a product of surface import. If surface is incorrectly defined in .XML file. Joining can result in multiple polysurfaces.
-                If surface consist of huge amount of triangles/quads joining can be very demanings to computational time.  
-                <li><b>Tolerance</b>: tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                If surface consist of huge number of triangles/quads joining can be very demanding on computational time.  
+                <li><b>Tolerance</b>: tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
                 <li><b>Parallel</b>: if checked multiple processors are used for surface import.*
-                <li><b>Number of precessors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.** 
+                <li><b>Number of precessors</b>: max. number of processors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.** 
             </ul></p>
         <p> In <i>Alignment</i> tab following options are present:
             <ul class="paragraph-list-bullets">
                 <li><b>Initial curve division</b>: number of divisions of vertical profile curve during alignment point's XYZ coordinates calculation.***     
-                <li><b>Flow step</b>: default distance of consecutive alignemnt's points. Values is overwriten by <i>Step</i> input parameter if defined.
+                <li><b>Flow step</b>: default distance of consecutive alignment's points. Values is overwritten by <i>Step</i> input parameter if defined.
                 <li><b>Parabolic curve step</b>: distance (stationing difference) between points used during calculation of parabolic curve (vertical profile). If length of parabolic curve is smaller, step is automatically changed to 1/10 curve length. 
                 <li><b>Transition curve step</b>: distance (stationing difference) between points used during calculation of transition curves (horizontal profile). If length of transition curve is smaller, step is automatically changed to 1/10 curve length. 
-                <li><b>Tolerance Z</b>: tolerance used for Z coordination of alignment's defining points. If 0 is inserted then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                <li><b>Tolerance Z</b>: tolerance used for Z coordination of alignment's defining points. If 0 is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
                 <li><b>Parallel</b>: if checked multiple processors are used for alignment import.*
-                <li><b>Number of precessors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is alowed for alignment import.***                                                  
+                <li><b>Number of processors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is allowed for alignment import.***                                                  
             </ul></p>
         <p>*Parallel computing is used in specific parts of import. Using parallel computing may not lead to speed up import. See time result under the <b> CreateAlignment/CreateSurface</b> component.</p>
-        <p>**If value equal or smaller then 0 is inserted, maximum number of processors is used.</p>
-        <p>***Allignment's defining points are calculated from horizontal (X, Y coordinates) and horizontal (Z coordinate) profile with specific algorithm. Algorithm divide profile curve to defined number of segments where Z coordinates are searched.</p>
+        <p>**If value equal or smaller then, 0 is inserted, maximum number of processors is used.</p>
+        <p>***Alignment's defining points are calculated from horizontal (X, Y coordinates) and horizontal (Z coordinate) profile with specific algorithm. Algorithm divide profile curve to defined number of segments where Z coordinates are searched.</p>
     </section>
 
     <section id="part6">
         <h2>Best practices</h2>
         <ul class="paragraph-list-bullets">
             <li>Always check result and compare it with original data.
-            <li>If large data are imported, import can be demanding on computational time. Separe import from other parts of script (internalise result, disable components).    
+            <li>If large data are imported, import can be demanding on computational time. Separate import from other parts of script (internalize result, disable components).    
             <li>Recalculate EndPoints LandXML components only if needed (.XML file changed).
             <li>When importing large surfaces use meshes first or unjoined breps. Join brep only after boundary is applied to specific area.
             <li>When importing large surface most time consuming operations are joining breps and showing result in Rhino.
             <li>Stationing is always defined on curve projection to world XY plane.
-            <li>Length difference smalled then 0.1 mm (when using meters as default units) should be sufficient.
+            <li>Length difference smaller then 0.1 mm (when using meters as default units) should be sufficient.
             <li>Step value from 0.1 m to 1.0 m should be sufficient.
             <li>Consider total length of alignment when defining step value.
             <li>Define and limit start and end stationing for alignment if possible. It will save your time.
-            <li>Some uncommon rules (national code rules) may not be taken into account in LandXML files (personal experience). Always check result before desing.
-            <li>Always check imported alignment correctness. There are three basic checks you can do (check length difference, check curve curvature graph smothness, check coordinates of important points at specific stationing)                
+            <li>Some uncommon rules (national code rules) may not be taken into account in LandXML files (personal experience). Always check result before design.
+            <li>Always check imported alignment correctness. There are three basic checks you can do (check length difference, check curve curvature graph smoothness, check coordinates of important points at specific stationing)                
             <li>If you are not sure, feel free to contact <a href="#part11">author</a>.
         </ul>
     </section>
