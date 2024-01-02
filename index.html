@@ -127,9 +127,9 @@
         <h2>Introduction</h2>
         <section id="part11">
             <h3>About EndPoints</h3>
-            <p>Hello dear Grasshopper user. Thank you for your interest in EndPoints plugin. Plugin was developed for the
+            <p>Hello dear Grasshopper user. Thank you for your interest in EndPoints plugin. The EndPoints plugin was developed for the
             purpose of importing alignment and digital terrain model (DTM) into Rhino/Grasshopper. Imported elements are intended to serve
-            as initial input for design of different infrastructure parts (e.g. bridges, tunels, rail and road structure). However, how
+            as initial input for design of different infrastructure parts (e.g. bridges, tunels, rail and road structure). However, how the
             plugin is used is fully up to the user.
             </p>
             <p class="paragraph-list">
@@ -139,9 +139,9 @@
         </section>
         <section id="part12">
             <h3>About LandXML</h3>
-            <p>LandXML schema is a opensource project for sharing topography of terrain data. It is widely used in civil engineering, especially in transportation
-            sector. Most of the software used in civil enginering is able to import and export data to LandXML format.  XML schema Official LandXML schema website 
-            can be found at <a href = "http://www.landxml.org/">http://www.landxml.org/.</a> There are multiple LandXML schemas. EndPoints plugin was tested against
+            <p>LandXML schema is a open-source project for sharing topography of terrain data. It is widely used in civil engineering, especially in transportation
+            sector. Most of the software used in civil enginering is able to import and export data to LandXML format.  The official LandXML schema website 
+            can be found at <a href = "http://www.landxml.org/">http://www.landxml.org/</a>. There are multiple LandXML schemas. The EndPoints plugin was tested against
             schema 1.0 and 1.2. Schema 1.1 and 2.0 (working draft since 2014) should work as well, but was no tested. In case of any inconveniece with schema 1.1 and 
             2.0, please contact author. 
             </p>   
@@ -167,53 +167,53 @@
     <section id="part2">
         <h2>Coordinate system and units</h2>
     <p>Grasshopper is unitless and units depend on the actual unit system setting in Rhino. However, LandXML is not 
-        unitless, automatic unit conversion was not included into LandXML import engine. It is up to user to know LandXML units
+        unitless, and automatic unit conversion was not included into LandXML import engine. It is up to user to know LandXML units
         and set similar units in the Rhino.
     </p>
-    <p>Used coordiante systems are country/region dependend It is not possible to include general approach for all coordiante system. Therefore, only most commonly used coordinate system
+    <p>Used coordiante systems are country/region dependend It is not possible to include general approach for all coordiante systems. Therefore, only most commonly used coordinate system
     were implemented. Commonly used coordiante system for different regions can be found at <a href = "https://epsg.io/">https://epsg.io/</a> website. 
-    Currently following coordinate systems are implemented and automatically transformed if applied in LandXML:
+    Currently, the following coordinate systems are implemented and automatically transformed if applied in LandXML:
     <ul class="main-list2">
         <li><a href="https://epsg.io/2065">S-JTSK (Ferro) / Krovak (EPSG: 2065)</a>
         <li><a href="https://epsg.io/5111">ETRS89 / NTM zone 11 (EPSG: 5111)</a><br>
     </ul>    
-    Otherwise no transformation of coordinates is done and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs please double check the result and contact author for 
+    Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs, please double check the result and contact author for 
     coordinate system implementaion. 
     </p>
     <img src="Pictures/EPSGError.gif" alt="Coordinate system warning"/>
     </section>        
     <section id="part3">
         <h2>Surface</h2>
-    <p>Surface in LandXML is be represented by TIN surface or GRID surface. Both cases are implemented in EndPoints plugin. Surface in LandXML is written as a colletion of numbered points and faces. Faces can be 
+    <p>Surface in LandXML is be represented by TIN surface or GRID surface. Both cases are implemented in EndPoints plugin. A surface in LandXML is written as a colletion of numbered points and faces. Faces can be 
     defined by 3 or 4 points. Surface source data (boudaries, breaklines, contours .etc) are not imported to Grasshopper as they are not important for our cause.
     </p>
         <section id="part31">
             <h3>Load .XML file with surfaces</h3>
-            <p>Every .XML file surface import must start by selecting surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>    
+            <p>To import a surface from an .XML file, you must first select the surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>    
             <img src="Pictures/SurfaceNames.png" alt="Read surface names" width="600">
-            <p><b>SurfaceNames</b> component has two inputs and two outputs. First input parameter <i>PathToXML</i> is string containing path to .XML file.
-                Input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas see <a href="#part12">About LandXML</a> section.</p>
-            <p>Output  parameter <i>SurfaceNames</i> is list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a 
+            <p>The <b>SurfaceNames</b> component has two inputs and two outputs. First input parameter, <i>PathToXML</i> is string containing path to .XML file.
+                The input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas, see <a href="#part12">About LandXML</a> section.</p>
+            <p>The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. The second output parameter <i>Namespace</i> is a 
                 plugin class with the information about the general .XML data and coordinate system.</p>
         </section>
         <section id="part32">
             <h3>Select surface</h3>
-            <p>Next step is to select which surfaces user want to import. This is fully up to user and selection should be performed according to users habits.</p>
+            <p>Next step is to select which surfaces user wants to import. This is fully up to user, and the selection should be performed according to user's habits.</p>
             <img src="Pictures/SurfaceSelection.png" alt="Different surface selection" width="700">
         </section>
         <section id="part33">
             <h3>Create surface</h3>           
-            <p>Surface can be created in multiple ways but always with <b>CreateSurface</b> component. Final surface can be represented by mesh (fast but less accurate),
-            unjoined triangle/quad surfaces (fast and accurate) or by joined surface (slow and accurate). For more information see <a href = "#part5">settings</a> section.</p>
+            <p>A surface can be created in multiple ways but always with <b>CreateSurface</b> component. Final surface can be represented by mesh (fast but less accurate),
+            unjoined triangle/quad surfaces (fast and accurate), or by joined surface (slow and accurate). For more information see <a href = "#part5">settings</a> section.</p>
             <img src="Pictures/SurfaceCreation.png" alt="Different surface selection" width="800">
-            <p><b>CreateSurface</b> component has three inputs and one output. First input parameter <i>SurfaceNames</i> is list of selected surface names which will be created.
-                Parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
-                point location is assessed according to projection to word XY plane. Z coodinate is neglected. If boundary is applied, imported surface can be divided into multiple parts in some cases. If whole surface is outside 
-                curve nothing is created. Note that only closed curves can be used as boundary curves. If open curve is boundary curve is ignored.
-                Parameter <i>Namespace</i> is mandatory and corresponds to the <b>SurfaceNames</b> output parametr <i>Namespaces</i>. It provides component with the info about .XML file so file does not have to be reopend. 
-            <p>Output parameter <i>Surface</i> is list of all imported surfaces represented by mesh/list of surfaces or signel brep. 
-            <p>If import is performed correctly message "Done" with the information about the computational time is shown below component. In case of large surfaces it is convenient to import surface first as a mesh 
-            or unjoined surfaces and then aplly boundary curve. Please keep in mind, joining surface into one large brep is the most CPU time consuming operation.
+            <p>The <b>CreateSurface</b> component has three inputs and one output. The first input parameter, <i>SurfaceNames</i>, is list of selected surface names which will be created.
+                The parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter, only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
+                point location is assessed according to projection to word XY plane. Z coodinate is neglected. If a boundary is applied, the imported surface can be divided into multiple parts in some cases. If the whole surface is outside 
+                curve nothing is created. Note that only closed curves can be used as boundary curves. If open curve is a boundary curve, it is ignored.
+                The parameter <i>Namespace</i> is mandatory and corresponds to the <b>SurfaceNames</b> output parametr <i>Namespaces</i>. It provides component with the information about .XML file so file does not have to be reopend. 
+            <p>The output parameter <i>Surface</i> is list of all imported surfaces represented by mesh/list of surfaces or signel brep. 
+            <p>If the import is performed correctly, the  message "Done" with the information about the computational time is shown below component. In case of large surfaces, it is convenient to import surface first as a mesh 
+            or unjoined surfaces and then aplly the boundary curve. Please keep in mind that joining the surface into one large brep is the most CPU time consuming operation.
             </p> 
             <video width="800" height="400" controls>
                 <source src="Videos/ImportSurface.mp4" type="video/mp4">
