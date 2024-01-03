@@ -193,7 +193,7 @@
             <img src="Pictures/SurfaceNames.png" alt="Read surface names" width="600">
             <p>The <b>SurfaceNames</b> component has two inputs and two outputs. First input parameter, <i>PathToXML</i> is string containing path to .XML file.
                 The input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas, see <a href="#part12">About LandXML</a> section.</p>
-            <p>The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. The second output parameter <i>Namespace</i> is a 
+            <p>The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a 
                 plugin class with the information about the general .XML data and coordinate system.</p>
         </section>
         <section id="part32">
@@ -206,7 +206,7 @@
             <p>A surface can be created in multiple ways but always with <b>CreateSurface</b> component. Final surface can be represented by mesh (fast but less accurate),
             unjoined triangle/quad surfaces (fast and accurate), or by joined surface (slow and accurate). For more information see <a href = "#part5">settings</a> section.</p>
             <img src="Pictures/SurfaceCreation.png" alt="Different surface selection" width="800">
-            <p>The <b>CreateSurface</b> component has three inputs and one output. The first input parameter, <i>SurfaceNames</i>, is list of selected surface names which will be created.
+            <p>The <b>CreateSurface</b> component has three inputs and one output. First input parameter, <i>SurfaceNames</i>, is list of selected surface names which will be created.
                 The parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter, only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
                 point location is assessed according to projection to word XY plane. Z coordinate is neglected. If a boundary is applied, the imported surface can be divided into multiple parts in some cases. If the whole surface is outside 
                 curve nothing is created. Note that only closed curves can be used as boundary curves. If open curve is a boundary curve, it is ignored.
@@ -223,31 +223,31 @@
     </section>
     <section id="part4">
         <h2>Alignment</h2>
-        <p>Alignment (general 3D curve) in LandXML is represented by horizontal and vertical profiles curves. Both curves are defined by multiple geometrical entities. <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_CoordGeom.html#Link07F13620">Horizontal profile</a> (XY plane center line) is usually made of straight lines, arcs and transition curves. 
-        Transition curves are named <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F13238">spirals</a> in LandXML. <b>Please note, only spiral "Clothoid" type is implemented in EndPoints plugin.</b>
-        Other possible spiral types can be found <a href ="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F16770"> here</a>. If unimplemented spiral type is present component <b> CreateAlignment</b> will produce 
-        a warning message. In that case please contact author and provide a .XML file to author. I will gladly implement new spiral types to EndPoints if possible.</p>
+        <p>Alignment (a general 3D curve) in LandXML is represented by horizontal and vertical profile curves. Both curves are defined by multiple geometrical entities. The <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_CoordGeom.html#Link07F13620">horizontal profile</a> (XY plane center line) is usually made up of straight lines, arcs, and transition curves. 
+        Transition curves are named <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F13238">spirals</a> in LandXML. <b>Please note that only spiral "Clothoid" type is implemented in EndPoints plugin.</b>
+        Other possible spiral types can be found <a href ="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Spiral.html#Link07F16770"> here</a>. If an unimplemented spiral type is present, the <b> CreateAlignment</b> component will produce 
+        a warning message. In that case please, contact author and provide a .XML file to author. I will gladly implement new spiral types to EndPoints if possible.</p>
         <img src="Pictures/UnimplementeSubCurve.gif" alt="Unimplemente SubCurve">    
-        <p><a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Profile.html#Link07F62A90">Vertical profile</a> (XZ plane profile curve) is be represented by <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfAlign.html#Link07F630D0">ProfAlign</a> or <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfSurf.html#Link07F62DB0">ProfSurf</a> type curve.
-        ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymmetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road, rail profile curve. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typically used for exporting intersection of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities are implemented in EndPoints.
+        <p>The <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Profile.html#Link07F62A90">vertical profile</a> (XZ plane profile curve) is represented by <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfAlign.html#Link07F630D0">ProfAlign</a> or <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfSurf.html#Link07F62DB0">ProfSurf</a> type curve.
+        ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymmetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road and rail profile curves. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typically used for exporting intersection of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities of profile curves are implemented in EndPoints.
         <section id="part41">
             <h3>Load .XML file with alignment</h3>
-            <p>Every .XML file alignment import must start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file use <b>AlignmentNames</b> component.</p>    
+            <p>To import an alignment from .XML, start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file, use <b>AlignmentNames</b> component.</p>    
             <img src="Pictures/AlignmentNames.png" alt="Read alignment names" width="600">
-            <p><b>AlignmentNames</b> component has two inputs and five outputs. First input parameter <i>PathToXML</i> is string containing path to .XML file.
-            Input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas see <a href="#part12">About LandXML</a> section.</p>
-            <p>Output parameter <i>AlignmentNames</i> is a list of all alignments (horizontal profiles) present in the .XML file. Second output parameter <i>ProfileNames</i> is a tree of all profiles (vertical profiles) present in .XML file. 
-            Profiles count can be higher then number of alignments as one alignment can contain multiple profiles. Each branch contains all profiles which belongs to the alignment on the same position as branch number is. 
-            In some cases (not so unusual), start and end stationing of horizontal and vertical profiles may not match. Alignment points which are not inside both domains cannot be calculated as only part of data are present. Therefore, 
-            output parameters <i>StartSta</i> / <i>EndSta</i> were presented. Both outputs are trees with a min./max. valid stationing which can be reached on the alignment for each profile. Minimum stationing is always max. value of (vertical profile start stationing; horizontal profile start stationing).
+            <p>The <b>AlignmentNames</b> component has two inputs and five outputs. First input parameter, <i>PathToXML</i>, is string containing path to .XML file.
+            Input parameter <i>Header</i> is optional and should be used if the LandXML schema is unimplemented. For implemented schemas, see <a href="#part12">About LandXML</a> section.</p>
+            <p>Output parameter <i>AlignmentNames</i> is a list of all alignments (horizontal profiles) present in the .XML file. Second output parameter, <i>ProfileNames</i>, is a tree of all profiles (vertical profiles) present in .XML file. 
+            The numbers of profiles can be higher then number of alignments, as one alignment can contain multiple profiles. Each branch contains all profiles which belong to the alignment at the same position as branch number. 
+            In some cases (not so unusual), start and end stationing of horizontal and vertical profiles may not match. Alignment points which are not inside both domains cannot be calculated as only part of data is present. Therefore, 
+            output parameters <i>StartSta</i> / <i>EndSta</i> were presented. Both outputs are trees with a min./max. valid stationing that can be reached on the alignment for each profile. Minimum stationing is always max. value of (vertical profile start stationing; horizontal profile start stationing).
             Maximum stationing is always min. value of (vertical profile start stationing; horizontal profile start stationing).
             Tree structure of <i>StartSta</i> / <i>EndSta</i> matches structure of <i>ProfileNames</i> output.
-            Last output parameter <i>Namespace</i> is a plugin class with the information about the general .XML data and coordinate system.</p>
+            Last output parameter, <i>Namespace</i>, is a plugin class with the information about the general .XML data and coordinate system.</p>
         </section>
         <section id="part42">
             <h3>Select alignment (horizontal profile) and profile (vertical profile)</h3>
-            <p>Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to user's habits. However, order of alignment and profile 
-            should always respect following rule. Alignment's list index is always equal to first index of branch in the profile's Data Tree. 
+            <p>Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to user's habits. However, the order of alignment and profile 
+            should always respect following rule: alignment's list index is always equal to first index of the branch in the profile's Data Tree. 
             </p>
             <img src="Pictures/AlignmentSelection.png" alt="Alignment and profile selection" width="800">
             <p>Of course, you can select multiple profiles for one alignment.</p>
@@ -256,24 +256,24 @@
         </section>
         <section id="part43">
             <h3>Create alignment</h3>
-            <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a nurbscurve on a proper coordinate.</p>
+            <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a NURBS curve on a proper coordinate.</p>
             <img src="Pictures/AlignmentCreation.png" alt="Alignment creation" width="800">
-            <p><b>CreateAlignment</b> component has six inputs and outputs. First input parameter <i>AlignmentNames</i> is list of selected alignment names. Second input 
-            <i>ProfileNames</i> is a Data Tree of selected profiles associated to each alignment. If abovementioned alignment and profile order convention is not repsected 
-            and profile name does not match associated alignment name, warning message is shown. Input <i>StartSta</i> and <i>EndSta</i> are optional input. It is Data Tree of required start and end stationing for each
-            imported curve. If stationing inputs are not used alignment curves are created in their whole length according to <a href="#part41">min./max.</a> valid stationing.<p> If start or end stationing input is defined 
-            by user, it must present as a Data Tree with value for each required profile. If user set stationing which is outside min./max. valid stationing warning message will appear and input will be ignored.
-            Parameter <i>Namespace</i> is mandatory and corresponds to the <b>AlignmentNames</b> output parameter <i>Namespaces</i>. It provides component with the info about .XML file so file does not have to be reopened. 
-            Last input parameter <i>Step</i> is optional and represents distance between consecutive points which are used for alignment curve creation as well as calculation of transition curves points. If <i>Step</i> value  
-            is not defined, value defined in <a href="#part5"> settings</a> is used. Otherwise, input parameter overrides value defined in settings and can be set individually for each component. 
-            <b>Please note, if step value is too small it can increase computation time needed for alignment import. If step value is too large it will decrease precision of imported curve.</b>
-            <p>Output parameter <i>Alignment3D</i> is a Data Tree of all alignment 3D curves imported from .XML file. Second output parameter <i>AlignmentXY</i> is a Data Tree of all alignment (horizontal profiles) imported from .XML file. Horizontal
+            <p><b>CreateAlignment</b> component has six inputs and outputs. First input parameter, <i>AlignmentNames</i>, is list of selected alignment names. Second input, 
+            <i>ProfileNames</i>, is a Data Tree of selected profiles associated to each alignment. If above-mentioned alignment and profile order convention is not repsected 
+            and profile name does not match associated alignment name, warning message is shown. Input <i>StartSta</i> and <i>EndSta</i> are optional inputs. It is Data Tree of required start and end stationing for each
+            imported curve. If stationing inputs are not used, alignment curves are created in their whole length according to <a href="#part41">min./max.</a> valid stationing.</p>
+            <p> If start or end stationing input is defined by user, it must present as a Data Tree with value for each required profile. If user set stationing which is outside min./max. valid stationing warning message will appear and input will be ignored.
+            The parameter <i>Namespace</i> is mandatory and corresponds to the <b>AlignmentNames</b> output parameter <i>Namespaces</i>. It provides component with the info about .XML file so file does not have to be reopened. 
+            Last input parameter, <i>Step</i>, is optional and represents the distance between consecutive points which are used for alignment curve creation as well as calculation of transition curves points. If <i>Step</i> value  
+            is not defined, value defined in active <a href="#part5">setting profile</a> is used. Otherwise, input parameter overrides value defined in settings and can be set individually for each component. 
+            <b>Please note, if step value is too small it can increase computation time needed for alignment import. If step value is too large, it will decrease precision of imported curve.</b>
+            <p>Output parameter <i>Alignment3D</i> is a Data Tree of all alignment 3D curves imported from .XML file. Second output parameter, <i>AlignmentXY</i>, is a Data Tree of all alignment (horizontal profiles) imported from .XML file. Horizontal
             profile curves are placed in world XY plane according to its coordinates in .XML file. Output parameter <i>Profile</i> is a Data Tree of all profiles (vertical profiles) imported from .XML file. Vertical profile curves 
-            are located in world XZ plane. Their X coordinate correspond with the stationing and Z coordinate with the elevation stated in .XML file. <i>AlignmentXY</i> and <i>Profile</i> outputs are always imported in full length which is present in 
+            are located in world XZ plane. Their X coordinate correspond with the stationing and Z coordinate with the elevation stated in .XML file. The <i>AlignmentXY</i> and <i>Profile</i> outputs are always imported in full length, which is present in 
             .XML file. On the other hand, <i>Alignment3D</i> is imported only between <a href="#part41">min. and max.</a> stationing. Moreover, each vertical and horizontal profiles are imported as a list of sub curves which represent profile <a href="#part4">parts</a>.
-            Last parameter <i>Difference</i> is a Data Tree of values with calculated length deviation between <a href="#part41"> min./max.</a> stationing and length of particular <i>Alignment3D</i> curve projection to XY plane. 
-            If <i> Step </i> value is set correctly and import was performed correctly <i> Difference</i> should be close to zero. With greater values of <i>Step</i>, deviation can increase. 
-            It is up to the user to define limit which can be considered as sufficient.</p>      
+            Last parameter, <i>Difference</i>, is a Data Tree of values with calculated length deviation between <a href="#part41"> min./max.</a> stationing and length of particular <i>Alignment3D</i> curve projection to XY plane. 
+            If the <i> Step </i> value is set correctly, and import was performed correctly, <i> Difference</i> should be close to zero. With greater values of <i>Step</i>, deviation can increase. 
+            It is up to the user to define limit that can be considered sufficient.</p>      
             <video width="800" height="400" controls>
                 <source src="Videos/ImportAlignment.mp4" type="video/mp4">
                 <source src="Videos/ImportAlignment.ogg" type="video/ogg">              
