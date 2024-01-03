@@ -288,15 +288,15 @@
         <p>After clicking the <i>LandXML Settings</i> button in top menu bar, the plugin setingsoption dialog apperas. Here, you can set up different options for surface and alignment. Various import settings
         can be also created and saved for future use.</p>
         <img src="Pictures/OpenSettings.gif" alt="OpenSettings" width="600">
-        <p>Dialog consists of two tabs with various settings for surface and alignment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles default profile is always used.
-        New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile use buttons at the bottom of the dialog. 
+        <p>Dialog consists of two tabs with various settings for surface and alignment import. Top dropdown menu contains predefined and saved profiles. If user did not set any setting profiles, default profile is always used.
+        New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile, use the buttons at the bottom of the dialog. 
         <ul class="paragraph-list-bullets">
-            <li><b>Set</b>: apply current settings and keep dialog open. These settings will be lost if Rhino is closed.
-            <li><b>Set and close</b>: apply current settings and close dialog. These settings will be lost if Rhino is closed.
-            <li><b>Close</b>: close dialog.
-            <li><b>Load</b>: load saved settings according to selected profile in top dropdown menu.
-            <li><b>Set and save</b>: apply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed. 
-            <li><b>Delete</b>: delete current selected profile from saved profiles.                                          
+            <li><b>Set</b>: Apply current settings and keep dialog open. These settings will be lost if Rhino is closed.
+            <li><b>Set and close</b>: Apply current settings and close dialog. These settings will be lost if Rhino is closed.
+            <li><b>Close</b>: Close dialog.
+            <li><b>Load</b>: Load saved settings according to selected profile in top dropdown menu.
+            <li><b>Set and save</b>: Apply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed. 
+            <li><b>Delete</b>: Delete current selected profile from saved profiles.                                          
         </ul>
         </p>
         <video width="306" height="342" controls>
@@ -305,22 +305,22 @@
         </video>
         <p>In <i>Surface</i> tab following options are present:
             <ul class="paragraph-list-bullets">
-                <li><b>Mesh/Brep</b>: if checked surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.     
-                <li><b>Join to polysurface</b>: surface triangles/quads are joined into one single polysurface. Applied only if Brep are selected as a product of surface import. If surface is incorrectly defined in .XML file. Joining can result in multiple polysurfaces.
-                If surface consist of huge number of triangles/quads joining can be very demanding on computational time.  
-                <li><b>Tolerance</b>: tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
-                <li><b>Parallel</b>: if checked multiple processors are used for surface import.*
-                <li><b>Number of precessors</b>: max. number of processors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.** 
+                <li><b>Mesh/Brep</b>: If checked, surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.     
+                <li><b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
+                If surface consist of huge number of triangles/quads, joining can be very demanding on computational time.  
+                <li><b>Tolerance</b>: Tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                <li><b>Parallel</b>: If checked, multiple processors are used for surface import.*
+                <li><b>Number of precessors</b>: Max. number of processors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.** 
             </ul></p>
         <p> In <i>Alignment</i> tab following options are present:
             <ul class="paragraph-list-bullets">
-                <li><b>Initial curve division</b>: number of divisions of vertical profile curve during alignment point's XYZ coordinates calculation.***     
-                <li><b>Flow step</b>: default distance of consecutive alignment's points. Values is overwritten by <i>Step</i> input parameter if defined.
-                <li><b>Parabolic curve step</b>: distance (stationing difference) between points used during calculation of parabolic curve (vertical profile). If length of parabolic curve is smaller, step is automatically changed to 1/10 curve length. 
-                <li><b>Transition curve step</b>: distance (stationing difference) between points used during calculation of transition curves (horizontal profile). If length of transition curve is smaller, step is automatically changed to 1/10 curve length. 
-                <li><b>Tolerance Z</b>: tolerance used for Z coordination of alignment's defining points. If 0 is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
-                <li><b>Parallel</b>: if checked multiple processors are used for alignment import.*
-                <li><b>Number of processors</b>: max. number of precessors allowed for parallel computing. Applied only if parallel computing is allowed for alignment import.***                                                  
+                <li><b>Initial curve division</b>: Number of divisions of vertical profile curve during alignment point's XYZ coordinates calculation.***     
+                <li><b>Flow step</b>: Default distance of consecutive alignment's points. Values is overwritten by <i>Step</i> input parameter if defined.
+                <li><b>Parabolic curve step</b>: Distance (stationing difference) between points used during calculation of parabolic curve (vertical profile). If length of parabolic curve is smaller, step is automatically changed to 1/10 curve length. 
+                <li><b>Transition curve step</b>: Distance (stationing difference) between points used during calculation of transition curves (horizontal profile). If the length of transition curve is smaller, step is automatically changed to 1/10 curve length. 
+                <li><b>Tolerance Z</b>: Tolerance used for Z coordination of alignment's defining points. If 0 is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
+                <li><b>Parallel</b>: If checked multiple processors are used for alignment import.*
+                <li><b>Number of processors</b>: Max. number of precessors allowed for parallel computing. Applied only if parallel computing is allowed for alignment import.***                                                  
             </ul></p>
         <p>*Parallel computing is used in specific parts of import. Using parallel computing may not lead to speed up import. See time result under the <b> CreateAlignment/CreateSurface</b> component.</p>
         <p>**If value equal or smaller then, 0 is inserted, maximum number of processors is used.</p>
@@ -350,10 +350,6 @@
         <h2>Sample files</h2>
         <p>Sample <a href="https://github.com/OndrejJanota91/EndPointsOnline/tree/main/SampleFiles">files</a> on GitHub.</p>
     </section>
-<a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=jc28as2t5j2jgzqwmudr7j8hlhxlwunx" border="0" title="website counter" alt="website counter"></a>
-<!--
-New counter after release.
 <a href="https://www.freecounterstat.com" title="hit counters"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=eghtsgz3f672y9q8e52y5zze6pu29jdt" border="0" title="hit counters" alt="hit counters"></a>
--->
 </body>
 </html>
