@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\CSS",
-    "\\FlowCharts",
-    "\\OlderVersions",
-    "\\Pictures"
+    "\\OlderVersions\\v1.0",
+    "\\OlderVersions\\v1.1",
+    "\\Pictures",
+    "\\Videos"
   ],
-  "SelectedNode": "\\Pictures\\OG_Image2.png",
+  "SelectedNode": "\\LicenseAndPricing.html",
   "PreviewInSolutionExplorer": false
 }
