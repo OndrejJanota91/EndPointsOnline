@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FlowCharts",
+    "\\FlowCharts\\v1.2",
+    "\\OlderVersions",
+    "\\OlderVersions\\v1.2.2",
+    "\\Pictures"
   ],
-  "SelectedNode": "\\EULA.html",
+  "SelectedNode": "\\FlowCharts\\v1.2\\IFCExportFlowChart.drawio",
   "PreviewInSolutionExplorer": false
 }
