@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LandXML xmlns="http://www.landxml.org/schema/LandXML-1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.landxml.org/schema/LandXML-1.2 http://www.landxml.org/schema/LandXML-1.2/LandXML-1.2.xsd" language="English (United Kingdom)" date="2023-08-09+02:00" time="12:54:53+02:00" version="1.2" readOnly="false">
+  <Project name="Untitled" desc="A brief project description, a long name or a code." state="proposed"/>
+  <Application name="Quadri" manufacturer="Trimble Solutions Sandvika AS" manufacturerURL="http://www.novapoint.com" version="Quadri(25.0.40375.0)" timeStamp="2023-05-08T00:38:22">
+    <Author createdBy="ANLK"/>
+  </Application>
+  <Units>
+    <Metric angularUnit="radians" areaUnit="squareMeter" diameterUnit="meter" directionUnit="radians" elevationUnit="meter" flowUnit="cubicMeterSecond" heightUnit="meter" latLongAngularUnit="radians" linearUnit="meter" pressureUnit="mmHG" temperatureUnit="celsius" velocityUnit="kilometersPerHour" volumeUnit="cubicMeter" widthUnit="meter"/>
+  </Units>
+  <CoordinateSystem rotationAngle="0.000000" epsgCode="5111" horizontalDatum="EPSG:5111" verticalDatum="EPSG:5941"/>
+  <Alignments name="Alignments">
+    <Alignment name="J001-CL" state="proposed" staStart="122438.497000" length="1425.224749">
+      <CoordGeom>
+        <Curve delta="-0.095866" radius="900.000000" rot="ccw" chord="86.246750" dirStart="3.969011" dirEnd="3.873145" staStart="122438.497000" length="86.279785">
+          <Start>1311490.570716 78179.581975</Start>
+          <End>1311429.225534 78118.957966</End>
+          <Center>1310828.002540 78788.682470</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="900.000000" radiusEnd="450.000000" constant="158.745079" rot="ccw" dirStart="3.873145" dirEnd="3.826478" staStart="122524.776785" length="28.000000">
+          <Start>1311429.225534 78118.957966</Start>
+          <PI>1311417.648159 78108.564761</PI>
+          <End>1311408.008161 78100.691062</End>
+        </Spiral>
+        <Curve delta="-0.157886" radius="450.000000" rot="ccw" chord="70.974943" dirStart="3.826478" dirEnd="3.668592" staStart="122552.776785" length="71.048715">
+          <Start>1311408.008161 78100.691062</Start>
+          <End>1311349.669199 78060.268198</End>
+          <Center>1311123.345171 78449.212197</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="450.000000" radiusEnd="INF" constant="143.874946" rot="ccw" dirStart="3.668592" dirEnd="3.617481" staStart="122623.825501" length="46.000000">
+          <Start>1311349.669199 78060.268198</Start>
+          <PI>1311336.412994 78052.554497</PI>
+          <End>1311309.150091 78038.503304</End>
+        </Spiral>
+        <Line dir="3.617481" staStart="122669.825501" length="49.159463">
+          <Start>1311309.150091 78038.503304</Start>
+          <End>1311265.452931 78015.981960</End>
+        </Line>
+        <Curve delta="-0.015661" radius="2600.000002" rot="ccw" chord="40.718156" dirStart="3.617481" dirEnd="3.601820" staStart="122718.984964" length="40.718572">
+          <Start>1311265.452931 78015.981960</Start>
+          <End>1311229.114170 77997.611801</End>
+          <Center>1310074.319161 80327.085668</Center>
+        </Curve>
+        <Line dir="3.601820" staStart="122759.703536" length="97.998107">
+          <Start>1311229.114170 77997.611801</Start>
+          <End>1311141.312620 77954.085753</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="295.000000" constant="138.473824" rot="cw" dirStart="3.601820" dirEnd="3.711990" staStart="122857.701643" length="65.000000">
+          <Start>1311141.312620 77954.085753</Start>
+          <PI>1311102.463344 77934.826919</PI>
+          <End>1311084.205692 77923.114111</End>
+        </Spiral>
+        <Curve delta="0.375378" radius="295.000000" rot="cw" chord="110.087437" dirStart="3.711990" dirEnd="4.087367" staStart="122922.701643" length="110.736447">
+          <Start>1311084.205692 77923.114111</Start>
+          <End>1311004.265328 77847.425393</End>
+          <Center>1311243.495725 77674.816537</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="295.000000" radiusEnd="400.000000" constant="106.009883" rot="cw" dirStart="4.087367" dirEnd="4.116817" staStart="123033.438090" length="10.000000">
+          <Start>1311004.265328 77847.425393</Start>
+          <PI>1311001.486877 77843.574548</PI>
+          <End>1310998.540505 77839.226664</End>
+        </Spiral>
+        <Curve delta="0.055660" radius="400.000000" rot="cw" chord="22.261047" dirStart="4.116817" dirEnd="4.172476" staStart="123043.438090" length="22.263921">
+          <Start>1310998.540505 77839.226664</Start>
+          <End>1310986.570070 77820.457996</End>
+          <Center>1311329.671512 77614.833579</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="400.000000" radiusEnd="250.000000" constant="100.000000" rot="cw" dirStart="4.172476" dirEnd="4.221226" staStart="123065.702011" length="15.000000">
+          <Start>1310986.570070 77820.457996</Start>
+          <PI>1310982.417272 77813.528706</PI>
+          <End>1310979.151310 77807.422763</End>
+        </Spiral>
+        <Curve delta="0.510063" radius="250.000000" rot="cw" chord="126.137941" dirStart="4.221226" dirEnd="4.731289" staStart="123080.702011" length="127.515746">
+          <Start>1310979.151310 77807.422763</Start>
+          <End>1310949.642238 77684.785107</End>
+          <Center>1311199.597586 77689.509917</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="250.000000" radiusEnd="INF" constant="117.260394" rot="cw" dirStart="4.731289" dirEnd="4.841289" staStart="123208.217756" length="55.000000">
+          <Start>1310949.642238 77684.785107</Start>
+          <PI>1310949.989124 77666.433899</PI>
+          <End>1310954.705384 77630.048351</End>
+        </Spiral>
+        <Line dir="4.841289" staStart="123263.217756" length="368.436527">
+          <Start>1310954.705384 77630.048351</Start>
+          <End>1311002.065581 77264.668430</End>
+        </Line>
+        <Curve delta="0.072583" radius="465.000000" rot="cw" chord="33.743585" dirStart="4.841289" dirEnd="4.913872" staStart="123631.654284" length="33.750993">
+          <Start>1311002.065581 77264.668430</Start>
+          <End>1311007.614426 77231.384202</End>
+          <Center>1311463.207869 77324.441254</Center>
+        </Curve>
+        <Line dir="4.913872" staStart="123665.405277" length="10.801046">
+          <Start>1311007.614426 77231.384202</Start>
+          <End>1311009.775961 77220.801652</End>
+        </Line>
+        <Curve delta="-0.032156" radius="465.000000" rot="ccw" chord="14.951733" dirStart="4.913872" dirEnd="4.881716" staStart="123676.206323" length="14.952377">
+          <Start>1311009.775961 77220.801652</Start>
+          <End>1311012.532237 77206.106168</End>
+          <Center>1310554.182518 77127.744600</Center>
+        </Curve>
+        <Line dir="4.881716" staStart="123691.158700" length="172.563049">
+          <Start>1311012.532237 77206.106168</Start>
+          <End>1311041.612475 77036.011060</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J001-CL" staStart="122438.497000">
+        <ProfAlign name="J001-CL">
+          <PVI>122450.000000 126.603529</PVI>
+          <CircCurve length="10.000030" radius="10000.000004">122575.040259 126.766082</CircCurve>
+          <CircCurve length="33.000935" radius="9999.999999">122994.704902 126.891979</CircCurve>
+          <CircCurve length="30.000977" radius="10000.000000">123125.359996 126.500000</CircCurve>
+          <PVI>123863.721749 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J001-CL" gauge="1.500000">
+        <CantStation station="122438.497000" speed="90.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122524.776785" speed="90.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122552.776785" speed="90.000000" appliedCant="100.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122623.825501" speed="90.000000" appliedCant="100.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122669.825501" speed="90.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="122759.703536" speed="288.000000"/>
+        <CantStation station="122857.701643" speed="80.000000" appliedCant="0.000000" curvature="cw" adverse="false"/>
+        <CantStation station="122922.701643" speed="70.000000" appliedCant="135.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123033.438090" speed="70.000000" appliedCant="135.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123043.438090" speed="70.000000" appliedCant="110.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123065.702011" speed="70.000000" appliedCant="110.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123080.702011" speed="70.000000" appliedCant="137.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123208.217756" speed="70.000000" appliedCant="137.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123263.217756" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123691.158700" speed="468.000000"/>
+        <CantStation station="123863.721749" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J002-CL" state="proposed" staStart="122454.913000" length="1720.777971">
+      <CoordGeom>
+        <Curve delta="-0.146786" radius="411.000000" rot="ccw" chord="60.274885" dirStart="3.950772" dirEnd="3.803986" staStart="122454.913000" length="60.329031">
+          <Start>1311479.351528 78167.599145</Start>
+          <End>1311434.669563 78127.144433</End>
+          <Center>1311181.902156 78451.227197</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="411.000000" radiusEnd="INF" constant="83.588277" rot="ccw" dirStart="3.803986" dirEnd="3.783305" staStart="122515.242031" length="17.000000">
+          <Start>1311434.669563 78127.144433</Start>
+          <PI>1311430.201087 78123.659257</PI>
+          <End>1311421.122066 78116.875336</End>
+        </Spiral>
+        <Line dir="3.783305" staStart="122532.242031" length="19.668215">
+          <Start>1311421.122066 78116.875336</Start>
+          <End>1311405.366408 78105.102575</End>
+        </Line>
+        <Curve delta="-0.038218" radius="500.000000" rot="ccw" chord="19.107885" dirStart="3.783305" dirEnd="3.745087" staStart="122551.910246" length="19.109048">
+          <Start>1311405.366408 78105.102575</Start>
+          <End>1311389.843865 78093.959778</End>
+          <Center>1311106.082480 78505.638629</Center>
+        </Curve>
+        <Curve delta="-0.020943" radius="1399.999999" rot="ccw" chord="29.320355" dirStart="3.745087" dirEnd="3.724143" staStart="122571.019293" length="29.320891">
+          <Start>1311389.843865 78093.959778</Start>
+          <End>1311365.529802 78077.573517</End>
+          <Center>1310595.311987 79246.660560</Center>
+        </Curve>
+        <Line dir="3.724143" staStart="122600.340184" length="14.903848">
+          <Start>1311365.529802 78077.573517</Start>
+          <End>1311353.084162 78069.374081</End>
+        </Line>
+        <Curve delta="-0.118982" radius="460.000000" rot="ccw" chord="54.699591" dirStart="3.724143" dirEnd="3.605161" staStart="122615.244032" length="54.731870">
+          <Start>1311353.084162 78069.374081</Start>
+          <End>1311305.698181 78042.049842</End>
+          <Center>1311100.012594 78453.502682</Center>
+        </Curve>
+        <Line dir="3.605161" staStart="122669.975902" length="199.834270">
+          <Start>1311305.698181 78042.049842</Start>
+          <End>1311126.953882 77952.695431</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="326.000000" constant="93.818975" rot="cw" dirStart="3.605161" dirEnd="3.646572" staStart="122869.810172" length="27.000000">
+          <Start>1311126.953882 77952.695431</Start>
+          <PI>1311110.852107 77944.646141</PI>
+          <End>1311102.974159 77940.291327</End>
+        </Spiral>
+        <Curve delta="0.596339" radius="326.000000" rot="cw" chord="191.538681" dirStart="3.646572" dirEnd="4.242911" staStart="122896.810172" length="194.406524">
+          <Start>1311102.974159 77940.291327</Start>
+          <End>1310969.961181 77802.470377</End>
+          <Center>1311260.689466 77654.981176</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="326.000000" radiusEnd="250.000000" constant="98.241110" rot="cw" dirStart="4.242911" dirEnd="4.274715" staStart="123091.216696" length="9.000000">
+          <Start>1310969.961181 77802.470377</Start>
+          <PI>1310967.835573 77798.280413</PI>
+          <End>1310966.012045 77794.383506</End>
+        </Spiral>
+        <Curve delta="0.409077" radius="250.000000" rot="cw" chord="101.557696" dirStart="4.274715" dirEnd="4.683792" staStart="123100.216696" length="102.269296">
+          <Start>1310966.012045 77794.383506</Start>
+          <End>1310942.549212 77695.573278</End>
+          <Center>1311192.446994 77688.424959</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="250.000000" radiusEnd="275.000000" constant="104.880885" rot="cw" dirStart="4.683792" dirEnd="4.699065" staStart="123202.485992" length="4.000000">
+          <Start>1310942.549212 77695.573278</Start>
+          <PI>1310942.492932 77693.605791</PI>
+          <End>1310942.465860 77691.574186</End>
+        </Spiral>
+        <Curve delta="0.126054" radius="275.000000" rot="cw" chord="34.641963" dirStart="4.699065" dirEnd="4.825119" staStart="123206.485992" length="34.664909">
+          <Start>1310942.465860 77691.574186</Start>
+          <End>1310944.186949 77656.975003</End>
+          <Center>1311217.441449 77687.910071</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="275.000000" radiusEnd="INF" constant="92.330927" rot="cw" dirStart="4.825119" dirEnd="4.881482" staStart="123241.150901" length="31.000000">
+          <Start>1310944.186949 77656.975003</Start>
+          <PI>1310945.349710 77646.704150</PI>
+          <End>1310948.828256 77626.328846</End>
+        </Spiral>
+        <Line dir="4.881482" staStart="123272.150901" length="29.930489">
+          <Start>1310948.828256 77626.328846</Start>
+          <End>1310953.865221 77596.825233</End>
+        </Line>
+        <Curve delta="-0.040193" radius="499.999999" rot="ccw" chord="20.095166" dirStart="4.881482" dirEnd="4.841289" staStart="123302.081390" length="20.096519">
+          <Start>1310953.865221 77596.825233</Start>
+          <End>1310956.848272 77576.952712</End>
+          <Center>1310460.996350 77512.680858</Center>
+        </Curve>
+        <Line dir="4.841289" staStart="123322.177909" length="273.550770">
+          <Start>1310956.848272 77576.952712</Start>
+          <End>1310992.011502 77305.671362</End>
+        </Line>
+        <Curve delta="-0.037138" radius="450.000000" rot="ccw" chord="16.710981" dirStart="4.841289" dirEnd="4.804152" staStart="123595.728679" length="16.711942">
+          <Start>1310992.011502 77305.671362</Start>
+          <End>1310993.851512 77289.061989</End>
+          <Center>1310545.744772 77247.826693</Center>
+        </Curve>
+        <Line dir="4.804152" staStart="123612.440620" length="14.917169">
+          <Start>1310993.851512 77289.061989</Start>
+          <End>1310995.218432 77274.207580</End>
+        </Line>
+        <Curve delta="0.078506" radius="450.000000" rot="cw" chord="35.318666" dirStart="4.804152" dirEnd="4.882658" staStart="123627.357789" length="35.327737">
+          <Start>1310995.218432 77274.207580</Start>
+          <End>1310999.832507 77239.191606</End>
+          <Center>1311443.325172 77315.442877</Center>
+        </Curve>
+        <Line dir="4.882658" staStart="123662.685527" length="91.262482">
+          <Start>1310999.832507 77239.191606</Start>
+          <End>1311015.296685 77149.248847</End>
+        </Line>
+        <Curve delta="-0.041368" radius="2004.700000" rot="ccw" chord="82.925389" dirStart="4.882658" dirEnd="4.841289" staStart="123753.948009" length="82.931302">
+          <Start>1311015.296685 77149.248847</Start>
+          <End>1311027.654838 77067.249480</End>
+          <Center>1309039.586141 76809.557908</Center>
+        </Curve>
+        <Line dir="4.841289" staStart="123836.879312" length="118.736544">
+          <Start>1311027.654838 77067.249480</Start>
+          <End>1311042.917673 76949.497993</End>
+        </Line>
+        <Curve delta="0.339035" radius="300.000000" rot="cw" chord="101.223988" dirStart="4.841289" dirEnd="5.180324" staStart="123955.615856" length="101.710416">
+          <Start>1311042.917673 76949.497993</Start>
+          <End>1311072.678359 76852.747812</End>
+          <Center>1311340.428827 76988.061105</Center>
+        </Curve>
+        <Curve delta="0.339239" radius="220.000000" rot="cw" chord="74.275197" dirStart="5.180324" dirEnd="5.519563" staStart="124057.326272" length="74.632555">
+          <Start>1311072.678359 76852.747812</Start>
+          <End>1311116.889345 76793.063697</End>
+          <Center>1311269.028702 76951.977560</Center>
+        </Curve>
+        <Line dir="5.519563" staStart="124131.958827" length="10.534460">
+          <Start>1311116.889345 76793.063697</Start>
+          <End>1311124.498762 76785.778670</End>
+        </Line>
+        <Curve delta="0.110659" radius="300.000000" rot="cw" chord="33.180749" dirStart="5.519563" dirEnd="5.630222" staStart="124142.493287" length="33.197684">
+          <Start>1311124.498762 76785.778670</Start>
+          <End>1311149.698662 76764.193325</End>
+          <Center>1311331.961521 77002.479393</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J002-CL" staStart="122454.913000">
+        <ProfAlign name="J002-CL">
+          <PVI>122454.913000 126.609917</PVI>
+          <CircCurve length="10.000768" radius="9999.999992">122616.042334 126.819398</CircCurve>
+          <CircCurve length="32.999910" radius="10000.000000">122984.592668 126.929963</CircCurve>
+          <CircCurve length="29.999910" radius="10000.000000">123127.913592 126.500000</CircCurve>
+          <CircCurve length="25.007869" radius="10000.000000">123840.848394 126.500000</CircCurve>
+          <CircCurve length="16.415384" radius="4000.000000">123933.219125 126.269000</CircCurve>
+          <CircCurve length="15.991926" radius="2500.000000">124066.089979 126.482000</CircCurve>
+          <CircCurve length="19.999573" radius="2500.000000">124113.881662 126.864333</CircCurve>
+          <PVI>124175.690971 126.864333</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J002-CL" gauge="1.500000">
+        <CantStation station="122454.913000" speed="60.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122515.242031" speed="60.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122532.242031" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122869.810172" speed="60.000000" appliedCant="0.000000" curvature="cw" adverse="false"/>
+        <CantStation station="122896.810172" speed="60.000000" appliedCant="55.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123091.216696" speed="60.000000" appliedCant="55.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123100.216696" speed="60.000000" appliedCant="70.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123202.485992" speed="60.000000" appliedCant="70.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123206.485992" speed="60.000000" appliedCant="65.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123241.150901" speed="60.000000" appliedCant="65.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123272.150901" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123955.615856" speed="144.000000"/>
+        <CantStation station="124175.690971" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J003-CL" state="proposed" staStart="119474.432000" length="5391.418375">
+      <CoordGeom>
+        <Curve delta="0.433060" radius="2500.000000" rot="cw" chord="1074.210266" dirStart="5.753526" dirEnd="6.186586" staStart="119474.432000" length="1082.650519">
+          <Start>1307442.735244 78910.321578</Start>
+          <End>1308464.711185 78579.424505</End>
+          <Center>1308705.834421 81067.769253</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="2500.000000" radiusEnd="INF" constant="866.025404" rot="cw" dirStart="6.186586" dirEnd="6.246586" staStart="120557.082519" length="300.000000">
+          <Start>1308464.711185 78579.424505</Start>
+          <PI>1308564.279113 78569.776268</PI>
+          <End>1308764.182878 78562.456629</End>
+        </Spiral>
+        <Line dir="6.246586" staStart="120857.082519" length="329.907245">
+          <Start>1308764.182878 78562.456629</Start>
+          <End>1309093.869189 78550.384898</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="1604.700000" constant="506.707016" rot="ccw" dirStart="6.246586" dirEnd="6.196732" staStart="121186.989763" length="160.000000">
+          <Start>1309093.869189 78550.384898</Start>
+          <PI>1309200.478303 78546.481319</PI>
+          <End>1309253.625030 78541.875142</End>
+        </Spiral>
+        <Curve delta="-0.448640" radius="1604.700000" rot="ccw" chord="713.910188" dirStart="6.196732" dirEnd="5.748092" staStart="121346.989763" length="719.932790">
+          <Start>1309253.625030 78541.875143</Start>
+          <End>1309933.337102 78323.565143</End>
+          <Center>1309115.066628 76943.168272</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="1604.700000" radiusEnd="INF" constant="620.586819" rot="ccw" dirStart="5.748092" dirEnd="5.673312" staStart="122066.922553" length="240.000000">
+          <Start>1309933.337102 78323.565143</Start>
+          <PI>1310002.191465 78282.749712</PI>
+          <End>1310133.385184 78191.080656</End>
+        </Spiral>
+        <Line dir="5.673312" staStart="122306.922553" length="708.573392">
+          <Start>1310133.385184 78191.080656</Start>
+          <End>1310714.217320 77785.235511</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="500.000000" constant="225.831796" rot="ccw" dirStart="5.673312" dirEnd="5.571312" staStart="123015.495945" length="102.000000">
+          <Start>1310714.217320 77785.235511</Start>
+          <PI>1310769.988722 77746.266330</PI>
+          <End>1310795.756995 77724.033684</End>
+        </Spiral>
+        <Curve delta="-0.626654" radius="500.000000" rot="ccw" chord="308.225388" dirStart="5.571312" dirEnd="4.944658" staStart="123117.495945" length="313.327033">
+          <Start>1310795.756995 77724.033684</Start>
+          <End>1310955.703628 77460.556998</End>
+          <Center>1310469.130301 77345.464003</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="500.000000" radiusEnd="INF" constant="176.068169" rot="ccw" dirStart="4.944658" dirEnd="4.882658" staStart="123430.822978" length="62.000000">
+          <Start>1310955.703628 77460.556998</Start>
+          <PI>1310960.462548 77440.437934</PI>
+          <End>1310967.467779 77399.694107</End>
+        </Spiral>
+        <Line dir="4.882658" staStart="123492.822978" length="254.945889">
+          <Start>1310967.467779 77399.694107</Start>
+          <End>1311010.667663 77148.434925</End>
+        </Line>
+        <Curve delta="-0.041379" radius="2000.000000" rot="ccw" chord="82.751487" dirStart="4.882658" dirEnd="4.841279" staStart="123747.768867" length="82.757391">
+          <Start>1311010.667663 77148.434925</Start>
+          <End>1311022.999479 77066.607454</End>
+          <Center>1309039.589153 76809.540390</Center>
+        </Curve>
+        <Line dir="4.841279" staStart="123830.526259" length="148.163382">
+          <Start>1311022.999479 77066.607454</Start>
+          <End>1311042.043442 76919.673063</End>
+        </Line>
+        <Curve delta="0.047248" radius="250.000000" rot="cw" chord="11.810929" dirStart="4.841279" dirEnd="4.888527" staStart="123978.689641" length="11.812027">
+          <Start>1311042.043442 76919.673063</Start>
+          <End>1311043.837801 76907.999233</End>
+          <Center>1311289.969733 76951.806446</Center>
+        </Curve>
+        <Curve delta="0.741698" radius="190.000000" rot="cw" chord="137.714657" dirStart="4.888527" dirEnd="5.630225" staStart="123990.501668" length="140.922679">
+          <Start>1311043.837801 76907.999233</Start>
+          <End>1311115.465469 76790.377790</End>
+          <Center>1311230.898069 76941.292715</Center>
+        </Curve>
+        <Line dir="5.630225" staStart="124131.424347" length="84.276011">
+          <Start>1311115.465469 76790.377790</Start>
+          <End>1311182.404984 76739.176742</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="250.000000" constant="90.829511" rot="ccw" dirStart="5.630225" dirEnd="5.564225" staStart="124215.700357" length="33.000000">
+          <Start>1311182.404984 76739.176742</Start>
+          <PI>1311199.883332 76725.807811</PI>
+          <End>1311208.164171 76718.560179</End>
+        </Spiral>
+        <Curve delta="-0.189814" radius="250.000000" rot="ccw" chord="47.382283" dirStart="5.564225" dirEnd="5.374412" staStart="124248.700357" length="47.453489">
+          <Start>1311208.164171 76718.560179</Start>
+          <End>1311240.701235 76684.115728</End>
+          <Center>1311043.513598 76530.437376</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="250.000000" radiusEnd="300.000000" constant="86.602540" rot="ccw" dirStart="5.374412" dirEnd="5.356078" staStart="124296.153847" length="5.000000">
+          <Start>1311240.701235 76684.115728</Start>
+          <PI>1311242.191492 76682.203551</PI>
+          <End>1311243.737377 76680.143179</End>
+        </Spiral>
+        <Curve delta="-0.229068" radius="300.000000" rot="ccw" chord="68.570126" dirStart="5.356078" dirEnd="5.127011" staStart="124301.153847" length="68.720273">
+          <Start>1311243.737377 76680.143179</Start>
+          <End>1311278.351883 76620.951135</End>
+          <Center>1311003.771243 76500.098033</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="300.000000" radiusEnd="246.000000" constant="82.663978" rot="ccw" dirStart="5.127011" dirEnd="5.108515" staStart="124369.874119" length="5.000000">
+          <Start>1311278.351883 76620.951135</Start>
+          <PI>1311279.392222 76618.587463</PI>
+          <End>1311280.325067 76616.357026</End>
+        </Spiral>
+        <Curve delta="-0.383211" radius="246.000000" rot="ccw" chord="93.694089" dirStart="5.108515" dirEnd="4.725304" staStart="124374.874119" length="94.269847">
+          <Start>1311280.325067 76616.357026</Start>
+          <End>1311299.354104 76524.615660</End>
+          <Center>1311053.374619 76521.438669</Center>
+        </Curve>
+        <Curve delta="-0.089323" radius="600.000003" rot="ccw" chord="53.576183" dirStart="4.725304" dirEnd="4.635981" staStart="124469.143967" length="53.593998">
+          <Start>1311299.354104 76524.615660</Start>
+          <End>1311297.653522 76471.066474</End>
+          <Center>1310699.404139 76516.866900</Center>
+        </Curve>
+        <Curve delta="-0.066247" radius="249.999994" rot="ccw" chord="16.558710" dirStart="4.635981" dirEnd="4.569734" staStart="124522.737965" length="16.561739">
+          <Start>1311297.653522 76471.066474</Start>
+          <End>1311295.843440 76454.606993</End>
+          <Center>1311048.382953 76490.149984</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="249.999994" radiusEnd="INF" constant="63.245552" rot="ccw" dirStart="4.569734" dirEnd="4.537734" staStart="124539.299703" length="16.000000">
+          <Start>1311295.843440 76454.606993</Start>
+          <PI>1311295.085116 76449.327321</PI>
+          <End>1311293.231484 76438.822369</End>
+        </Spiral>
+        <Line dir="4.537734" staStart="124555.299703" length="25.000446">
+          <Start>1311293.231484 76438.822369</Start>
+          <End>1311288.887188 76414.202267</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="340.000000" constant="116.619038" rot="cw" dirStart="4.537734" dirEnd="4.596557" staStart="124580.300149" length="40.000000">
+          <Start>1311288.887188 76414.202267</Start>
+          <PI>1311284.252515 76387.936533</PI>
+          <End>1311282.711035 76374.688180</End>
+        </Spiral>
+        <Curve delta="0.135771" radius="340.000000" rot="cw" chord="46.126704" dirStart="4.596557" dirEnd="4.732328" staStart="124620.300149" length="46.162152">
+          <Start>1311282.711035 76374.688180</Start>
+          <End>1311280.500278 76328.614485</End>
+          <Center>1311620.432693 76335.393376</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="340.000000" radiusEnd="613.000000" constant="161.111978" rot="cw" dirStart="4.732328" dirEnd="4.810061" staStart="124666.462301" length="34.000000">
+          <Start>1311280.500278 76328.614485</Start>
+          <PI>1311280.807022 76313.232571</PI>
+          <End>1311282.623938 76294.689495</End>
+        </Spiral>
+        <Curve delta="0.060344" radius="613.000000" rot="cw" chord="36.985211" dirStart="4.810061" dirEnd="4.870405" staStart="124700.462301" length="36.990823">
+          <Start>1311282.623938 76294.689495</Start>
+          <End>1311287.339393 76258.006116</End>
+          <Center>1311892.702325 76354.467098</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="613.000000" radiusEnd="674.000000" constant="217.743043" rot="cw" dirStart="4.870405" dirEnd="4.881307" staStart="124737.453125" length="7.000000">
+          <Start>1311287.339393 76258.006116</Start>
+          <PI>1311287.881453 76254.604294</PI>
+          <End>1311288.479161 76251.099565</End>
+        </Spiral>
+        <Curve delta="0.123787" radius="674.000000" rot="cw" chord="83.379405" dirStart="4.881307" dirEnd="5.005094" staStart="124744.453125" length="83.432664">
+          <Start>1311288.479161 76251.099565</Start>
+          <End>1311307.553689 76169.931298</End>
+          <Center>1311952.886270 76364.409729</Center>
+        </Curve>
+        <Curve delta="0.058407" radius="650.000000" rot="cw" chord="37.959190" dirStart="5.005094" dirEnd="5.063501" staStart="124827.885789" length="37.964586">
+          <Start>1311307.553689 76169.931298</Start>
+          <End>1311319.563144 76133.921951</End>
+          <Center>1311929.907069 76357.484681</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J003-CL" staStart="119474.432000">
+        <ProfAlign name="J003-CL">
+          <PVI>119483.134000 168.783000</PVI>
+          <CircCurve length="212.534475" radius="15000.000000">122361.274419 128.000000</CircCurve>
+          <CircCurve length="39.999787" radius="9999.999999">122925.000000 128.000000</CircCurve>
+          <CircCurve length="39.999787" radius="10000.000000">123300.000000 126.500000</CircCurve>
+          <CircCurve length="49.999583" radius="10000.000000">123941.943962 126.500000</CircCurve>
+          <CircCurve length="49.999583" radius="10000.000000">124014.743962 126.864000</CircCurve>
+          <CircCurve length="35.999892" radius="11999.999999">124293.700216 126.864000</CircCurve>
+          <CircCurve length="43.999901" radius="10000.000000">124443.632492 127.313797</CircCurve>
+          <CircCurve length="13.999991" radius="10000.000002">124532.773083 127.189000</CircCurve>
+          <PVI>124579.135000 127.189000</PVI>
+          <PVI>124714.333000 127.496054</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J003-CL" gauge="1.500000">
+        <CantStation station="119474.432000" speed="200.000000" appliedCant="80.000000" curvature="cw" adverse="false"/>
+        <CantStation station="120557.082519" speed="200.000000" appliedCant="80.000000" curvature="cw" adverse="false"/>
+        <CantStation station="120857.082519" speed="200.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121186.989763" speed="170.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121346.989763" speed="170.000000" appliedCant="85.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122066.922553" speed="170.000000" appliedCant="85.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122306.922553" speed="170.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123015.495945" speed="90.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123117.495945" speed="90.000000" appliedCant="95.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123430.822978" speed="90.000000" appliedCant="95.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123492.822978" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123978.689641" speed="144.000000"/>
+        <SpeedStation station="123990.501668" speed="126.000000"/>
+        <SpeedStation station="124131.424347" speed="180.000000"/>
+        <CantStation station="124215.700357" speed="50.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124248.700357" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124296.153846" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124301.153846" speed="50.000000" appliedCant="35.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124369.874119" speed="50.000000" appliedCant="35.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124374.874119" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124539.299703" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124555.299703" speed="50.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124865.850375" speed="50.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J004-CL" state="proposed" staStart="123584.217000" length="492.166770">
+      <CoordGeom>
+        <Curve delta="-0.161518" radius="300.000000" rot="ccw" chord="48.402815" dirStart="4.882658" dirEnd="4.721140" staStart="123584.217000" length="48.455469">
+          <Start>1310982.945405 77309.673132</Start>
+          <End>1310987.272143 77261.464089</End>
+          <Center>1310687.283628 77258.838952</Center>
+        </Curve>
+        <Line dir="4.721140" staStart="123632.672469" length="6.515143">
+          <Start>1310987.272143 77261.464089</Start>
+          <End>1310987.329153 77254.949196</End>
+        </Line>
+        <Curve delta="0.110657" radius="300.000001" rot="cw" chord="33.180232" dirStart="4.721140" dirEnd="4.831797" staStart="123639.187612" length="33.197166">
+          <Start>1310987.329153 77254.949196</Start>
+          <End>1310989.453860 77221.837062</End>
+          <Center>1311287.317668 77257.574333</Center>
+        </Curve>
+        <Line dir="4.831797" staStart="123672.384779" length="149.995492">
+          <Start>1310989.453860 77221.837062</Start>
+          <End>1311007.321959 77072.909634</End>
+        </Line>
+        <Curve delta="0.007370" radius="5000.000001" rot="cw" chord="36.851100" dirStart="4.831797" dirEnd="4.839167" staStart="123822.380271" length="36.851184">
+          <Start>1311007.321959 77072.909634</Start>
+          <End>1311011.846621 77036.337363</End>
+          <Center>1315971.718742 77668.530813</Center>
+        </Curve>
+        <Line dir="4.839167" staStart="123859.231454" length="92.720757">
+          <Start>1311011.846621 77036.337363</Start>
+          <End>1311023.570112 76944.360743</End>
+        </Line>
+        <Curve delta="0.481189" radius="190.000000" rot="cw" chord="90.546436" dirStart="4.839167" dirEnd="5.320356" staStart="123951.952212" length="91.425930">
+          <Start>1311023.570112 76944.360743</Start>
+          <End>1311056.091184 76859.856087</End>
+          <Center>1311212.045253 76968.384095</Center>
+        </Curve>
+        <Line dir="5.320356" staStart="124043.378141" length="33.005629">
+          <Start>1311056.091184 76859.856087</Start>
+          <End>1311074.944001 76832.764708</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J004-CL" staStart="123584.217000">
+        <ProfAlign name="J004-CL">
+          <PVI>123584.217000 126.500000</PVI>
+          <CircCurve length="49.999583" radius="10000.000000">123944.204566 126.500000</CircCurve>
+          <CircCurve length="49.999583" radius="10000.000000">124017.004566 126.864000</CircCurve>
+          <PVI>124076.383770 126.864000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J004-CL" gauge="1.500000">
+        <CantStation station="123584.217000" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124076.383770" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J005-CL" state="proposed" staStart="123517.985000" length="614.366052">
+      <CoordGeom>
+        <Curve delta="0.168989" radius="300.000000" rot="cw" chord="50.636428" dirStart="4.815365" dirEnd="4.984354" staStart="123517.985000" length="50.696730">
+          <Start>1310959.028349 77365.061823</Start>
+          <End>1310968.465671 77315.312603</End>
+          <Center>1311257.439152 77395.899991</Center>
+        </Curve>
+        <Line dir="4.984354" staStart="123568.681730" length="9.997319">
+          <Start>1310968.465671 77315.312603</Start>
+          <End>1310971.151197 77305.682737</End>
+        </Line>
+        <Curve delta="-0.152557" radius="300.000000" rot="ccw" chord="45.722761" dirStart="4.984354" dirEnd="4.831797" staStart="123578.679049" length="45.767130">
+          <Start>1310971.151197 77305.682737</Start>
+          <End>1310980.041522 77260.832620</End>
+          <Center>1310682.177715 77225.095349</Center>
+        </Curve>
+        <Line dir="4.831797" staStart="123624.446179" length="189.851934">
+          <Start>1310980.041522 77260.832620</Start>
+          <End>1311002.657489 77072.332554</End>
+        </Line>
+        <Curve delta="0.007370" radius="4999.999983" rot="cw" chord="36.851100" dirStart="4.831797" dirEnd="4.839167" staStart="123814.298113" length="36.851184">
+          <Start>1311002.657489 77072.332554</Start>
+          <End>1311007.182152 77035.760283</End>
+          <Center>1315967.054254 77667.953730</Center>
+        </Curve>
+        <Line dir="4.839167" staStart="123851.149297" length="89.513155">
+          <Start>1311007.182152 77035.760283</Start>
+          <End>1311018.500078 76946.965522</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="200.000000" constant="69.282032" rot="cw" dirStart="4.839167" dirEnd="4.899167" staStart="123940.662452" length="24.000000">
+          <Start>1311018.500078 76946.965522</Start>
+          <PI>1311020.523478 76931.090937</PI>
+          <End>1311022.009539 76923.227380</End>
+        </Spiral>
+        <Curve delta="0.456294" radius="200.000000" rot="cw" chord="90.469119" dirStart="4.899167" dirEnd="5.355461" staStart="123964.662452" length="91.258746">
+          <Start>1311022.009539 76923.227380</Start>
+          <End>1311058.479559 76840.434873</End>
+          <Center>1311218.531066 76960.366166</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="200.000000" radiusEnd="300.000000" constant="120.000000" rot="cw" dirStart="5.355461" dirEnd="5.455461" staStart="124055.921198" length="24.000000">
+          <Start>1311058.479559 76840.434873</Start>
+          <PI>1311065.201587 76831.464147</PI>
+          <End>1311073.868274 76822.030897</End>
+        </Spiral>
+        <Curve delta="0.174766" radius="300.000000" rot="cw" chord="52.363155" dirStart="5.455461" dirEnd="5.630227" staStart="124079.921198" length="52.429854">
+          <Start>1311073.868274 76822.030897</Start>
+          <End>1311112.524759 76786.709852</End>
+          <Center>1311294.786423 77024.996834</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J005-CL" staStart="123517.985000">
+        <ProfAlign name="J005-CL">
+          <PVI>123517.985000 126.500000</PVI>
+          <CircCurve length="49.999583" radius="10000.000000">123934.940941 126.500000</CircCurve>
+          <CircCurve length="49.999583" radius="10000.000000">124007.740941 126.864000</CircCurve>
+          <PVI>124132.350748 126.864000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J005-CL" gauge="1.500000">
+        <CantStation station="123517.985000" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123940.662452" speed="40.000000" appliedCant="0.000000" curvature="cw" adverse="false"/>
+        <CantStation station="123964.662452" speed="40.000000" appliedCant="40.000000" curvature="cw" adverse="false"/>
+        <CantStation station="124055.921198" speed="40.000000" appliedCant="40.000000" curvature="cw" adverse="false"/>
+        <CantStation station="124079.921198" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124132.351052" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J006-CL" state="proposed" staStart="121347.491000" length="3172.427611">
+      <CoordGeom>
+        <Curve delta="-0.445830" radius="1600.000001" rot="ccw" chord="707.434968" dirStart="6.196466" dirEnd="5.750636" staStart="121347.491000" length="713.327982">
+          <Start>1309253.449601 78537.171061</Start>
+          <End>1309927.242529 78321.608252</End>
+          <Center>1309114.872425 76943.183492</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="1600.000001" radiusEnd="INF" constant="629.205213" rot="ccw" dirStart="5.750636" dirEnd="5.673312" staStart="122060.818982" length="247.437000">
+          <Start>1309927.242529 78321.608252</Start>
+          <PI>1309998.339951 78279.707220</PI>
+          <End>1310133.601780 78185.195655</End>
+        </Spiral>
+        <Line dir="5.673312" staStart="122308.255982" length="705.252061">
+          <Start>1310133.601780 78185.195655</Start>
+          <End>1310711.711363 77781.252863</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="485.000000" constant="213.518149" rot="ccw" dirStart="5.673312" dirEnd="5.576405" staStart="123013.508043" length="94.000000">
+          <Start>1310711.711363 77781.252863</Start>
+          <PI>1310763.105807 77745.341997</PI>
+          <End>1310786.954773 77724.976260</End>
+        </Spiral>
+        <Curve delta="-0.694031" radius="485.000000" rot="ccw" chord="329.889870" dirStart="5.576405" dirEnd="4.882374" staStart="123107.508043" length="336.604955">
+          <Start>1310786.954773 77724.976260</Start>
+          <End>1310950.010980 77438.201088</End>
+          <Center>1310472.001124 77356.154896</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="485.000000" radiusEnd="INF" constant="177.552809" rot="ccw" dirStart="4.882374" dirEnd="4.815364" staStart="123444.112998" length="65.000000">
+          <Start>1310950.010980 77438.201088</Start>
+          <PI>1310953.677842 77416.837559</PI>
+          <End>1310958.133238 77373.723628</End>
+        </Spiral>
+        <Line dir="4.815364" staStart="123509.112998" length="144.090688">
+          <Start>1310958.133238 77373.723628</Start>
+          <End>1310972.944700 77230.396216</End>
+        </Line>
+        <Curve delta="-0.003258" radius="9999.999813" rot="ccw" chord="32.580884" dirStart="4.815364" dirEnd="4.812105" staStart="123653.203686" length="32.580898">
+          <Start>1310972.944700 77230.396216</Start>
+          <End>1310976.240976 77197.982507</End>
+          <Center>1301025.916820 76202.469842</Center>
+        </Curve>
+        <Line dir="4.812105" staStart="123685.784584" length="221.680361">
+          <Start>1310976.240976 77197.982507</Start>
+          <End>1310998.309537 76977.403358</End>
+        </Line>
+        <Curve delta="0.330001" radius="300.000000" rot="cw" chord="98.551604" dirStart="4.812105" dirEnd="5.142106" staStart="123907.464945" length="99.000208">
+          <Start>1310998.309537 76977.403358</Start>
+          <End>1311024.094178 76882.284638</End>
+          <Center>1311296.819267 77007.268739</Center>
+        </Curve>
+        <Curve delta="0.488119" radius="190.000000" rot="cw" chord="91.824717" dirStart="5.142106" dirEnd="5.630225" staStart="124006.465153" length="92.742684">
+          <Start>1311024.094178 76882.284638</Start>
+          <End>1311081.387467 76810.526310</End>
+          <Center>1311196.820068 76961.441235</Center>
+        </Curve>
+        <Line dir="5.630225" staStart="124099.207837" length="121.853871">
+          <Start>1311081.387467 76810.526310</Start>
+          <End>1311178.174666 76736.495208</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="260.000000" constant="91.214034" rot="ccw" dirStart="5.630225" dirEnd="5.568687" staStart="124221.061708" length="32.000000">
+          <Start>1311178.174666 76736.495208</Start>
+          <PI>1311195.122863 76723.531783</PI>
+          <End>1311203.183606 76716.540051</End>
+        </Spiral>
+        <Curve delta="-0.240914" radius="260.000000" rot="ccw" chord="62.486372" dirStart="5.568687" dirEnd="5.327773" staStart="124253.061708" length="62.637740">
+          <Start>1311203.183606 76716.540051</Start>
+          <End>1311245.125127 76670.220989</End>
+          <Center>1311032.821601 76520.130307</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="260.000000" radiusEnd="295.000000" constant="104.676372" rot="ccw" dirStart="5.327773" dirEnd="5.309683" staStart="124315.699449" length="5.000000">
+          <Start>1311245.125127 76670.220989</Start>
+          <PI>1311246.538009 76668.222466</PI>
+          <End>1311247.973620 76666.111804</End>
+        </Spiral>
+        <Curve delta="-0.251292" radius="295.000000" rot="ccw" chord="73.936198" dirStart="5.309683" dirEnd="5.058391" staStart="124320.699449" length="74.131094">
+          <Start>1311247.973620 76666.111804</Start>
+          <End>1311281.566886 76600.247900</End>
+          <Center>1311004.049721 76500.201794</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="295.000000" radiusEnd="250.000000" constant="99.163165" rot="ccw" dirStart="5.058391" dirEnd="5.036221" staStart="124394.830542" length="6.000000">
+          <Start>1311281.566886 76600.247900</Start>
+          <PI>1311282.612348 76597.347900</PI>
+          <End>1311283.540719 76594.581993</End>
+        </Spiral>
+        <Curve delta="-0.194830" radius="250.000000" rot="ccw" chord="48.630530" dirStart="5.036221" dirEnd="4.841391" staStart="124400.830542" length="48.707530">
+          <Start>1311283.540719 76594.581993</Start>
+          <End>1311294.457677 76547.192663</End>
+          <Center>1311046.534991 76515.031475</Center>
+        </Curve>
+        <Curve delta="-0.008296" radius="2230.000010" rot="ccw" chord="18.499057" dirStart="4.841391" dirEnd="4.833096" staStart="124449.538073" length="18.499110">
+          <Start>1311294.457677 76547.192663</Start>
+          <End>1311296.761371 76528.837607</End>
+          <Center>1309082.987313 76260.314858</Center>
+        </Curve>
+        <Curve delta="-0.190436" radius="272.435000" rot="ccw" chord="51.803067" dirStart="4.833096" dirEnd="4.642660" staStart="124468.037183" length="51.881428">
+          <Start>1311296.761371 76528.837607</Start>
+          <End>1311298.081620 76477.051366</End>
+          <Center>1311026.308665 76496.032676</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J006-CL" staStart="121347.491000">
+        <ProfAlign name="J006-CL">
+          <PVI>121350.261000 142.329639</PVI>
+          <CircCurve length="213.123952" radius="15000.000000">122358.832242 127.999500</CircCurve>
+          <CircCurve length="40.009489" radius="10000.000000">122923.268520 127.999987</CircCurve>
+          <CircCurve length="16.000343" radius="4000.000000">123298.255154 126.500000</CircCurve>
+          <CircCurve length="34.999857" radius="10000.000000">123928.912522 126.500000</CircCurve>
+          <CircCurve length="34.999857" radius="10000.000001">124032.912522 126.864000</CircCurve>
+          <CircCurve length="32.277928" radius="10000.000000">124297.565698 126.864000</CircCurve>
+          <CircCurve length="37.412631" radius="10000.000001">124409.170014 127.224237</CircCurve>
+          <CircCurve length="15.701503" radius="10000.000002">124457.150723 127.199600</CircCurve>
+          <CircCurve length="41.595541" radius="15879.000000">124499.120854 127.243949</CircCurve>
+          <PVI>124519.918611 127.211445</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J006-CL" gauge="1.500000">
+        <CantStation station="121347.491000" speed="170.000000" appliedCant="85.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122060.818982" speed="170.000000" appliedCant="85.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="122308.255982" speed="170.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123013.508043" speed="90.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123107.508043" speed="90.000000" appliedCant="100.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123444.112998" speed="90.000000" appliedCant="100.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123509.112998" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123907.464945" speed="144.000000"/>
+        <SpeedStation station="124099.207837" speed="180.000000"/>
+        <CantStation station="124221.061708" speed="50.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124253.061708" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124315.699449" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124320.699449" speed="50.000000" appliedCant="35.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124394.830542" speed="50.000000" appliedCant="35.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124400.830542" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="124519.918611" speed="50.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J007-CL" state="proposed" staStart="122945.151000" length="1052.099820">
+      <CoordGeom>
+        <Curve delta="-0.066569" radius="759.999999" rot="ccw" chord="50.583265" dirStart="5.673312" dirEnd="5.606743" staStart="122945.151000" length="50.592607">
+          <Start>1310655.677534 77820.405385</Start>
+          <End>1310696.154555 77790.069309</End>
+          <Center>1310220.377094 77197.417805</Center>
+        </Curve>
+        <Line dir="5.606743" staStart="122995.743607" length="71.460591">
+          <Start>1310696.154555 77790.069309</Start>
+          <End>1310751.879853 77745.333337</End>
+        </Line>
+        <Spiral spiType="clothoid" radiusStart="INF" radiusEnd="480.000000" constant="162.480767" rot="ccw" dirStart="5.606743" dirEnd="5.549451" staStart="123067.204197" length="55.000000">
+          <Start>1310751.879853 77745.333337</Start>
+          <PI>1310780.477607 77722.375214</PI>
+          <End>1310794.097644 77710.094500</End>
+        </Spiral>
+        <Curve delta="-0.676796" radius="480.000000" rot="ccw" chord="318.697199" dirStart="5.549451" dirEnd="4.872655" staStart="123122.204197" length="324.861955">
+          <Start>1310794.097644 77710.094500</Start>
+          <End>1310946.515458 77430.207532</End>
+          <Center>1310472.666739 77353.608633</Center>
+        </Curve>
+        <Spiral spiType="clothoid" radiusStart="480.000000" radiusEnd="INF" constant="162.480767" rot="ccw" dirStart="4.872655" dirEnd="4.815364" staStart="123447.066152" length="55.000000">
+          <Start>1310946.515458 77430.207532</Start>
+          <PI>1310949.442026 77412.103484</PI>
+          <End>1310953.211739 77375.624776</End>
+        </Spiral>
+        <Line dir="4.815364" staStart="123502.066152" length="146.479004">
+          <Start>1310953.211739 77375.624776</Start>
+          <End>1310968.268709 77229.921700</End>
+        </Line>
+        <Curve delta="-0.003258" radius="10000.000023" rot="ccw" chord="32.581332" dirStart="4.815364" dirEnd="4.812105" staStart="123648.545155" length="32.581347">
+          <Start>1310968.268709 77229.921700</Start>
+          <End>1310971.565031 77197.507545</End>
+          <Center>1301021.240667 76201.994858</Center>
+        </Curve>
+        <Line dir="4.812105" staStart="123681.126502" length="98.374089">
+          <Start>1310971.565031 77197.507545</Start>
+          <End>1310981.358296 77099.622136</End>
+        </Line>
+        <Curve delta="-0.030936" radius="2000.000000" rot="ccw" chord="61.869933" dirStart="4.812105" dirEnd="4.781169" staStart="123779.500591" length="61.872401">
+          <Start>1310981.358296 77099.622136</Start>
+          <End>1310986.564571 77037.971642</End>
+          <Center>1308991.293428 76900.519599</Center>
+        </Curve>
+        <Line dir="4.781169" staStart="123841.372991" length="50.000000">
+          <Start>1310986.564571 77037.971642</Start>
+          <End>1310990.000873 76988.089864</End>
+        </Line>
+        <Curve delta="0.340939" radius="190.000000" rot="cw" chord="64.465099" dirStart="4.781169" dirEnd="5.122108" staStart="123891.372991" length="64.778385">
+          <Start>1310990.000873 76988.089864</Start>
+          <End>1311005.277408 76925.460985</End>
+          <Center>1311179.551631 77001.147808</Center>
+        </Curve>
+        <Line dir="5.122108" staStart="123956.151376" length="41.099444">
+          <Start>1311005.277408 76925.460985</Start>
+          <End>1311021.649441 76887.763229</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J007-CL" staStart="122945.151000">
+        <ProfAlign name="J007-CL">
+          <PVI>122945.151000 127.912456</PVI>
+          <CircCurve length="16.000491" radius="4000.000000">123298.252239 126.500000</CircCurve>
+          <CircCurve length="34.997680" radius="10000.000000">123925.689540 126.500000</CircCurve>
+          <PVI>123997.248755 126.750442</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J007-CL" gauge="1.500000">
+        <CantStation station="122945.151000" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123067.204197" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123122.204197" speed="80.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123447.066152" speed="80.000000" appliedCant="40.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123502.066152" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123891.372991" speed="144.000000"/>
+        <CantStation station="123997.250820" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_013_CL" state="proposed" staStart="0.000000" length="51.702735">
+      <CoordGeom>
+        <Curve delta="0.110660" radius="190.000000" rot="cw" chord="21.014705" dirStart="4.730610" dirEnd="4.841270" staStart="0.000000" length="21.025431">
+          <Start>1310974.265581 77524.748623</Start>
+          <End>1310975.809844 77503.790735</End>
+          <Center>1311164.234042 77528.210436</Center>
+        </Curve>
+        <Line dir="4.841270" staStart="21.025431" length="30.677304">
+          <Start>1310975.809844 77503.790735</Start>
+          <End>1310979.752637 77473.367859</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J_013_CL" staStart="0.000000">
+        <ProfAlign name="J_013_CL">
+          <PVI>0.000000 126.500000</PVI>
+          <PVI>51.702735 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_013_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="51.702735" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_020-CL" state="proposed" staStart="123228.936000" length="210.689485">
+      <CoordGeom>
+        <Line dir="4.836615" staStart="123228.936000" length="39.757555">
+          <Start>1310959.845124 77664.908901</Start>
+          <End>1310964.771359 77625.457723</End>
+        </Line>
+        <Curve delta="0.006752" radius="1999.999994" rot="cw" chord="13.503015" dirStart="4.836615" dirEnd="4.843367" staStart="123268.693555" length="13.503041">
+          <Start>1310964.771359 77625.457723</Start>
+          <End>1310966.489698 77612.064489</End>
+          <Center>1312949.359051 77873.271504</Center>
+        </Curve>
+        <Line dir="4.843367" staStart="123282.196596" length="40.844363">
+          <Start>1310966.489698 77612.064489</Start>
+          <End>1310971.824115 77571.569971</End>
+        </Line>
+        <Curve delta="-0.112735" radius="250.000000" rot="ccw" chord="28.168894" dirStart="4.843367" dirEnd="4.730631" staStart="123323.040959" length="28.183817">
+          <Start>1310971.824115 77571.569971</Start>
+          <End>1310973.923848 77543.479444</End>
+          <Center>1310723.965445 77538.919094</Center>
+        </Curve>
+        <Line dir="4.730631" staStart="123351.224775" length="55.203342">
+          <Start>1310973.923848 77543.479444</Start>
+          <End>1310974.930834 77488.285287</End>
+        </Line>
+        <Curve delta="0.110658" radius="300.000000" rot="cw" chord="33.180433" dirStart="4.730631" dirEnd="4.841289" staStart="123406.428117" length="33.197368">
+          <Start>1310974.930834 77488.285287</Start>
+          <End>1310977.369762 77455.194612</End>
+          <Center>1311274.880918 77493.757707</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_020-CL" staStart="123228.936000">
+        <ProfAlign name="J_020-CL">
+          <PVI>123228.936000 126.500000</PVI>
+          <PVI>123439.625485 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_020-CL" gauge="1.500000">
+        <CantStation station="123228.936000" speed="70.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <SpeedStation station="123268.693555" speed="126.000000"/>
+        <CantStation station="123439.625485" speed="70.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_021-CL" state="proposed" staStart="122649.933000" length="664.236180">
+      <CoordGeom>
+        <Line dir="3.600315" staStart="122649.933000" length="235.073391">
+          <Start>1311330.541164 78041.021499</Start>
+          <End>1311119.769925 77936.930268</End>
+        </Line>
+        <Curve delta="0.591563" radius="306.000000" rot="cw" chord="178.390214" dirStart="3.600315" dirEnd="4.191878" staStart="122885.006391" length="181.018135">
+          <Start>1311119.769925 77936.930268</Start>
+          <End>1310989.792772 77814.745948</End>
+          <Center>1311255.267680 77662.564894</Center>
+        </Curve>
+        <Curve delta="0.163333" radius="315.000000" rot="cw" chord="51.392671" dirStart="4.191878" dirEnd="4.355211" staStart="123066.024526" length="51.449842">
+          <Start>1310989.792772 77814.745948</Start>
+          <End>1310967.956334 77768.223086</End>
+          <Center>1311263.075765 77658.088980</Center>
+        </Curve>
+        <Curve delta="0.322078" radius="210.000000" rot="cw" chord="67.344336" dirStart="4.355211" dirEnd="4.677288" staStart="123117.474368" length="67.636298">
+          <Start>1310967.956334 77768.223086</Start>
+          <End>1310954.831975 77702.169996</End>
+          <Center>1311164.702621 77694.800349</Center>
+        </Curve>
+        <Curve delta="0.164001" radius="350.000000" rot="cw" chord="57.336089" dirStart="4.677288" dirEnd="4.841289" staStart="123185.110666" length="57.400395">
+          <Start>1310954.831975 77702.169996</Start>
+          <End>1310957.520040 77644.896953</End>
+          <Center>1311304.616386 77689.887251</Center>
+        </Curve>
+        <Line dir="4.841289" staStart="123242.511061" length="71.658119">
+          <Start>1310957.520040 77644.896953</Start>
+          <End>1310966.731241 77573.833321</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J_021-CL" staStart="122649.933000">
+        <ProfAlign name="J_021-CL">
+          <PVI>122649.933000 126.699411</PVI>
+          <CircCurve length="21.999457" radius="9999.999999">122690.397111 126.800569</CircCurve>
+          <CircCurve length="20.000120" radius="10000.000002">122812.889276 126.837319</CircCurve>
+          <CircCurve length="16.999984" radius="9999.999999">123011.312108 126.500000</CircCurve>
+          <PVI>123314.154638 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_021-CL" gauge="1.500000">
+        <CantStation station="122649.933000" speed="90.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123314.169180" speed="90.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_022_CL" state="proposed" staStart="0.000000" length="175.326817">
+      <CoordGeom>
+        <Line dir="4.681584" staStart="0.000000" length="21.954073">
+          <Start>1310938.535343 77720.093171</Start>
+          <End>1310937.859160 77698.149513</End>
+        </Line>
+        <Curve delta="0.199898" radius="300.000000" rot="cw" chord="59.869650" dirStart="4.681584" dirEnd="4.881482" staStart="21.954073" length="59.969448">
+          <Start>1310937.859160 77698.149513</Start>
+          <End>1310941.995509 77638.422923</End>
+          <Center>1311237.716831 77688.909548</Center>
+        </Curve>
+        <Line dir="4.881482" staStart="81.923521" length="43.730519">
+          <Start>1310941.995509 77638.422923</Start>
+          <End>1310949.354863 77595.316099</End>
+        </Line>
+        <Curve delta="-0.050848" radius="250.000000" rot="ccw" chord="12.710602" dirStart="4.881482" dirEnd="4.830634" staStart="125.654040" length="12.711971">
+          <Start>1310949.354863 77595.316099</Start>
+          <End>1310951.174713 77582.736452</End>
+          <Center>1310702.920428 77553.243912</Center>
+        </Curve>
+        <Line dir="4.830634" staStart="138.366011" length="9.999965">
+          <Start>1310951.174713 77582.736452</Start>
+          <End>1310952.354410 77572.806315</End>
+        </Line>
+        <Curve delta="0.141899" radius="190.000000" rot="cw" chord="26.938228" dirStart="4.830634" dirEnd="4.972534" staStart="148.365975" length="26.960842">
+          <Start>1310952.354410 77572.806315</Start>
+          <End>1310957.420640 77546.348775</End>
+          <Center>1311141.027667 77595.220646</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_022_CL" staStart="0.000000">
+        <ProfAlign name="J_022_CL">
+          <PVI>-0.000000 126.262924</PVI>
+          <CircCurve length="7.999989" radius="4000.000001">118.537776 126.500000</CircCurve>
+          <PVI>175.326817 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_022_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="175.326817" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_023_CL" state="proposed" staStart="123169.926000" length="221.957461">
+      <CoordGeom>
+        <Line dir="4.681584" staStart="123169.926000" length="21.954089">
+          <Start>1310933.837573 77720.237930</Start>
+          <End>1310933.161390 77698.294256</End>
+        </Line>
+        <Curve delta="0.081433" radius="304.700000" rot="cw" chord="24.805842" dirStart="4.681584" dirEnd="4.763017" staStart="123191.880089" length="24.812697">
+          <Start>1310933.161390 77698.294256</Start>
+          <End>1310933.407259 77673.489632</End>
+          <Center>1311237.716832 77688.909547</Center>
+        </Curve>
+        <Line dir="4.763017" staStart="123216.692787" length="14.122863">
+          <Start>1310933.407259 77673.489632</Start>
+          <End>1310934.121973 77659.384866</End>
+        </Line>
+        <Curve delta="0.209517" radius="300.000000" rot="cw" chord="62.740203" dirStart="4.763017" dirEnd="4.972534" staStart="123230.815650" length="62.855105">
+          <Start>1310934.121973 77659.384866</Start>
+          <End>1310943.831801 77597.400575</End>
+          <Center>1311233.737569 77674.566928</Center>
+        </Curve>
+        <Line dir="4.972534" staStart="123293.670755" length="58.829568">
+          <Start>1310943.831801 77597.400575</Start>
+          <End>1310958.964012 77540.550472</End>
+        </Line>
+        <Curve delta="-0.131277" radius="300.000000" rot="ccw" chord="39.354864" dirStart="4.972534" dirEnd="4.841257" staStart="123352.500323" length="39.383138">
+          <Start>1310958.964012 77540.550472</Start>
+          <End>1310966.570631 77501.937719</End>
+          <Center>1310669.058244 77463.384118</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_023_CL" staStart="123169.926000">
+        <ProfAlign name="J_023_CL">
+          <PVI>123169.926461 126.261527</PVI>
+          <CircCurve length="7.999962" radius="4000.000000">123289.163461 126.500000</CircCurve>
+          <PVI>123412.939740 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_023_CL" gauge="1.500000">
+        <CantStation station="123169.926000" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123391.883461" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_024_CL" state="proposed" staStart="123369.262000" length="255.062407">
+      <CoordGeom>
+        <Curve delta="-0.159250" radius="495.300000" rot="ccw" chord="78.793070" dirStart="5.054102" dirEnd="4.894852" staStart="123369.262000" length="78.876391">
+          <Start>1310935.793031 77511.440036</Start>
+          <End>1310956.208119 77435.337657</End>
+          <Center>1310469.130201 77345.464458</Center>
+        </Curve>
+        <Line dir="4.894852" staStart="123448.138391" length="36.178470">
+          <Start>1310956.208119 77435.337657</Start>
+          <End>1310962.772776 77399.759757</End>
+        </Line>
+        <Curve delta="-0.063055" radius="300.000000" rot="ccw" chord="18.913372" dirStart="4.894852" dirEnd="4.831797" staStart="123484.316861" length="18.916506">
+          <Start>1310962.772776 77399.759757</Start>
+          <End>1310965.616645 77381.061414</End>
+          <Center>1310667.752838 77345.324143</Center>
+        </Curve>
+        <Line dir="4.831797" staStart="123503.233367" length="121.091040">
+          <Start>1310965.616645 77381.061414</Start>
+          <End>1310980.041522 77260.832620</End>
+        </Line>
+      </CoordGeom>
+      <Profile name="J_024_CL" staStart="123369.262000">
+        <ProfAlign name="J_024_CL">
+          <PVI>123369.262000 126.500000</PVI>
+          <PVI>123624.324407 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_024_CL" gauge="1.500000">
+        <CantStation station="123369.262000" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123624.324407" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_045_CL" state="proposed" staStart="123418.699000" length="134.451064">
+      <CoordGeom>
+        <Line dir="4.841490" staStart="123418.699000" length="70.441858">
+          <Start>1310961.342839 77500.299413</Start>
+          <End>1310970.411742 77430.443773</End>
+        </Line>
+        <Curve delta="0.035172" radius="289.999999" rot="cw" chord="10.199473" dirStart="4.841490" dirEnd="4.876663" staStart="123489.140858" length="10.199998">
+          <Start>1310970.411742 77430.443773</Start>
+          <End>1310971.902519 77420.353836</End>
+          <Center>1311257.998355 77467.779273</Center>
+        </Curve>
+        <Line dir="4.876663" staStart="123499.340857" length="10.000000">
+          <Start>1310971.902519 77420.353836</Start>
+          <End>1310973.537879 77410.488463</End>
+        </Line>
+        <Curve delta="-0.146031" radius="300.000000" rot="ccw" chord="43.770292" dirStart="4.876663" dirEnd="4.730632" staStart="123509.340857" length="43.809208">
+          <Start>1310973.537879 77410.488463</Start>
+          <End>1310977.526747 77366.900306</End>
+          <Center>1310677.576668 77361.427666</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_045_CL" staStart="123418.699000">
+        <ProfAlign name="J_045_CL">
+          <PVI>123418.699000 126.355847</PVI>
+          <CircCurve length="11.328606" radius="2500.000000">123475.202932 126.382320</CircCurve>
+          <CircCurve length="12.499896" radius="2500.000000">123498.738876 126.500000</CircCurve>
+          <PVI>123553.847966 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_045_CL" gauge="1.500000">
+        <CantStation station="123418.699000" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123553.150064" speed="60.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V001-V030_CL" state="proposed" staStart="0.000000" length="121.229364">
+      <CoordGeom>
+        <Curve delta="-0.066529" radius="760.000000" rot="ccw" chord="50.552784" dirStart="5.673299" dirEnd="5.606770" staStart="0.000000" length="50.562109">
+          <Start>1310171.711426 78164.300940</Start>
+          <End>1310212.164282 78133.983445</End>
+          <Center>1309736.403115 77541.318859</Center>
+        </Curve>
+        <Line dir="5.606770" staStart="50.562109" length="20.088029">
+          <Start>1310212.164282 78133.983445</Start>
+          <End>1310227.829365 78121.408308</End>
+        </Line>
+        <Curve delta="0.066552" radius="760.000000" rot="cw" chord="50.569893" dirStart="5.606770" dirEnd="5.673322" staStart="70.650137" length="50.579227">
+          <Start>1310227.829365 78121.408308</Start>
+          <End>1310268.296253 78091.081009</End>
+          <Center>1310703.590532 78714.072895</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V001-V030_CL" staStart="0.000000">
+        <ProfAlign name="J_V001-V030_CL">
+          <PVI>-0.000000 128.430000</PVI>
+          <CircCurve length="117.236154" radius="16000.000000">58.616766 128.000492</CircCurve>
+          <PVI>121.229364 128.000492</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V001-V030_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121.229364" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V003-V028_CL" state="proposed" staStart="0.000000" length="121.229571">
+      <CoordGeom>
+        <Curve delta="0.066542" radius="760.000000" rot="cw" chord="50.562802" dirStart="5.673312" dirEnd="5.739854" staStart="0.000000" length="50.572131">
+          <Start>1310390.754097 78005.515979</Start>
+          <End>1310433.141900 77977.950220</End>
+          <Center>1310826.054448 78628.503623</Center>
+        </Curve>
+        <Line dir="5.739854" staStart="50.572131" length="20.086700">
+          <Start>1310433.141900 77977.950220</Start>
+          <End>1310450.335941 77967.565593</End>
+        </Line>
+        <Curve delta="-0.066540" radius="760.000000" rot="ccw" chord="50.561412" dirStart="5.739854" dirEnd="5.673314" staStart="70.658831" length="50.570741">
+          <Start>1310450.335941 77967.565593</Start>
+          <End>1310492.722604 77940.000631</End>
+          <Center>1310057.423393 77317.012190</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V003-V028_CL" staStart="0.000000">
+        <ProfAlign name="J_V003-V028_CL">
+          <PVI>0.000000 128.000000</PVI>
+          <PVI>121.229571 128.000000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V003-V028_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121.229571" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V007-V024_CL" state="proposed" staStart="123500.371000" length="92.117688">
+      <CoordGeom>
+        <Curve delta="-0.161518" radius="300.000001" rot="ccw" chord="48.402815" dirStart="4.882658" dirEnd="4.721140" staStart="123500.371000" length="48.455469">
+          <Start>1310968.734290 77392.327823</Start>
+          <End>1310973.061028 77344.118780</End>
+          <Center>1310673.072513 77341.493642</Center>
+        </Curve>
+        <Line dir="4.721140" staStart="123548.826469" length="10.465594">
+          <Start>1310973.061028 77344.118780</Start>
+          <End>1310973.152607 77333.653586</End>
+        </Line>
+        <Curve delta="0.110655" radius="300.000000" rot="cw" chord="33.179691" dirStart="4.721140" dirEnd="4.831795" staStart="123559.292063" length="33.196625">
+          <Start>1310973.152607 77333.653586</Start>
+          <End>1310975.277249 77300.541990</End>
+          <Center>1311273.141121 77336.278723</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V007-V024_CL" staStart="123500.371000">
+        <ProfAlign name="J_V007-V024_CL">
+          <PVI>123500.371000 126.500000</PVI>
+          <PVI>123592.488688 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V007-V024_CL" gauge="1.500000">
+        <CantStation station="123500.371000" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123592.488688" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V009-V022_CL" state="proposed" staStart="121000.508000" length="75.723317">
+      <CoordGeom>
+        <Curve delta="0.110656" radius="300.000000" rot="cw" chord="33.179842" dirStart="4.815366" dirEnd="4.926022" staStart="121000.508000" length="33.196777">
+          <Start>1310954.366748 77364.447996</Start>
+          <End>1310959.597367 77331.683037</End>
+          <Center>1311252.777518 77395.286491</Center>
+        </Curve>
+        <Line dir="4.926022" staStart="121033.704777" length="9.328541">
+          <Start>1310959.597367 77331.683037</Start>
+          <End>1310961.575126 77322.566559</End>
+        </Line>
+        <Curve delta="-0.110660" radius="300.000000" rot="ccw" chord="33.181062" dirStart="4.926022" dirEnd="4.815362" staStart="121043.033318" length="33.197999">
+          <Start>1310961.575126 77322.566559</Start>
+          <End>1310966.805870 77289.800384</End>
+          <Center>1310668.394975 77258.963104</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V009-V022_CL" staStart="121000.508000">
+        <ProfAlign name="J_V009-V022_CL">
+          <PVI>121000.508466 126.500000</PVI>
+          <PVI>121076.230783 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V009-V022_CL" gauge="1.500000">
+        <CantStation station="121000.508000" speed="200.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121076.231317" speed="200.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V021-V004_CL" state="proposed" staStart="0.000000" length="60.194672">
+      <CoordGeom>
+        <Line dir="5.488329" staStart="0.000000" length="33.234344">
+          <Start>1311095.281795 76808.220160</Start>
+          <End>1311118.558707 76784.498714</End>
+        </Line>
+        <Curve delta="0.141896" radius="189.999999" rot="cw" chord="26.937715" dirStart="5.488329" dirEnd="5.630225" staStart="33.234344" length="26.960327">
+          <Start>1311118.558707 76784.498714</Start>
+          <End>1311138.741064 76766.657386</End>
+          <Center>1311254.173680 76917.572298</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V021-V004_CL" staStart="0.000000">
+        <ProfAlign name="J_V021-V004_CL">
+          <PVI>0.000000 126.864000</PVI>
+          <PVI>60.194672 126.864000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V021-V004_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="60.194672" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V103-V113_CL" state="proposed" staStart="3.456000" length="80.076479">
+      <CoordGeom>
+        <Curve delta="0.124728" radius="300.000000" rot="cw" chord="37.394296" dirStart="3.617481" dirEnd="3.742210" staStart="3.456000" length="37.418547">
+          <Start>1311303.255973 78035.465498</Start>
+          <End>1311271.149016 78016.295816</End>
+          <Center>1311440.694478 77768.799682</Center>
+        </Curve>
+        <Line dir="3.742210" staStart="40.874547" length="15.698008">
+          <Start>1311271.149016 78016.295816</Start>
+          <End>1311258.198362 78007.424063</End>
+        </Line>
+        <Curve delta="-0.141894" radius="190.000000" rot="ccw" chord="26.937313" dirStart="3.742210" dirEnd="3.600315" staStart="56.572555" length="26.959925">
+          <Start>1311258.198362 78007.424063</Start>
+          <End>1311234.952162 77993.814029</End>
+          <Center>1311150.819569 78164.171614</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V103-V113_CL" staStart="3.456000">
+        <ProfAlign name="J_V103-V113_CL">
+          <PVI>3.456000 126.820419</PVI>
+          <PVI>83.532479 126.796499</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V103-V113_CL" gauge="1.500000">
+        <CantStation station="3.456000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="83.532479" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V105-V116_CL" state="proposed" staStart="15.626000" length="69.643912">
+      <CoordGeom>
+        <Curve delta="-0.110655" radius="190.000000" rot="ccw" chord="21.013763" dirStart="4.841289" dirEnd="4.730634" staStart="15.626000" length="21.024488">
+          <Start>1310960.234419 77623.955754</Start>
+          <End>1310961.779065 77602.998839</End>
+          <Center>1310771.810688 77599.532450</Center>
+        </Curve>
+        <Line dir="4.730634" staStart="36.650488" length="15.422864">
+          <Start>1310961.779065 77602.998839</Start>
+          <End>1310962.060442 77587.578542</End>
+        </Line>
+        <Curve delta="0.110655" radius="300.000000" rot="cw" chord="33.179626" dirStart="4.730634" dirEnd="4.841289" staStart="52.073352" length="33.196560">
+          <Start>1310962.060442 77587.578542</Start>
+          <End>1310964.499357 77554.488675</End>
+          <Center>1311262.010510 77593.051788</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V105-V116_CL" staStart="15.626000">
+        <ProfAlign name="J_V105-V116_CL">
+          <PVI>15.626000 126.500000</PVI>
+          <PVI>85.269912 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V105-V116_CL" gauge="1.500000">
+        <CantStation station="15.626000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="85.269912" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V107-V110_CL" state="proposed" staStart="0.000000" length="75.724518">
+      <CoordGeom>
+        <Curve delta="-0.110658" radius="300.000000" rot="ccw" chord="33.180542" dirStart="4.841291" dirEnd="4.730633" staStart="0.000000" length="33.197478">
+          <Start>1310967.627209 77530.357563</Start>
+          <End>1310970.066191 77497.266782</End>
+          <Center>1310670.116114 77491.793996</Center>
+        </Curve>
+        <Line dir="4.730633" staStart="33.197478" length="9.329562">
+          <Start>1310970.066191 77497.266782</Start>
+          <End>1310970.236387 77487.938773</End>
+        </Line>
+        <Curve delta="0.110658" radius="300.000000" rot="cw" chord="33.180543" dirStart="4.730633" dirEnd="4.841291" staStart="42.527039" length="33.197478">
+          <Start>1310970.236387 77487.938773</Start>
+          <End>1310972.675369 77454.847992</End>
+          <Center>1311270.186464 77493.411559</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V107-V110_CL" staStart="0.000000">
+        <ProfAlign name="J_V107-V110_CL">
+          <PVI>0.000000 126.500000</PVI>
+          <PVI>75.724518 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V107-V110_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="75.724518" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V111-V104_CL" state="proposed" staStart="0.000000" length="98.141560">
+      <CoordGeom>
+        <Curve delta="-0.083146" radius="500.000000" rot="ccw" chord="41.560938" dirStart="4.841294" dirEnd="4.758148" staStart="0.000000" length="41.572912">
+          <Start>1310978.140828 77449.245879</Start>
+          <End>1310981.765818 77407.843331</End>
+          <Center>1310482.289201 77384.971749</Center>
+        </Curve>
+        <Line dir="4.758148" staStart="41.572912" length="14.998320">
+          <Start>1310981.765818 77407.843331</Start>
+          <End>1310982.451888 77392.860711</End>
+        </Line>
+        <Curve delta="0.083141" radius="500.000000" rot="cw" chord="41.558356" dirStart="4.758148" dirEnd="4.841289" staStart="56.571232" length="41.570328">
+          <Start>1310982.451888 77392.860711</Start>
+          <End>1310986.076546 77351.460725</End>
+          <Center>1311481.928505 77415.732292</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V111-V104_CL" staStart="0.000000">
+        <ProfAlign name="J_V111-V104_CL">
+          <PVI>0.000000 126.500000</PVI>
+          <PVI>98.141560 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V111-V104_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="98.141560" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V113-V026_CL" state="proposed" staStart="123458.085000" length="126.914778">
+      <CoordGeom>
+        <Curve delta="-0.110655" radius="300.000000" rot="ccw" chord="33.179691" dirStart="4.841288" dirEnd="4.730632" staStart="123458.085000" length="33.196625">
+          <Start>1310974.318254 77442.173274</Start>
+          <End>1310976.757111 77409.083338</End>
+          <Center>1310676.807031 77403.610699</Center>
+        </Curve>
+        <Line dir="4.730632" staStart="123491.281625" length="48.110457">
+          <Start>1310976.757111 77409.083338</Start>
+          <End>1310977.634748 77360.980887</End>
+        </Line>
+        <Curve delta="0.152026" radius="300.000000" rot="cw" chord="45.563790" dirStart="4.730632" dirEnd="4.882658" staStart="123539.392082" length="45.607697">
+          <Start>1310977.634748 77360.980887</Start>
+          <End>1310981.923051 77315.619346</End>
+          <Center>1311277.584828 77366.453527</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V113-V026_CL" staStart="123458.085000">
+        <ProfAlign name="J_V113-V026_CL">
+          <PVI>123458.085000 126.500000</PVI>
+          <PVI>123585.091000 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V113-V026_CL" gauge="1.500000">
+        <CantStation station="123458.085000" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123584.999778" speed="80.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V115-V102_CL" state="proposed" staStart="0.000000" length="75.724477">
+      <CoordGeom>
+        <Curve delta="0.110659" radius="300.000000" rot="cw" chord="33.180690" dirStart="4.841288" dirEnd="4.951947" staStart="0.000000" length="33.197625">
+          <Start>1310986.847436 77345.511697</Start>
+          <End>1310992.925735 77312.892493</End>
+          <Center>1311284.358648 77384.074355</Center>
+        </Curve>
+        <Line dir="4.951947" staStart="33.197625" length="9.329226">
+          <Start>1310992.925735 77312.892493</Start>
+          <End>1310995.139308 77303.829682</End>
+        </Line>
+        <Curve delta="-0.110659" radius="300.000000" rot="ccw" chord="33.180690" dirStart="4.951947" dirEnd="4.841288" staStart="42.526851" length="33.197625">
+          <Start>1310995.139308 77303.829682</Start>
+          <End>1311001.217607 77271.210478</End>
+          <Center>1310703.706395 77232.647820</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V115-V102_CL" staStart="0.000000">
+        <ProfAlign name="J_V115-V102_CL">
+          <PVI>0.000000 126.500000</PVI>
+          <PVI>75.724477 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V115-V102_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="75.724477" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V15-V18_CL" state="proposed" staStart="123642.930752" length="75.722477">
+      <CoordGeom>
+        <Curve delta="0.110655" radius="300.000000" rot="cw" chord="33.179691" dirStart="4.882660" dirEnd="4.993315" staStart="123642.930752" length="33.196625">
+          <Start>1310989.602181 77270.955989</Start>
+          <End>1310997.024131 77238.617056</End>
+          <Center>1311285.263866 77321.790702</Center>
+        </Curve>
+        <Line dir="4.993315" staStart="123676.127377" length="9.329227">
+          <Start>1310997.024131 77238.617056</Start>
+          <End>1310999.610617 77229.653543</End>
+        </Line>
+        <Curve delta="-0.110655" radius="300.000000" rot="ccw" chord="33.179691" dirStart="4.993315" dirEnd="4.882660" staStart="123685.456604" length="33.196625">
+          <Start>1310999.610617 77229.653543</Start>
+          <End>1311007.032568 77197.314611</End>
+          <Center>1310711.370883 77146.479897</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V15-V18_CL" staStart="123642.930752">
+        <ProfAlign name="J_V15-V18_CL">
+          <PVI>123642.930752 126.500000</PVI>
+          <PVI>123718.653229 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V15-V18_CL" gauge="1.500000">
+        <CantStation station="123642.930752" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="123718.653229" speed="40.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V17-V14_CL" state="proposed" staStart="121118.874000" length="75.722477">
+      <CoordGeom>
+        <Curve delta="0.110655" radius="300.000001" rot="cw" chord="33.179691" dirStart="4.831799" dirEnd="4.942454" staStart="121118.874000" length="33.196625">
+          <Start>1310980.828837 77254.270495</Start>
+          <End>1310986.597108 77221.596057</End>
+          <Center>1311278.692580 77290.008304</Center>
+        </Curve>
+        <Line dir="4.942454" staStart="121152.070625" length="9.329227">
+          <Start>1310986.597108 77221.596057</Start>
+          <End>1310988.724552 77212.512640</End>
+        </Line>
+        <Curve delta="-0.110655" radius="299.999999" rot="ccw" chord="33.179691" dirStart="4.942454" dirEnd="4.831799" staStart="121161.399852" length="33.196625">
+          <Start>1310988.724552 77212.512640</Start>
+          <End>1310994.492823 77179.838202</End>
+          <Center>1310696.629082 77144.100393</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V17-V14_CL" staStart="121118.874000">
+        <ProfAlign name="J_V17-V14_CL">
+          <PVI>121118.876000 126.500000</PVI>
+          <PVI>121194.564932 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V17-V14_CL" gauge="1.500000">
+        <CantStation station="121118.874000" speed="200.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="121194.596477" speed="200.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+    <Alignment name="J_V19-V16_CL" state="proposed" staStart="0.000000" length="75.756935">
+      <CoordGeom>
+        <Line dir="4.721140" staStart="0.000000" length="42.560310">
+          <Start>1310987.329153 77254.949196</Start>
+          <End>1310987.701575 77212.390515</End>
+        </Line>
+        <Curve delta="0.110655" radius="300.000000" rot="cw" chord="33.179691" dirStart="4.721140" dirEnd="4.831795" staStart="42.560310" length="33.196625">
+          <Start>1310987.701575 77212.390515</Start>
+          <End>1310989.826218 77179.278919</End>
+          <Center>1311287.690089 77215.015652</Center>
+        </Curve>
+      </CoordGeom>
+      <Profile name="J_V19-V16_CL" staStart="0.000000">
+        <ProfAlign name="J_V19-V16_CL">
+          <PVI>0.000000 126.500000</PVI>
+          <PVI>75.650002 126.500000</PVI>
+        </ProfAlign>
+      </Profile>
+      <Cant name="J_V19-V16_CL" gauge="1.500000">
+        <CantStation station="0.000000" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+        <CantStation station="75.756935" speed="0.000000" appliedCant="0.000000" curvature="ccw" adverse="false"/>
+      </Cant>
+    </Alignment>
+  </Alignments>
+</LandXML>

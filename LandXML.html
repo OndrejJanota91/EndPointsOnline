@@ -100,7 +100,7 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">
-                Version: 1.3.4<br>
+                Version: 1.3.6<br>
                 Developed for Rhino 6 and higher.<br>
             </p>
         </section>
@@ -119,17 +119,15 @@
             and set similar units in the Rhino.
         </p>
         <p>
-            Used coordinate systems are country/region dependend. It is not possible to include general approach for all coordinate systems. Therefore, only most commonly used coordinate systems
-            were implemented. Commonly used coordinate system for different regions can be found at <a href="https://epsg.io/">https://epsg.io/</a> website.
-            Currently, the following coordinate systems are implemented and automatically transformed if applied in LandXML:
-            <ul class="main-list2">
-                <li><a href="https://epsg.io/2065">S-JTSK (Ferro) / Krovak (EPSG: 2065)</a>
-                <li><a href="https://epsg.io/5111">ETRS89 / NTM zone 11 (EPSG: 5111)</a><br>
-            </ul>
-            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. If this occurs, please double check the result and contact the author for
-            coordinate system implementation.
+            Used coordinate systems are country/region dependend. Therefore, if coordinate system is used in XML file and coordinate system's EPSG code 
+            is present or added as user unput, code is read and checked against existing coordinate system found <a href="https://epsg.io/">here</a>.
+            If coordinate system is valid and usable (i.e. coordinaate system is cartesian and its axis directed to world's directions (west, east, north, south)) coordinates are
+            transformed accordingly. Commonly used coordinate system for different regions can be found at <a href="https://epsg.io/">https://epsg.io/</a>.
+            Vertical coordinate system transformation is implemented only for horizontaly coordinates (X and Y coordinates). Vertical coordinate system transformation is not implemented.
+            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. In case implementation of 
+            coordinate system is incorrect contact the author.
         </p>
-        <img src="Pictures/EPSGError.gif" alt="Coordinate system warning" />
+        <img src="Pictures/EPSGError_1.3.6.gif" alt="Coordinate system warning" />
     </section>
     <section id="part3">
         <h2>Surface</h2>
@@ -140,10 +138,12 @@
         <section id="part31">
             <h3>Load .XML file with surfaces</h3>
             <p>To import a surface from an .XML file, you must first select the surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>
-            <img src="Pictures/SurfaceNames.png" alt="Read surface names" width="600">
+            <img src="Pictures/SurfaceNames_1.3.6.png" alt="Read surface names" width="600">
             <p>
                 The <b>SurfaceNames</b> component has two inputs and two outputs. First input parameter, <i>PathToXML</i> is string containing path to .XML file.
                 The input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas, see <a href="#part12">About LandXML</a> section.
+                The <i>EPSGCode</i> input is optional and should be used if EPSG code (coordinate system) in XML file is missing or is incorrect. EPSG code is usually four digit number representing coordinate system.
+                For more info about EPSG code and and coordinate systems visit <a href="https://epsg.io/">https://epsg.io/</a> website.
             </p>
             <p>
                 The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a
@@ -153,7 +153,7 @@
         <section id="part32">
             <h3>Select surface</h3>
             <p>Next step is to select which surfaces user wants to import. This is fully up to user, and the selection should be performed according to user's habits.</p>
-            <img src="Pictures/SurfaceSelection.png" alt="Different surface selection" width="700">
+            <img src="Pictures/SurfaceSelection_1.3.6.png" alt="Different surface selection" width="700">
         </section>
         <section id="part33">
             <h3>Create surface</h3>
@@ -161,7 +161,7 @@
                 A surface can be created in multiple ways but always with <b>CreateSurface</b> component. Final surface can be represented by mesh (fast but less accurate),
                 unjoined triangle/quad surfaces (fast and accurate), or by joined surface (slow and accurate). For more information see <a href="#part5">settings</a> section.
             </p>
-            <img src="Pictures/SurfaceCreation.png" alt="Different surface selection" width="800">
+            <img src="Pictures/SurfaceCreation_1.3.6.png" alt="Different surface selection" width="800">
             <p>
                 The <b>CreateSurface</b> component has three inputs and one output. First input parameter, <i>SurfaceNames</i>, is list of selected surface names which will be created.
                 The parameter <i>Boundary</i> is optional. If user provides list of closed curves to this parameter, only part of the triangle/quads with all corner points inside boundary will be created. Inner/outer
@@ -194,10 +194,12 @@
             <section id="part41">
                 <h3>Load .XML file with alignment</h3>
                 <p>To import an alignment from .XML, start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file, use <b>AlignmentNames</b> component.</p>
-                <img src="Pictures/AlignmentNames.png" alt="Read alignment names" width="600">
+                <img src="Pictures/AlignmentNames_1.3.6.png" alt="Read alignment names" width="600">
                 <p>
                     The <b>AlignmentNames</b> component has two inputs and five outputs. First input parameter, <i>PathToXML</i>, is string containing path to .XML file.
                     Input parameter <i>Header</i> is optional and should be used if the LandXML schema is unimplemented. For implemented schemas, see <a href="#part12">About LandXML</a> section.
+                    The <i>EPSGCode</i> input is optional and should be used if EPSG code (coordinate system) in XML file is missing or is incorrect. EPSG code is usually four digit number representing coordinate system.
+                    For more info about EPSG code and and coordinate systems visit <a href="https://epsg.io/">https://epsg.io/</a> website.
                 </p>
                 <p>
                     Output parameter <i>AlignmentNames</i> is a list of all alignments (horizontal profiles) present in the .XML file. Second output parameter, <i>ProfileNames</i>, is a tree of all profiles (vertical profiles) present in .XML file.
@@ -213,17 +215,14 @@
                 <h3>Select alignment (horizontal profile) and profile (vertical profile)</h3>
                 <p>
                     Next step is to select which alignment and profile user want to import. This is fully up to user and selection should be performed according to user's habits. However, the order of alignment and profile
-                    should always respect following rule: alignment's list index is always equal to first index of the branch in the profile's Data Tree.
+                    should always respect following rule: alignment's list index is always equal to first index of the branch in the profile's Data Tree. Of course, you can select multiple profiles for one alignment.
                 </p>
-                <img src="Pictures/AlignmentSelection.png" alt="Alignment and profile selection" width="800">
-                <p>Of course, you can select multiple profiles for one alignment.</p>
-                <img src="Pictures/AlignmentSelection2.png" alt="Alignment and multiple profile selection" width="800">
-
+                <img src="Pictures/AlignmentSelection_1.3.6.png" alt="Alignment and profile selection" width="800">
             </section>
             <section id="part43">
                 <h3>Create alignment</h3>
                 <p>Alignment can be created in with <b>CreateAlignment</b> component. Final curve is represented by a NURBS curve on a proper coordinate.</p>
-                <img src="Pictures/AlignmentCreation.png" alt="Alignment creation" width="800">
+                <img src="Pictures/AlignmentCreation_1.3.6.png" alt="Alignment creation" width="800">
                 <p>
                     <b>CreateAlignment</b> component has six inputs and outputs. First input parameter, <i>AlignmentNames</i>, is list of selected alignment names. Second input,
                     <i>ProfileNames</i>, is a Data Tree of selected profiles associated to each alignment. If above-mentioned alignment and profile order convention is not repsected
