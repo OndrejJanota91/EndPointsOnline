@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SampleFiles"
+    "\\CSS",
+    "\\SampleFiles",
+    "\\SampleFiles\\LandXML"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\Changelog.html",
   "PreviewInSolutionExplorer": false
 }
