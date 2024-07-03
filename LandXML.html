@@ -100,7 +100,7 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">
-                Version: 1.3.7<br>
+                Version: 1.3.8<br>
                 Developed for Rhino 6 and higher.<br>
             </p>
         </section>
@@ -308,9 +308,9 @@
             In <i>Surface</i> tab following options are present:
             <ul class="paragraph-list-bullets">
                 <li><b>Mesh/Brep</b>: If checked, surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.
-                <li>
-                    <b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
+                <li><b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
                     If surface consist of huge number of triangles/quads, joining can be very demanding on computational time.
+                <li><b>Ignore invisible faces</b>: If checked, surface's invisible faces (mark with attribute i in LandXML) are ignored during import.'</li>
                 <li><b>Tolerance</b>: Tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
                 <li><b>Parallel</b>: If checked, multiple processors are used for surface import.*
                 <li><b>Number of precessors</b>: Max. number of processors allowed for parallel computing. Applied only if parallel computing is alowed for surface import.**
