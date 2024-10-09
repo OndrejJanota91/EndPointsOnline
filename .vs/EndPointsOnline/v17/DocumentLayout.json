@@ -1,52 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\LandXML.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LandXML.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\IFC.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IFC.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\EULA.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EULA.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\Changelog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Changelog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\Source\\Repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\LandXML_1.3.4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.3.4\\LandXML_1.3.4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\Source\\Repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\IFC_1.3.4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.3.4\\IFC_1.3.4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\LandXML_1.2.2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.2.2\\LandXML_1.2.2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\IFC_1.2.2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.2.2\\IFC_1.2.2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\LandXML_1.1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.1\\LandXML_1.1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\IFC_1.1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OlderVersions\\v1.1\\IFC_1.1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -54,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -91,151 +46,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EULA.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\EULA.html",
-              "RelativeDocumentMoniker": "EULA.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\EULA.html",
-              "RelativeToolTip": "EULA.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T18:49:53.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LandXML_1.1.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\LandXML_1.1.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.1\\LandXML_1.1.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\LandXML_1.1.html",
-              "RelativeToolTip": "OlderVersions\\v1.1\\LandXML_1.1.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:08:59.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IFC_1.1.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\IFC_1.1.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.1\\IFC_1.1.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.1\\IFC_1.1.html",
-              "RelativeToolTip": "OlderVersions\\v1.1\\IFC_1.1.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:08:50.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LandXML_1.3.4.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\LandXML_1.3.4.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.3.4\\LandXML_1.3.4.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\LandXML_1.3.4.html",
-              "RelativeToolTip": "OlderVersions\\v1.3.4\\LandXML_1.3.4.html",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABMAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:07:14.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IFC_1.2.2.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\IFC_1.2.2.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.2.2\\IFC_1.2.2.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\IFC_1.2.2.html",
-              "RelativeToolTip": "OlderVersions\\v1.2.2\\IFC_1.2.2.html",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:05:53.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IFC_1.3.4.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\IFC_1.3.4.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.3.4\\IFC_1.3.4.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.3.4\\IFC_1.3.4.html",
-              "RelativeToolTip": "OlderVersions\\v1.3.4\\IFC_1.3.4.html",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:05:51.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LandXML_1.2.2.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\LandXML_1.2.2.html",
-              "RelativeDocumentMoniker": "OlderVersions\\v1.2.2\\LandXML_1.2.2.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\OlderVersions\\v1.2.2\\LandXML_1.2.2.html",
-              "RelativeToolTip": "OlderVersions\\v1.2.2\\LandXML_1.2.2.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-15T08:05:47.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Changelog.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\Changelog.html",
-              "RelativeDocumentMoniker": "Changelog.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\Changelog.html",
-              "RelativeToolTip": "Changelog.html",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFsAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-16T05:08:35.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LandXML.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\LandXML.html",
-              "RelativeDocumentMoniker": "LandXML.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\LandXML.html",
-              "RelativeToolTip": "LandXML.html",
-              "ViewState": "AQIAAMkAAAAAAAAAAAD4v9sAAABzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-16T05:08:13.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IFC.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\IFC.html",
-              "RelativeDocumentMoniker": "IFC.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\IFC.html",
-              "RelativeToolTip": "IFC.html",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAEwFwAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-16T05:07:55.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\Janot\\source\\repos\\OndrejJanota91\\EndPointsOnline\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-16T05:07:50.662Z",
-              "EditorCaption": ""
             }
           ]
         }
