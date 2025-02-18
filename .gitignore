@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/EndPointsOnline/CopilotIndices/17.12.38.29086
+/.vs/EndPointsOnline/FileContentIndex
+/.vs/EndPointsOnline/v17/.wsuo
+/.vs/EndPointsOnline/v17/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
