@@ -184,7 +184,7 @@
         <img src="Pictures/UnimplementeSubCurve.gif" alt="Unimplemented SubCurve">
         <p>
             The <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_Profile.html#Link07F62A90">vertical profile</a> (XZ plane profile curve) is represented by <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfAlign.html#Link07F630D0">ProfAlign</a> or <a href="http://www.landxml.org/schema/landxml-1.2/documentation/LandXML-1.2Doc_ProfSurf.html#Link07F62DB0">ProfSurf</a> type curve.
-            ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymmetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfiAlign is typically used for road and rail profile curves. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typically used for exporting intersection of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities of profile curves are implemented in EndPoints.
+            ProfAlign is created by points of vertical intersection (PVI), parabolic curves (ParaCurve), unsymmetric parabolic curve (UnsymParaCurve) or arcs (CircCurve). ProfilAlign is typically used for road and rail profile curves. ProfSurf is represented by list of 2D points (PntList2D). ProfSurf is typically used for exporting intersection of two surfaces (e.g. terrain and road slopes). Both types and all geometric entities of profile curves are implemented in EndPoints.
             <section id="part41">
                 <h3>Load .XML file with alignment</h3>
                 <p>To import an alignment from .XML, start by selecting alignment (horizontal profile) and profile (vertical profile) names for import from the .XML file. To read all alignment and profile names and other alignment data in .XML file, use <b>AlignmentNames</b> component.</p>
@@ -219,7 +219,7 @@
                 <img src="Pictures/AlignmentCreation_1.4.0.png" alt="Alignment creation" width="800">
                 <p>
                     <b>CreateAlignment</b> component has six inputs and outputs. First input parameter, <i>AlignmentNames</i>, is list of selected alignment names. Second input,
-                    <i>ProfileNames</i>, is a Data Tree of selected profiles associated to each alignment. If above-mentioned alignment and profile order convention is not repsected
+                    <i>ProfileNames</i>, is a Data Tree of selected profiles associated to each alignment. If above-mentioned alignment and profile order convention is not respected
                     and profile name does not match associated alignment name, warning message is shown. Input <i>StartSta</i> and <i>EndSta</i> are optional inputs. It is Data Tree of required start and end stationing for each
                     imported curve. If stationing inputs are not used, alignment curves are created in their whole length according to <a href="#part41">min./max.</a> valid stationing.
                 </p>
