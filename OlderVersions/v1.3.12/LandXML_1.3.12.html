@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="EndPoints-LandXML" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Online guide to EndPoints plugin" />   
-    <meta property="og:url" content="https://ondrejjanota91.github.io/EndPointsOnline/LandXML"/>
+    <meta property="og:description" content="Online guide to EndPoints plugin" />
+    <meta property="og:url" content="https://ondrejjanota91.github.io/EndPointsOnline/LandXML" />
     <meta property="og:image" content="https://github.com/OndrejJanota91/EndPointsOnline/blob/main/Pictures/imageforpreview.png?raw=true">
-    <meta name="author" content="Ondřej Janota">
+    <meta name="author" content="Ond?ej Janota">
     <title>EndPoints</title>
     <link rel="stylesheet" href="CSS/Styles.css">
 </head>
@@ -80,7 +80,7 @@
             </p>
             <p class="paragraph-list">
                 Contact: <a href="mailto:EndPointsonline@gmail.com">EndPointsonline@gmail.com</a><br>
-                Website: <a href="https://www.linkedin.com/in/ondřej-janota/">Ondřej Janota</a><br>
+                Website: <a href="https://www.linkedin.com/in/ond?ej-janota/">Ond?ej Janota</a><br>
             </p>
         </section>
         <section id="part12">
@@ -100,7 +100,7 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">
-                Version: 1.4.3<br>
+                Version: 1.3.12<br>
                 Developed for Rhino 6 and higher.<br>
             </p>
         </section>
@@ -119,12 +119,12 @@
             and set similar units in the Rhino.
         </p>
         <p>
-            Used coordinate systems are country/region dependend. Therefore, if coordinate system is used in XML file and coordinate system's EPSG code 
+            Used coordinate systems are country/region dependend. Therefore, if coordinate system is used in XML file and coordinate system's EPSG code
             is present or added as user unput, code is read and checked against existing coordinate system found <a href="https://spatialreference.org/ref/epsg/">here</a>.
             If coordinate system is valid and usable (i.e. coordinaate system is cartesian and its axis directed to world's directions (west, east, north, south)) coordinates are
             transformed accordingly. Commonly used coordinate system for different regions can be found at <a href="https://epsg.io/">https://epsg.io/</a>.
             Vertical coordinate system transformation is implemented only for horizontaly coordinates (X and Y coordinates). Vertical coordinate system transformation is not implemented.
-            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. In case implementation of 
+            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. In case implementation of
             coordinate system is incorrect contact the author.
         </p>
         <img src="Pictures/EPSGError_1.3.6.gif" alt="Coordinate system warning" />
@@ -259,14 +259,14 @@
             Cross-sections in LandXML represents section curves at defined stationing. Cross-sections can represent <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_CrossSectSurf.html#Link07F1F4F0">surface profiles</a> on defined stationings or <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_DesignCrossSectSurf.html#Link07F1F810">parts of designed structure (assemblies/subassemblies)</a> (road, railway etc.). Each cross-section consists of sub-cross-section curves. In general, cross-sections can be defined in different ways.
             Some of the sub-cross-section curves can be defined incorrectly (duplicate points, curve defined by two diplicate points etc.). In that case point/sub-cross-section curve is skipped. and warning message is produced.
         </p>
-        <p>   
+        <p>
             <section id="part51">
                 <h3>Create cross-sections</h3>
                 <p>
                     To import cross-sections from .XML, start by selecting alignment (horizontal profile) name from <b>AlignmentNames</b> component output. Based on the selected alignment, corresponding cross-sections imported and placed in XY plane. Vertical position of the cross-sections is dependent on
                     point Z coordinates written in .XML file.
                 </p>
-                    <img src="Pictures/CreateCrossSection.png" alt="Import cross section" width="600">
+                <img src="Pictures/CreateCrossSection.png" alt="Import cross section" width="600">
                 <p>
                     The <b>CreateCrossSection</b> component has four inputs and six outputs. The first input parameter, <i>AlignmentNames</i>, is a list of strings containing names of the alignments for which we want cross-sections to be imported.
                     Input parameter <i>StartSta</i> and <i>EndSta</i>, are list and are optional. Using these parameters, user can set the stationing interval on which cross-section will be imported. If one of the inputs is not setted alignment start or end stationing will be used.
@@ -278,8 +278,8 @@
                     Output parameter <i>DesignCrossSectionsCurves</i> is a Data Tree of all imported <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_DesignCrossSectSurf.html#Link07F1F810">designed cross-sections</a> on the selected stationing interval. Each branch corresponds to one stationing where the section is defined.
                     Parameter <i>DesignSectionCurveNames</i> is a Data Tree with the names of all imported designed sub-cross-sections on selected stationing interval. Parameter <i>DesignCrossSectionsStationings</i> is a Data Tree with the stationing of all imported designed cross-sections on the selected stationing interval.
                 </p>
-            </section>        
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/gIac8qJ4m0U?si=umXZhFrdFtT8EC3b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/gIac8qJ4m0U?si=umXZhFrdFtT8EC3b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
     <section id="part6">
         <h2>LandXML Settings</h2>
@@ -308,7 +308,8 @@
             In <i>Surface</i> tab following options are present:
             <ul class="paragraph-list-bullets">
                 <li><b>Mesh/Brep</b>: If checked, surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.
-                <li><b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
+                <li>
+                    <b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
                     If surface consist of huge number of triangles/quads, joining can be very demanding on computational time.
                 <li><b>Ignore invisible faces</b>: If checked, surface's invisible faces (mark with attribute i in LandXML) are ignored during import.'</li>
                 <li><b>Tolerance</b>: Tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
