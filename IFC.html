@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Online guide to EndPoints plugin" />
     <meta property="og:url" content="https://ondrejjanota91.github.io/EndPointsOnline/IFC" />
-    <meta property="og:image" content="https://github.com/OndrejJanota91/EndPointsOnline/blob/main/Pictures/imageforpreview.png?raw=true">
+    <meta property="og:image"
+        content="https://github.com/OndrejJanota91/EndPointsOnline/blob/main/Pictures/imageforpreview.png?raw=true">
     <meta name="author" content="Ondřej Janota">
     <title>EndPoints</title>
     <link rel="stylesheet" href="CSS/Styles.css">
@@ -48,7 +50,8 @@
                 <li><a href="#part33">IFCFacilityParts components</a></li>
                 <li><a href="#part34">IFCExport component</a></li>
                 <li><a href="#part35">IFCElementAssembly component</a></li>
-                <li><a href="#part36">Input data structure rules</a></li>
+                <li><a href="#part36">IFCCRS component</a></li>
+                <li><a href="#part37">Input data structure rules</a></li>
             </ul>
         </li>
         <li><a href="#part4">IFC settings</a></li>
@@ -61,10 +64,14 @@
         <section id="part11">
             <h3>About EndPoints</h3>
             <p>
-                Hello dear Grasshopper user. Thank you for your interest in EndPoints plugin. The EndPoints plugin was developed for the
-                purpose of importing alignment and digital terrain model (DTM) into Rhino/Grasshopper from (Land)XML files and export your building/bridge/tunnel or other
-                to IFC file format. The imported elements (alignment and DTM) are intended to serve as initial input for design of various infrastructure parts
-                (e.g. bridges, tunnels, rail and road structure).The purpose of IFC exporter is to provide users with an easy-to-use but sufficiently comprehensive option for producing IFC
+                Hello dear Grasshopper user. Thank you for your interest in EndPoints plugin. The EndPoints plugin was
+                developed for the
+                purpose of importing alignment and digital terrain model (DTM) into Rhino/Grasshopper from (Land)XML
+                files and export your building/bridge/tunnel or other
+                to IFC file format. The imported elements (alignment and DTM) are intended to serve as initial input for
+                design of various infrastructure parts
+                (e.g. bridges, tunnels, rail and road structure).The purpose of IFC exporter is to provide users with an
+                easy-to-use but sufficiently comprehensive option for producing IFC
                 files directly from Rhino/Grasshopper. However, how the plugin is utilized is entirely up to the user.
             </p>
             <p class="paragraph-list">
@@ -75,17 +82,26 @@
         <section id="part12">
             <h3>About IFC</h3>
             <p>
-                <a href="https://technical.buildingsmart.org/standards/ifc/">IFC schema</a> describes the built environment, including buildings and civil infrastructure. It is an open international standard
-                <a href="https://www.iso.org/standard/70303.html">(ISO 16739-1:2018)</a>. Schema is vendor-neutral and has the potential to be used across wide range of devices and software platforms. IFC schema has
-                many different use cases. IFC schema specification is the primary technical deliverable of <a href="https://www.buildingsmart.org/">buildingSMART International</a> to fulfill its
-                goal to promote openBIM®. So far three versions are official <a href="https://technical.buildingsmart.org/standards/ifc/ifc-schema-specifications/">(IFC 2x3, IFC 4 and IFC 4x3)</a>.
+                <a href="https://technical.buildingsmart.org/standards/ifc/">IFC schema</a> describes the built
+                environment, including buildings and civil infrastructure. It is an open international standard
+                <a href="https://www.iso.org/standard/70303.html">(ISO 16739-1:2018)</a>. Schema is vendor-neutral and
+                has the potential to be used across wide range of devices and software platforms. IFC schema has
+                many different use cases. IFC schema specification is the primary technical deliverable of <a
+                    href="https://www.buildingsmart.org/">buildingSMART International</a> to fulfill its
+                goal to promote openBIM®. So far three versions are official <a
+                    href="https://technical.buildingsmart.org/standards/ifc/ifc-schema-specifications/">(IFC 2x3, IFC 4
+                    and IFC 4.3)</a>.
             </p>
         </section>
         <section id="part13">
             <h3>License and pricing</h3>
             <p>
-                Export to IFC is based on xbim library (<a href="https://docs.xbim.net/">xbim toolkit</a>, <a href="https://docs.xbim.net/license/license.html">license</a>), for which I am very grateful to the creators of the xbim toolkit library.<br>
-                <b>License and pricign policy for EndPoints plugin can be read <a href="./LicenseAndPricing.html">here.</a></b></p>
+                Export to IFC is based on xbim library (<a href="https://docs.xbim.net/">xbim toolkit</a>, <a
+                    href="https://docs.xbim.net/license/license.html">license</a>), for which I am very grateful to the
+                creators of the xbim toolkit library.<br>
+                <b>License and pricing policy for EndPoints plugin can be read <a
+                        href="./LicenseAndPricing.html">here.</a></b>
+            </p>
         </section>
         <section id="part14">
             <h3>Version</h3>
@@ -97,180 +113,365 @@
         <section id="part15">
             <h3>Orientation in plugin</h3>
             <p>With the installation of the EndPoints plugin two new features will appear in the Grasshopper.</p>
-            <img src="Pictures/EndPointsAddon1.3.png" alt="Parts of EndPoints plugins">
-            <p>New tab in the top menu bar (1) with the plugin <a href="#part4">settings</a> and new tab in the ribbon menu (2) with four components.</p>
+            <img src="Pictures/EndPointsAddon1.4.png" alt="Parts of EndPoints plugins">
+            <p>New tab in the top menu bar (1) with the plugin <a href="#part4">settings</a> and new tab in the ribbon
+                menu (2) with plugin components.</p>
             </p>
         </section>
     </section>
     <section id="part2">
         <h2>Coordinate system and units</h2>
         <p>
-            Grasshopper is unitless and units depend on the actual unit system set in Rhino. However, IFC is not
-            unitless (SI units are always used). Automatic unit conversion is not included into IFC export engine. As the main part of IFC is graphical data and its dimensions
-            depend on Rhino unit system, only the length unit matters. <b>All IFC are exported in meters</b>, so your Rhino/Grasshoper geometry should be always in meters. If not, <b>IFCExport</b> will produce a warning message.
+            Grasshopper is unitless and units depend on the actual unit system set in Rhino. However, IFC is not (SI
+            units are always used). Automatic unit conversion is not included into IFC export engine.
+            As the main part of IFC is graphical data and its dimensions depend on Rhino unit system, only the length
+            unit matters. Ifc length units depends on the actual Rhinoceros units.
+            If the Rhino length units are set to one of the following units:
+        <ul class="paragraph-list-bullets">
+            <li>Meters</li>
+            <li>Centimeters</li>
+            <li>Millimeters</li>
+            <li>Microns</li>
+            <li>Nanometers</li>
+            <li>Kilometers</li>
+            <li>Megameters</li>
+            <li>Decimeters</li>
+            <li>Dekameters</li>
+        </ul>
+        Ifc length unit will be set according to Rhinoceros units. If not, <b>IFCExport</b> will produce a warning
+        message and Ifc unit will be set to meters.
         </p>
         <p>
-            Coordinate systems are not implemented into IFC export engine. Geometry is exported as it is located in Rhino. However, as coordination between different structures
-            is key in civil engineering and not all disciplines work in global coordinate system, the origin point and rotation from X axis can be defined for IFC export.
+            Coordinate system can be defined in Ifc with IfcCoordinateReferenceSystem (for IFC 4.3). However, geometry
+            is always exported as it is located in Rhino. Coordination between different structures
+            is key in civil engineering and not all disciplines work in global coordinate system, the origin point and
+            rotation from X axis can be defined for IFC export.
         </p>
     </section>
     <section id="part3">
         <h2>Export to IFC</h2>
         <p>
-            IFC is very complex and wide-purpose schema. It is not possible to cover all possibilities offered by IFC schemas.The main purpose of EndPoints plugin is to simplify IFC production directly from Rhino/Grasshopper.
-            The exporter is focused on creation of IFC files, which should be used for coordination and delivery both geometry and non-graphical data. In some cases export options may be limited. For successful export, rules described in <a href="#part34">Input data structure rules</a> section
-            must be followed. As different clients, companies and countries develop their own standards proper sorting of data before export and how to get data inside Grasshopper is up to the user.
+            IFC is very complex and wide-purpose schema. It is not possible to cover all possibilities offered by IFC
+            schemas. The main purpose of EndPoints plugin is to simplify IFC production directly from Rhino/Grasshopper.
+            The exporter is focused on creation of IFC files, which should be used for coordination and delivery both
+            geometry and non-graphical data. In some cases export options may be limited. For successful export, rules
+            described in <a href="#part34">Input data structure rules</a> section
+            must be followed. As different clients, companies and countries develop their own standards proper sorting
+            of data before export and how to get data inside Grasshopper is up to the user.
         </p>
         <section id="part31">
             <h3>IFCSchema component</h3>
-            <p><b>IFCSchema</b> component is simple value picker parameter with predefined implemented IFC schemas. IFC schemas <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/">2x3</a>, <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/HTML/">4</a> and <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/">4.3</a> are implemented.</p>
-            <img src="Pictures/IFCSchema1.3.png" alt="IFCSchema component" width="600">
+            <p><b>IFCSchema</b> component is simple value picker parameter with predefined implemented IFC schemas. IFC
+                schemas <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/">2x3</a>, <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/HTML/">4</a> and <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/">4.3</a> are implemented.</p>
+            <img src="Pictures/IFCSchema1.4.png" alt="IFCSchema component" width="600">
         </section>
         <section id="part32">
             <h3>IFCFacilityTypes components</h3>
             <p>
-                <b>IFCFacilityTypes</b> components are set of simple value picker parameters with predefined IFC Facility types and its sub-types. These value pickers are valid only for export to IFC4.3 schema. For IFC2x3 and IFC4, building is always used. Since IFC4.3 schema not building but facilities are exported. Facility can be five different types.
+                <b>IFCFacilityTypes</b> components are set of simple value picker parameters with predefined IFC
+                Facility types and its sub-types. These value pickers are valid only for export to IFC4.3 schema. For
+                IFC2x3 and IFC4, building is always used. Since IFC4.3 schema not building but facilities are exported.
+                Facility can be six different types.
                 Each facility has its sub-types.
             </p>
             <ul class="paragraph-list-bullets">
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBuilding.htm">IfcBuilding</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridge.htm">IfcBridge</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarineFacility.htm">IfcMarineFacility</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoad.htm">IfcRoad</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailway.htm">IfcRailway</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBuilding.htm">IfcBuilding</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridge.htm">IfcBridge</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarineFacility.htm">IfcMarineFacility</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoad.htm">IfcRoad</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailway.htm">IfcRailway</a>
+                </li>
+                <li>IfcCommonFacility</a></li>
             </ul>
-            <img src="Pictures/FacilityTypes1.3.png" alt="IFCFaclityTypes components" width="600">
-            <p>Facility sub-types values are enumeration defined by IFC schema, specifing further facility type. For each facility new to IFC4.3 value picker with permitted values was created. <q>Userdefined</q> option was removed as it was marked as wrong by <a href="https://technical.buildingsmart.org/services/validation-service/">buildingSmart validation service.</a></p>
+            <img src="Pictures/FacilityTypes1.4.png" alt="IFCFacilityTypes components" width="600">
+            <p>Facility sub-types values are enumeration defined by IFC schema, specifying further facility type. For
+                each facility new to IFC4.3 value picker with permitted values was created. <q>Userdefined</q> option
+                was removed as it was marked as wrong by <a
+                    href="https://technical.buildingsmart.org/services/validation-service/">buildingSmart validation
+                    service.</a></p>
             <ul class="paragraph-list-bullets">
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridgeTypeEnum.htm">IfcBridgeTypes</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarineFacilityTypeEnum.htm">IfcMarineFacilityTypes</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoadTypeEnum.htm">IfcRoadTypes</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailwayTypeEnum.htm">IfcRailwayTypes</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridgeTypeEnum.htm">IfcBridgeTypes</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarineFacilityTypeEnum.htm">IfcMarineFacilityTypes</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoadTypeEnum.htm">IfcRoadTypes</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailwayTypeEnum.htm">IfcRailwayTypes</a>
+                </li>
             </ul>
-            <img src="Pictures/FacilityTypesEnumeration1.3.png" alt="FacilityTypesEnumeration components" width="600">
+            <img src="Pictures/FacilityTypesEnumeration1.4.png" alt="FacilityTypesEnumeration components" width="600">
         </section>
         <section id="part33">
             <h3>IFCFacilityParts components</h3>
             <p>
-                <b>IFCFacilityParts</b> components are set of simple value picker parameters with predefined FacilityParts. These value pickers are valid only for export facilites new to IFC4.3 schema. For building export stories are always used as facility parts.
-                Each facility consists of different facility parts. 
+                <b>IFCFacilityParts</b> components are set of simple value picker parameters with predefined
+                FacilityParts. These value pickers are valid only for export facilities new to IFC4.3 schema. For
+                building export stories are always used as facility parts.
+                Each facility consists of different facility parts.
             </p>
             <ul class="paragraph-list-bullets">
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridgePartTypeEnum.htm">IfcBridgeParts</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarinePartTypeEnum.htm">IfcMarineFacilityParts</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoadPartTypeEnum.htm">IfcRoadParts</a></li>
-                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayParts</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBridgePartTypeEnum.htm">IfcBridgeParts</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMarinePartTypeEnum.htm">IfcMarineFacilityParts</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRoadPartTypeEnum.htm">IfcRoadParts</a>
+                </li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayParts</a>
+                </li>
+                <li><a
+                        href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommonTypeEnum.htm">IfcCommonFacilityParts</a>
+                </li>
             </ul>
-            <img src="Pictures/IFCFacilityParts1.3.png" alt="IFCFaclityParts component" width="600">
+            <img src="Pictures/IFCFacilityParts1.4.png" alt="IFCFacilityParts component" width="600">
         </section>
         <section id="part34">
             <h3>IFCExport component</h3>
             <p>
-                The component has multiple input parameters. The first parameter, <i>Export</i>, triggers the export if all necessary inputs are provided and boolean true is input for this parameter.
-                The use of the native <b>Button</b> is assumed for <i>Export</i> parameter. <i> FileName</i> is the name (without .ifc extension) of created IFC file. <i>Directory</i> is the path to the
-                directory where IFC file will be saved. <i>IFCSchema</i> input parameter is a string with the version of IFC schema. The use of the EndPoint <a href="#part31"><b>IFCSchema</b></a> component is assumed for <i>IFCSchema</i> parameter.
-                Input <i>ProjectName</i> is optional parameter. User can set name of a project. Inputs <i>FacilityType</i>, <i>FacilitySubType</i> <i>FacilityName</i> are optional and specifies what type of facility structure is, its name and sub-type.
-                If IFC schema 2x3 or 4 is used, structure is always exported as building. If <i>FacilityType</i> is building <i>FacilitySubType</i> is neglected automatically.
+                The component has multiple input parameters. The first parameter, <i>Export</i>, triggers the export if
+                all necessary inputs are provided and boolean true is input for this parameter.
+                The use of the native <b>Button</b> is assumed for <i>Export</i> parameter. <i> FileName</i> is the name
+                (without .ifc extension) of created IFC file. <i>Directory</i> is the path to the
+                directory where IFC file will be saved. <i>IFCSchema</i> input parameter is a string with the version of
+                IFC schema. The use of the EndPoint <a href="#part31"><b>IFCSchema</b></a> component is assumed for
+                <i>IFCSchema</i> parameter. Input <i>CRS</i> is inner class with coordinate system. This input is optional additional
+                and applicable only for IFC 4.3 schema. The use of the EndPoint <a href="#part31"><b>IFCCRS</b></a> component is assumed for
+                <i>CRS</i> input parameter. Input <i>ProjectName</i> is optional parameter. User can set name of a project. 
+                Inputs <i>FacilityType</i>, <i>FacilitySubType</i> <i>FacilityName</i> are optional and specifies what type of
+                facility structure is, its name and sub-type. If IFC schema 2x3 or 4 is used, structure is always exported as 
+                building. If <i>FacilityType</i> is building <i>FacilitySubType</i> is neglected automatically.
             </p>
-            <img src="Pictures/IFCExport1.3.png" alt="IFCExport component" width="350">
+            <img src="Pictures/IFCExport1.4.png" alt="IFCExport component" width="350">
             <p>
-                The optional parameters <i>FacilityPartsNames</i> and <i>FacilityPartTypes</i> are trees with the names and types of all IfcFacilityParts classes which will be defined inside the IFC file. If input is not provided, no parts are defined in the IFC file and all IfcBuildingElement/IfcBuiltElements classes are part of the IfcFacility (IfcBuilding, IfcBridge, IfcMarineFacility, IfcRoad, IfcRailway) class. If tree is provided,
-                then IfcBuildingElement/IfcBuiltElement classes are matched with the IfcFacilityPart according to tree paths. If <i>FacilityType</i> is set to building or <i>IFCSchema</i> is 2x3 or 4, <i>FacilityPartType</i> is neglected automatically (building storeys are used).
-                The parameter <i>Geometry</i> is a tree with all geometry which will be exported to IFC file. The <i>Geometry</i> parameter takes only meshes, and each mesh is exported as single IfcBuildingElement. The parameter <i>ElementAssemblies</i>
-                is a list with internal classes containing wrapped information about IfcElementAssembly classes. The use of the <a href="#part33"><b>IFCElementAssembly</b></a> component is assumed to generate this input list, and no additional information for this input is needed. IfcElementAssembly is created only if its FacilityType match FacilityType required for IFCExport. Each class in the list will be exported as a IfcElementAssembly class
-                with defined stories, IFC types, properties, layers and colours. However, both the <i>Geometry</i> and <i>ElementAssemblies</i> inputs are optional, at least one must be present. Otherwise, a warning message is shown, and IFC file is not created.
-                The <i>ElementNames</i> input parameter is optional. User can define name property of each element exported into IFC file. The <i>Colours</i> parameter is optional and must be a tree with colours defined as RGB (3 x integers in range 0 to 255). Tree structure must match <i>Geometry</i> tree structure. Each mesh should have a defined colour. However, if number of defined colours in tree path is smaller than number of meshes in same tree path, the last item in actual path is used as a colour
-                for missing colours. If the <i>Colours</i> input is not defined, then the default transparent color is used for all elements.
-                <i>IFCElementTypes</i> parameter is optional and must be a tree with strings (case-insensitive) defining types if IfcBuildingElement. Tree structure must match the <i>Geometry</i> tree structure. Each mesh shoudl have a defined IfcElementType. The default IfcBuildingElement set in the <a href="#part5">IFC settings</a> is used if <i>IFCElementTypes</i> input is not defined.
+                The optional parameters <i>FacilityPartsNames</i> and <i>FacilityPartTypes</i> are trees with the names
+                and types of all IfcFacilityParts classes which will be defined inside the IFC file. If input is not
+                provided, no parts are defined in the IFC file and all IfcBuildingElement/IfcBuiltElements classes are
+                part of the IfcFacility (IfcBuilding, IfcBridge, IfcMarineFacility, IfcRoad, IfcRailway) class. If tree
+                is provided,
+                then IfcBuildingElement/IfcBuiltElement classes are matched with the IfcFacilityPart according to tree
+                paths. If <i>FacilityType</i> is set to building or <i>IFCSchema</i> is 2x3 or 4,
+                <i>FacilityPartType</i> is neglected automatically (building storeys are used).
+                The parameter <i>Geometry</i> is a tree with all geometry which will be exported to IFC file. The
+                <i>Geometry</i> parameter takes only meshes, and each mesh is exported as single IfcBuildingElement. The
+                parameter <i>ElementAssemblies</i>
+                is a list with internal classes containing wrapped information about IfcElementAssembly classes. The use
+                of the <a href="#part33"><b>IFCElementAssembly</b></a> component is assumed to generate this input list,
+                and no additional information for this input is needed. IfcElementAssembly is created only if its
+                FacilityType match FacilityType required for IFCExport. Each class in the list will be exported as a
+                IfcElementAssembly class
+                with defined stories, IFC types, properties, layers and colours. However, both the <i>Geometry</i> and
+                <i>ElementAssemblies</i> inputs are optional, at least one must be present. Otherwise, a warning message
+                is shown, and IFC file is not created.
+                The <i>ElementNames</i> input parameter is optional. User can define name property of each element
+                exported into IFC file.  Input <i>ElementMaterials</i> is optional. User can defined IfcMaterial property 
+                of each exported element. The <i>Colours</i> parameter is optional and must be a tree with colours defined
+                as RGB (3 x integers in range 0 to 255). Tree structure must match <i>Geometry</i> tree structure. Each
+                mesh should have a defined colour. However, if number of defined colours in tree path is smaller than
+                number of meshes in same tree path, the last item in actual path is used as a colour
+                for missing colours. If the <i>Colours</i> input is not defined, then the default transparent color is
+                used for all elements.
+                <i>IFCElementTypes</i> parameter is optional and must be a tree with strings (case-insensitive) defining
+                types if IfcBuildingElement. Tree structure must match the <i>Geometry</i> tree structure. Each geometry input
+                should have a defined IfcElementType. The default IfcBuildingElement set in the <a href="#part5">IFC
+                settings</a> is used if <i>IFCElementTypes</i> input is not defined.
+                <i>IFCElementPredefinedTypes</i> input parameter is optional and must be a tree with strings (case-insensitive) defining
+                predefined types for each IfcElement. Predefined types are defined in IFC schema. Enumeration for each element type can be 
+                defined with value pickers in the ElementPredefinedTypesEnums containers.
             </p>
+            <img src="Pictures/ElementPredefinedTypesEnums.png" alt="IFCElementPredefinedTypesEnums" width="600">
             <p>
                 List of implemented IfcBuildingElements/IfcBuiltElements:
-                <ul class="paragraph-list-bullets">
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelement.htm">IFC 2x3</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcproductextension/lexical/ifcbuildingelement.htm">IFC 4</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBuiltElement.htm">IFC 4.3</a></li>
-                </ul>
+            <ul class="paragraph-list-bullets">
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelement.htm">IFC
+                        2x3</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcproductextension/lexical/ifcbuildingelement.htm">IFC
+                        4</a></li>
+                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcBuiltElement.htm">IFC
+                        4.3</a></li>
+            </ul>
             </p>
             <p>
-                Optional parameters <i>UDAKeys</i>, <i>UDAValues</i>, <i>UDAPSets</i> are trees used for defining the non-graphical information for each IfcBuildingElement. Structure of these trees must match each other and correspond with the <i>Geometry</i> input tree structure. The ruling element is always <i>UDAKeys</i>, which represent
-                names of the non-graphical attributes. According to the path and position inside the actual item of <i>UDAKeys</i>, corresponding values of non-graphical attributes and property sets names are retrieved from <i>UDAValues</i> and <i>UDAPSets</i> inputs. Default attribute value "Value_not_defined" and property set name "Not_defined" are used if there is no item at the same position.
-                All non-graphical attributes are exported as IfcPropertySingleValue. The parameter <i>UDAIFCTypes</i> is optional and can be used for the definition of IfcPropertySingleValue nominal value types for each non-graphical attribute. Tree structure of strings (case-insensitives) must match the structure of <i>UDAKeys</i>. IfcPropertySingleValue type set in the <a href="#part5">IFC settings</a> is used if the parameter is not defined.
-                Note that even if all UDA values are inserted as strings, they must be convertible to the type regarding the defined UDA Ifc type (e.g., if IfcReal is required, string must be convertible to a decimal number etc.). If conversion is not possible, attribute is written in IFC file as IfcLabel, and warning message is shown. Definition of units for non-graphical is not implemented and default
-                units, possibly derived from SI units, are used. The optional parameter <i>IfcLayers</i> is a tree with names of layers in which elements will be placed. Each <i>Geometry</i> item is matched with layer according to its path. If <i>Layer</i>layer unput is defined but not matched with <i>Geometry</i> item, layer "Not_defined" is created and used.
+                Optional parameters <i>UDAKeys</i>, <i>UDAValues</i>, <i>UDAPSets</i> are trees used for defining the
+                non-graphical information for each IfcBuildingElement. Structure of these trees must match each other
+                and correspond with the <i>Geometry</i> input tree structure. The ruling element is always
+                <i>UDAKeys</i>, which represent
+                names of the non-graphical attributes. According to the path and position inside the actual item of
+                <i>UDAKeys</i>, corresponding values of non-graphical attributes and property sets names are retrieved
+                from <i>UDAValues</i> and <i>UDAPSets</i> inputs. Default attribute value "Value_not_defined" and
+                property set name "Not_defined" are used if there is no item at the same position.
+                All non-graphical attributes are exported as IfcPropertySingleValue. The parameter <i>UDAIFCTypes</i> is
+                optional and can be used for the definition of IfcPropertySingleValue nominal value types for each
+                non-graphical attribute. Tree structure of strings (case-insensitive) must match the structure of
+                <i>UDAKeys</i>. IfcPropertySingleValue type set in the <a href="#part5">IFC settings</a> is used if the
+                parameter is not defined.
                 List of implemented IfcPropertyValues nominal value types:
-                <ul class="paragraph-list-bullets">
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcsimplevalue.htm">IFC 2x3 - IFcSimpleValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcmeasurevalue.htm">IFC 2x3 - IfcMeasureValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IFC 2x3 - IfcDerivedMeasureValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">IFC 4 - IFcSimpleValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcmeasurevalue.htm">IFC 4 - IfcMeasureValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IFC 4 - IfcDerivedMeasureValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcSimpleValue.htm">IFC 4.3 - IFcSimpleValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMeasureValue.htm">IFC 4.3 - IfcMeasureValue types</a></li>
-                    <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcDerivedMeasureValue.htm">IFC 4.3 - IfcDerivedMeasureValue types</a></li> 
-                </ul>
+            <ul class="paragraph-list-bullets">
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcsimplevalue.htm">IFC
+                        2x3 - IFcSimpleValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcmeasurevalue.htm">IFC
+                        2x3 - IfcMeasureValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IFC
+                        2x3 - IfcDerivedMeasureValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">IFC
+                        4 - IFcSimpleValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcmeasurevalue.htm">IFC
+                        4 - IfcMeasureValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/schema/ifcmeasureresource/lexical/ifcderivedmeasurevalue.htm">IFC
+                        4 - IfcDerivedMeasureValue types</a></li>
+                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcSimpleValue.htm">IFC
+                        4.3 - IFcSimpleValue types</a></li>
+                <li><a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMeasureValue.htm">IFC
+                        4.3 - IfcMeasureValue types</a></li>
+                <li><a
+                        href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcDerivedMeasureValue.htm">IFC
+                        4.3 - IfcDerivedMeasureValue types</a></li>
+            </ul>
+                Note that even if all UDA values are inserted as strings, they must be convertible to the type regarding
+                the defined UDA Ifc type (e.g., if IfcReal is required, string must be convertible to a decimal number
+                etc.). If conversion is not possible, attribute is written in IFC file as IfcLabel, and warning message
+                is shown. Definition of units for non-graphical is not implemented and default
+                units, possibly derived from SI units, are used. The optional parameter <i>IfcLayers</i> is a tree with
+                names of layers in which elements will be placed. Each <i>Geometry</i> item is matched with layer
+                according to its path. If <i>IfcLayers</i> input is defined but not matched with <i>Geometry</i> item,
+                no layer is used. Input parameter <i>IfcGroups</i> is optional. Structure of input is tree with
+                names of group in which elements will be placed. Each <i>Geometry</i> item is matched with group
+                according to its path. Input parameter <i>IfcSystems</i> is optional. Structure of input is tree with
+                names of systems in which elements will be placed. Each <i>Geometry</i> item is matched with system
+                according to its path.  
             </p>
             <p>
-                Optional parameters <i>OriginXCoor</i>, <i>OriginYCoor</i> and <i>OriginZCoor</i> can be used to define vector between of Rhino's local coordinate system (in which geometry is defined) and Rhino's global coordinate system (in which IFC file will be located, points measured, and coordinated).
-                The last parameter, <i>Rotation</i>, can be used to define angle between X axis of Rhino's local coordinate system and Rhino's global coordinate system. Apositive value is measured from Rhino's' global X axis in the counterclockwise direction. The angle can be inserted in degrees or radians according to a selected option in
-                the <a href="#part5">IFC settings</a> dialog.
+                Optional parameters <i>OriginXCoor</i>, <i>OriginYCoor</i> and <i>OriginZCoor</i> can be used to define
+                vector between of Rhino's local coordinate system (in which geometry is defined) and Rhino's global
+                coordinate system (in which IFC file will be located, points measured, and coordinated).
+                The last parameter, <i>Rotation</i>, can be used to define angle between X axis of Rhino's local
+                coordinate system and Rhino's global coordinate system. A positive value is measured from Rhino's'
+                global X axis in the counterclockwise direction. The angle can be inserted in degrees or radians
+                according to a selected option in the <a href="#part5">IFC settings</a> dialog.
             </p>
             <p>Output parameter <i>File path</i> is a path to the created .IFC file.</p>
             <p>
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/yf0UeSiVC9A?si=FE2p_9k04x6S87Db" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/dmj-y1bTAgQ?si=q2D1ptgmp5GudvAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/yf0UeSiVC9A?si=FE2p_9k04x6S87Db"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/dmj-y1bTAgQ?si=q2D1ptgmp5GudvAz"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
             </p>
 
         </section>
         <section id="part35">
             <h3>IFCElementAssembly component</h3>
             <p>
-                The component has multiple input parameters which function in the same way as inputs for <a href="#part31"><b>IFCExport</b></a> component. However, there are few differences. If data for <i>IFCElementTypes</i> is not provided, all members of each IfcElementAssembly are type of IfcMebmer.
-                The input <i>Geometry</i> is mandatory and not optional. All elements in each branch of the input tree are grouped into one IfcElementAssembly. Each member in Element assembly has facility part and layer. Color and IfcType can be
-                set separately for each member of the element assembly. UDA properties are set only for element assembly and not for each member.
+                The component has multiple input parameters which function in the same way as inputs for <a
+                    href="#part31"><b>IFCExport</b></a> component. However, there are few differences. If data for
+                <i>IFCElementTypes</i> is not provided, all members of each IfcElementAssembly are type of IfcMember.
+                The input <i>Geometry</i> is mandatory and not optional. All elements in each branch of the input tree
+                are grouped into one IfcElementAssembly. Each member in Element assembly has facility part and layer.
+                Color and IfcType can be set separately for each member of the element assembly. UDA properties are 
+                set only for element assembly and not for each member.
             </p>
-            <img src="Pictures/IFCElementAssembly1.3.png" alt="IFCElementAssembly component" width="350">
-            <p>Output parameter <i>ElementAssemblies</i> is a list of plugin internal classes with wrapped information (facility type, facility part, geometry, layers, names colors, non-graphical information) about element assembly. This output should be only inserted to input parameter <i>ElementAssemblies</i> of <b>IFCExport</b> component.</p>
+            <img src="Pictures/IFCElementAssembly1.4.png" alt="IFCElementAssembly component" width="350">
+            <p>Output parameter <i>ElementAssemblies</i> is a list of plugin internal classes with wrapped information
+                (facility type, facility part, geometry, layers, names colors, non-graphical information) about element
+                assembly. This output should be only inserted to input parameter <i>ElementAssemblies</i> of
+                <b>IFCExport</b> component.</p>
             <p>
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/9a3_R7mkiqM?si=TZH5dt_8rtmt8qyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/VpD41AWXskk?si=55Q83oLxY4qgTvV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/9a3_R7mkiqM?si=TZH5dt_8rtmt8qyM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/VpD41AWXskk?si=55Q83oLxY4qgTvV0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
 
             </p>
         </section>
         <section id="part36">
+            <h3>IFCCRS component</h3>
+                Input parameter <i>CRSName</i> is a string with the name of CRS and correspond with 
+                <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">Name attribute</a> of IfcCoordinateReferenceSystem.
+                Input parameter <i>CRSDescription</i> is string with the informal description of this coordinate reference system according to <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">	Description attribute</a> of IfcCoordinateReferenceSystem.
+                Input parameter <i></i>GeodeticDatum</i> is string with name by which datum is identified according to <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm"> GeodeticDatum attribute</a>  of  IfcCoordinateReferenceSystem.
+            </p>
+            <img src="Pictures/IFCCRS1.4.png" alt="IFCCRS component" width="350">
+            <p>Output parameter <i>CRS</i> is a internal classes with wrapped information
+                about coordinate reference system. This output should be only inserted to input parameter <i>CRS</i> of
+                <b>IFCExport</b> component.</p>
+        </section>
+        <section id="part37">
             <h3>Input data structure rules</h3>
             <p>
-                To export all data properly, it is necessary to follow rules for inputs tree data structures. These rules are described in the following flowcharts. Generally, total length of paths of your branches does not matter, but inputs have to have same path indices, and
-                some inputs have to have depth length one index longer or shorter. Only in this case are geometries with proper attributes matched correctly.
+                To export all data properly, it is necessary to follow rules for inputs tree data structures. These
+                rules are described in the following flowcharts. Generally, total length of paths of your branches does
+                not matter, but inputs have to have same path indices, and
+                some inputs have to have depth length one index longer or shorter. Only in this case are geometries with
+                proper attributes matched correctly.
             </p>
             <p><b>IFCExport</b></p>
-            <img src="Pictures/IFCExportFlowChart1.3.png" alt="IFCExportFlowChart" width="1200">
-            <img src="Pictures/DataStructureIFCExport_1.3_1.png" alt="IFCDataStructure1" width="1200">
-            <img src="Pictures/DataStructureIFCExport_1.3_2.png" alt="IFCDataStructure2" width="1200">
+            <img src="Pictures/IFCExportFlowChart1.4.png" alt="IFCExportFlowChart" width="1200">
+            <img src="Pictures/DataStructureIFCExport_1.4_1.png" alt="IFCDataStructure1" width="1200">
+            <img src="Pictures/DataStructureIFCExport_1.4_2.png" alt="IFCDataStructure2" width="1200">
             <p><b>IFCElementAssembly</b></p>
-            <img src="Pictures/IFCElementAssemblyFlowChart1.3.png" alt="IFCElementAssemblyFlowChart" width="1200">
-            <img src="Pictures/DataStructureIFCElementAssembly_1.3.png" alt="IFCDataStructure3 " width="1200">
+            <img src="Pictures/IFCElementAssemblyFlowChart1.4.png" alt="IFCElementAssemblyFlowChart" width="1200">
+            <img src="Pictures/DataStructureIFCElementAssembly_1.4.png" alt="IFCDataStructure3 " width="1200">
         </section>
     </section>
     <section id="part4">
         <h2>IFC Settings</h2>
         <p>
-            After clicking the <i>IFC Settings</i> button in top menu bar, the plugin IFC settings option dialog appears. Here, you can set up different options for IFC export. Various export settings
+            After clicking the <i>IFC Settings</i> button in top menu bar, the plugin IFC settings option dialog
+            appears. Here, you can set up different options for IFC export. Various export settings
             can be also created and saved for future use.
         </p>
         <img src="Pictures/SettingsIFC_1.2.gif" alt="OpenSettings" width="600">
         <p>
-            The dialog consists of four tabs with various settings for IFC export. The top dropdown menu contains predefined and saved profiles. If the user has not set any setting profiles, the default profile is always used.
-            New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile, use the buttons at the bottom of the dialog.
-            <ul class="paragraph-list-bullets">
-                <li><b>Set</b>: Apply current settings and keep the dialog open. These settings will be lost if Rhino is closed.
-                <li><b>Set and close</b>: Apply current settings and close the dialog. These settings will be lost if Rhino is closed.
-                <li><b>Close</b>: Close the dialog.
-                <li><b>Load</b>: Load saved settings according to selected profile in top dropdown menu.
-                <li><b>Set and save</b>: Apply current settings. These settings will be saved to a profile selected in top dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even if Rhino is closed.
-                <li><b>Delete</b>: Delete current selected profile from saved profiles.
-            </ul>
+            The dialog consists of four tabs with various settings for IFC export. The top dropdown menu contains
+            predefined and saved profiles. If the user has not set any setting profiles, the default profile is always
+            used.
+            New profiles can be easily created and saved for further use. To apply settings or save/load/delete profile,
+            use the buttons at the bottom of the dialog.
+        <ul class="paragraph-list-bullets">
+            <li><b>Set</b>: Apply current settings and keep the dialog open. These settings will be lost if Rhino is
+                closed.
+            <li><b>Set and close</b>: Apply current settings and close the dialog. These settings will be lost if Rhino
+                is closed.
+            <li><b>Close</b>: Close the dialog.
+            <li><b>Load</b>: Load saved settings according to selected profile in top dropdown menu.
+            <li><b>Set and save</b>: Apply current settings. These settings will be saved to a profile selected in top
+                dropdown menu. New profiles can be created if new profile name is provided. These profiles are kept even
+                if Rhino is closed.
+            <li><b>Delete</b>: Delete current selected profile from saved profiles.
+        </ul>
         </p>
         <video width="606" height="392" controls>
             <source src="Videos/SettingProfileIFC.mp4" type="video/mp4">
@@ -278,62 +479,99 @@
         </video>
         <p>
             In the <i>General</i> tab, following options are present:
-            <ul class="paragraph-list-bullets">
-                <li><b>Author name</b>: Author name displayed in the file header.
-                <li><b>Organization</b>: Organization displayed in the file header.
-                <li><b>Organization address</b>: Organization address name displayed in the file header.
-                <li><b>Authorization name</b>: Authorization name displayed in the file header.
-                <li><b>Authorization mailing address</b>: Authorization mailing address displayed in the file header.
-                <li><b>IFC facility part by path</b>: If checked, the <i>FacilityPartsNames</i> input in <b>IFCExport</b> is paired by structure path not by each element. See <a href="#part34">Input data structure rules</a> section.
-                <li><b>Rotation in radians</b>: If checked, the <i>Rotation</i> input in <b>IFCExport</b> is set to radians. Otherwise, it is in degrees.
-                <li><b>Parallel</b>: If checked, multiple processors are used for IFC export import.*
-                <li><b>Number of processors</b>: The maximun number of processors allowed for parallel computing. Applied only if parallel computing is allowed for IFC Export.**
-            </ul>
+        <ul class="paragraph-list-bullets">
+            <li><b>Author name</b>: Author name displayed in the file header.
+            <li><b>Organization</b>: Organization displayed in the file header.
+            <li><b>Organization address</b>: Organization address name displayed in the file header.
+            <li><b>Authorization name</b>: Authorization name displayed in the file header.
+            <li><b>Authorization mailing address</b>: Authorization mailing address displayed in the file header.
+            <li><b>IFC facility part by path</b>: If checked, the <i>FacilityPartsNames</i> input in <b>IFCExport</b> is
+                paired by structure path not by each element. See <a href="#part37">Input data structure rules</a>
+                section.
+            <li><b>Rotation in radians</b>: If checked, the <i>Rotation</i> input in <b>IFCExport</b> is set to radians.
+                Otherwise, it is in degrees.
+            <li><b>Parallel</b>: If checked, multiple processors are used for IFC export import.*
+            <li><b>Number of processors</b>: The maximal number of processors allowed for parallel computing. Applied
+                only if parallel computing is allowed for IFC Export.**
+        </ul>
         </p>
-        <p>*Parallel computing is used in specific parts of export. Using parallel computing may not lead to speed-up export. See time result under the <b> ExportIFC</b> component.</p>
+        <p>*Parallel computing is used in specific parts of export. Using parallel computing may not lead to speed-up
+            export. See time result under the <b> ExportIFC</b> component.</p>
         <p>**If a value is equal or smaller than 0, maximum number of processors is used.</p>
         <p>
             In the<i>IFC 2x3</i> tab, following options are present:
-            <ul class="paragraph-list-bullets">
-                <li><b>Default IFC Element type 2x3</b>: Default IFCBuildingElement type can be selected. If the user does not define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
-                <li><b>Default IFC UDA value type 2x3</b>: Default IFCPropertySingleValue nominal value type can be selected. If the user does not define <i>UDAIFCTypes</i> input in  <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
-            </ul>
+        <ul class="paragraph-list-bullets">
+            <li><b>Default IFC Element type 2x3</b>: Default IFCBuildingElement type can be selected. If the user does
+                not define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a
+                    href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
+            <li><b>Default IFC UDA value type 2x3</b>: Default IFCPropertySingleValue nominal value type can be
+                selected. If the user does not define <i>UDAIFCTypes</i> input in <a href="#part34"><b>IFCExport</b></a>
+                or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
+        </ul>
         </p>
         <p>
             In <i>IFC 4</i> tab, following options are present:
-            <ul class="paragraph-list-bullets">
-                <li><b>Default IFC Element type 4</b>: Default IFCBuildingElement type can be selected. If the user does not define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
-                <li><b>Default IFC UDA value type 4</b>: Default IFCPropertySingleValue nominal value type can be selected. If the user does not define <i>UDAIFCTypes</i> input in  <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
-                <li><b>Export as tessellation 4</b>: Defines what geometry should be represented by <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/annex/annex-e/tessellated-item.htm">tessellation</a> and what by <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/annex/annex-e/brep-model.htm">brep</a>. Four options available.
-            </ul>
+        <ul class="paragraph-list-bullets">
+            <li><b>Default IFC Element type 4</b>: Default IFCBuildingElement type can be selected. If the user does not
+                define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a
+                    href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
+            <li><b>Default IFC UDA value type 4</b>: Default IFCPropertySingleValue nominal value type can be selected.
+                If the user does not define <i>UDAIFCTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a
+                    href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
+            <li><b>Export as tessellation 4</b>: Defines what geometry should be represented by <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/annex/annex-e/tessellated-item.htm">tessellation</a>
+                and what by <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/annex/annex-e/brep-model.htm">brep</a>.
+                Four options available.
+        </ul>
         </p>
         In the<i>IFC 4x3</i> tab, following options are present:
         <ul class="paragraph-list-bullets">
-            <li><b>Default IFC Element type 4.3</b>: Default IFCBuiltElement type can be selected. If the user does not define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
-            <li><b>Default IFC UDA value type 4.3</b>: Default IFCPropertySingleValue nominal value type can be selected. If the user does not define <i>UDAIFCTypes</i> input in  <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
-            <li><b>Export as tessellation 4.3</b>: Defines what geometry should be represented by <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcTriangulatedFaceSet.htm">tessellation</a> and what by <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcFacetedBrep.htm">brep</a>. Four options available.
-            <li><b>Default color 4.3</b>: Default color can be seleted. If the user does not define <i>Colors</i>input in <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
-</ul>
-
+            <li><b>Default IFC Element type 4.3</b>: Default IFCBuiltElement type can be selected. If the user does not
+                define <i>IFCElementTypes</i> input in <a href="#part34"><b>IFCExport</b></a> or <a
+                    href="#part35"><b>IFCElementAssembly</b></a> components, this value is used.
+            <li><b>Default IFC UDA value type 4.3</b>: Default IFCPropertySingleValue nominal value type can be
+                selected. If the user does not define <i>UDAIFCTypes</i> input in <a href="#part34"><b>IFCExport</b></a>
+                or <a href="#part35"><b>IFCElementAssembly</b></a> components, this value is used (if possible).
+            <li><b>Export as tessellation 4.3</b>: Defines what geometry should be represented by <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcTriangulatedFaceSet.htm">tessellation</a>
+                and what by <a
+                    href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcFacetedBrep.htm">brep</a>.
+                Four options available.
+            <li><b>Default color 4.3</b>: Default color can be selected. If the user does not define <i>Colors</i>input
+                in <a href="#part34"><b>IFCExport</b></a> or <a href="#part35"><b>IFCElementAssembly</b></a> components,
+                this value is used.
+        </ul>
     </section>
     <section id="part5">
         <h2>IFC validation</h2>
         <p>
-            Correctness of exported IFC files was tested with buildingSMART Internation validation <a href="https://authentication.buildingsmart.org/buildingsmartservices.onmicrosoft.com/b2c_1a_signupsignin_c/oauth2/v2.0/authorize?response_type=code&client_id=b1e97355-b8fb-4a36-953d-39156ff58cfc&redirect_uri=https%3A%2F%2Fvalidate.buildingsmart.org%2Fcallback&scope=openid+profile+https%3A%2F%2FbuildingSMARTservices.onmicrosoft.com%2Fapi%2Fread&state=ag1VzenUpK0x4s6S5uTNQni5C7v50a">service</a>.
-            All files are correctly written except in cases when geometry is written as tessellation. In this case IfcCartesianPointList3D should have only one attribute but XBIM engine wrote two (possible in <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcgeometricmodelresource/lexical/ifccartesianpointlist3d.htm">IFC 4x1 schema and higher</a>). Tessellation error should not have impact on the IFC functionality, and
-            software capable of showing IFC should work correctly. <b>Unfortunately, it is not in author's capacities to perform enough tests to ensure all user exports will work absolutely smoothly. If you observe any errors or inaccuracies, please contact the <a href="#part11">author</a>.</b>
+            Correctness of exported IFC files was tested with buildingSMART International validation <a
+                href="https://authentication.buildingsmart.org/buildingsmartservices.onmicrosoft.com/b2c_1a_signupsignin_c/oauth2/v2.0/authorize?response_type=code&client_id=b1e97355-b8fb-4a36-953d-39156ff58cfc&redirect_uri=https%3A%2F%2Fvalidate.buildingsmart.org%2Fcallback&scope=openid+profile+https%3A%2F%2FbuildingSMARTservices.onmicrosoft.com%2Fapi%2Fread&state=ag1VzenUpK0x4s6S5uTNQni5C7v50a">service</a>.
+            All files are correctly written except in cases when geometry is written as tessellation. In this case
+            IfcCartesianPointList3D should have only one attribute but XBIM engine wrote two (possible in <a
+                href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcgeometricmodelresource/lexical/ifccartesianpointlist3d.htm">IFC
+                4x1 schema and higher</a>). Tessellation error should not have impact on the IFC functionality, and
+            software capable of showing IFC should work correctly. <b>Unfortunately, it is not in author's capacities to
+                perform enough tests to ensure all user exports will work absolutely smoothly. If you observe any errors
+                or inaccuracies, please contact the <a href="#part11">author</a>.</b>
         </p>
-        <img src="Pictures/IFC_validation4.3.png" alt="IFC valiadtion" width="800">
-        <img src="Pictures/IFC_validation.png" alt="IFC valiadtion" width="800">
+        <img src="Pictures/IFC_validation1.4.png" alt="IFC validation" width="800">
+        <img src="Pictures/IFC_validation4.3.png" alt="IFC validation" width="800">
+        <img src="Pictures/IFC_validation.png" alt="IFC validation" width="800">
         <img src="Pictures/Tesselation_error.png" alt="Tessellation_error" width="800">
     </section>
     <section id="part6">
         <h2>Best practices</h2>
         <ul class="paragraph-list-bullets">
             <li>Always check the result and compare it with the original data.</li>
-            <li>Play with mesh topology for ompitimizing IFC export and mitigating huge IFC files.</li>
-            <li><b>(This should be solved in version 1.3.2 and higher)</b> Always check the result of meshing. Rhino may have problems with meshing geometry when it is at great distance from global origin. In this case, move geometry near the global origin and define local origin point and rotation in <b>IFCExport</b> component.</li>
-            <li>Some uncommon rules (national codes and rules) may not be taken into account in IFC export. Always check the result.</li>
+            <li>Play with mesh topology for optimizing IFC export and mitigating huge IFC files.</li>
+            <li><b>(This should be solved in version 1.3.2 and higher)</b> Always check the result of meshing. Rhino may
+                have problems with meshing geometry when it is at great distance from global origin. In this case, move
+                geometry near the global origin and define local origin point and rotation in <b>IFCExport</b>
+                component.</li>
+            <li>Some uncommon rules (national codes and rules) may not be taken into account in IFC export. Always check
+                the result.</li>
             <li>Use tessellation for as many objects as possible, it will significantly speed up export.</li>
             <li>If you are not sure about UDA Ifc type, IfcLabel will always work.</li>
             <li>If you are not sure, feel free to contact <a href="#part11">author</a>.</li>
@@ -341,7 +579,9 @@
     </section>
     <section id="part7">
         <h2>Sample files</h2>
-        <p>Sample <a href="https://github.com/OndrejJanota91/EndPointsOnline/tree/main/SampleFiles">files</a> on GitHub.</p>
+        <p>Sample <a href="https://github.com/OndrejJanota91/EndPointsOnline/tree/main/SampleFiles/IFC">files</a> on GitHub.
+        </p>
     </section>
 </body>
+
 </html>
