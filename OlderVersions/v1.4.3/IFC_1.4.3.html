@@ -12,7 +12,7 @@
         content="https://github.com/OndrejJanota91/EndPointsOnline/blob/main/Pictures/imageforpreview.png?raw=true">
     <meta name="author" content="Ondřej Janota">
     <title>EndPoints</title>
-    <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="../../CSS/Styles.css">
 </head>
 
 <body>
@@ -106,7 +106,7 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">
-                Version: 1.4.4<br>
+                Version: 1.4.3<br>
                 Developed for Rhino 6 and higher.<br>
             </p>
         </section>
@@ -397,14 +397,12 @@
                 The input <i>Geometry</i> is mandatory and not optional. All elements in each branch of the input tree
                 are grouped into one IfcElementAssembly. Each member in Element assembly has facility part and layer.
                 Color and IfcType can be set separately for each member of the element assembly. UDA properties are 
-                set only for element assembly and not for each member. UDAs for each element in the assembly are matched to the element by the path
-                of the DataTree. UDA path must be one level deeper then <i>Geometry</i> input. Last index in the path must match position of the 
-                element in the <i>Geometry</i> input.
+                set only for element assembly and not for each member.
             </p>
             <img src="Pictures/IFCElementAssembly1.4.png" alt="IFCElementAssembly component" width="350">
             <p>Output parameter <i>ElementAssemblies</i> is a list of plugin internal classes with wrapped information
                 (facility type, facility part, geometry, layers, names colors, non-graphical information) about element
-                assembly and its elements. This output should be only inserted to input parameter <i>ElementAssemblies</i> of
+                assembly. This output should be only inserted to input parameter <i>ElementAssemblies</i> of
                 <b>IFCExport</b> component.</p>
             <p>
                 <iframe width="800" height="450" src="https://www.youtube.com/embed/9a3_R7mkiqM?si=TZH5dt_8rtmt8qyM"
