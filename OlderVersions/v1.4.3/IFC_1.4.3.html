@@ -28,7 +28,7 @@
         </div>
     </section>
     <div class="header-container"></div>
-    <img id="header-image" src="Pictures/EndPointsLogo.png" width="150" height="150" alt="Header Image">
+    <img id="header-image" src="../../Pictures/EndPointsLogo.png" width="150" height="150" alt="Header Image">
     <h1>EndPoints - IFC</h1>
     <ul class="main-list">
         <li>
@@ -113,7 +113,7 @@
         <section id="part15">
             <h3>Orientation in plugin</h3>
             <p>With the installation of the EndPoints plugin two new features will appear in the Grasshopper.</p>
-            <img src="Pictures/EndPointsAddon1.4.png" alt="Parts of EndPoints plugins">
+            <img src="../../Pictures/EndPointsAddon1.4.png" alt="Parts of EndPoints plugins">
             <p>New tab in the top menu bar (1) with the plugin <a href="#part4">settings</a> and new tab in the ribbon
                 menu (2) with plugin components.</p>
             </p>
@@ -165,7 +165,7 @@
                 schemas <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/">2x3</a>, <a
                     href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/HTML/">4</a> and <a
                     href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/">4.3</a> are implemented.</p>
-            <img src="Pictures/IFCSchema1.4.png" alt="IFCSchema component" width="600">
+            <img src="../../Pictures/IFCSchema1.4.png" alt="IFCSchema component" width="600">
         </section>
         <section id="part32">
             <h3>IFCFacilityTypes components</h3>
@@ -194,7 +194,7 @@
                 </li>
                 <li>IfcCommonFacility</a></li>
             </ul>
-            <img src="Pictures/FacilityTypes1.4.png" alt="IFCFacilityTypes components" width="600">
+            <img src="../../Pictures/FacilityTypes1.4.png" alt="IFCFacilityTypes components" width="600">
             <p>Facility sub-types values are enumeration defined by IFC schema, specifying further facility type. For
                 each facility new to IFC4.3 value picker with permitted values was created. <q>Userdefined</q> option
                 was removed as it was marked as wrong by <a
@@ -214,7 +214,7 @@
                         href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRailwayTypeEnum.htm">IfcRailwayTypes</a>
                 </li>
             </ul>
-            <img src="Pictures/FacilityTypesEnumeration1.4.png" alt="FacilityTypesEnumeration components" width="600">
+            <img src="../../Pictures/FacilityTypesEnumeration1.4.png" alt="FacilityTypesEnumeration components" width="600">
         </section>
         <section id="part33">
             <h3>IFCFacilityParts components</h3>
@@ -241,7 +241,7 @@
                         href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommonTypeEnum.htm">IfcCommonFacilityParts</a>
                 </li>
             </ul>
-            <img src="Pictures/IFCFacilityParts1.4.png" alt="IFCFacilityParts component" width="600">
+            <img src="../../Pictures/IFCFacilityParts1.4.png" alt="IFCFacilityParts component" width="600">
         </section>
         <section id="part34">
             <h3>IFCExport component</h3>
@@ -259,7 +259,7 @@
                 facility structure is, its name and sub-type. If IFC schema 2x3 or 4 is used, structure is always exported as 
                 building. If <i>FacilityType</i> is building <i>FacilitySubType</i> is neglected automatically.
             </p>
-            <img src="Pictures/IFCExport1.4.png" alt="IFCExport component" width="350">
+            <img src="../../Pictures/IFCExport1.4.png" alt="IFCExport component" width="350">
             <p>
                 The optional parameters <i>FacilityPartsNames</i> and <i>FacilityPartTypes</i> are trees with the names
                 and types of all IfcFacilityParts classes which will be defined inside the IFC file. If input is not
@@ -296,7 +296,7 @@
                 predefined types for each IfcElement. Predefined types are defined in IFC schema. Enumeration for each element type can be 
                 defined with value pickers in the ElementPredefinedTypesEnums containers.
             </p>
-            <img src="Pictures/ElementPredefinedTypesEnums.png" alt="IFCElementPredefinedTypesEnums" width="600">
+            <img src="../../Pictures/ElementPredefinedTypesEnums.png" alt="IFCElementPredefinedTypesEnums" width="600">
             <p>
                 List of implemented IfcBuildingElements/IfcBuiltElements:
             <ul class="paragraph-list-bullets">
@@ -399,7 +399,7 @@
                 Color and IfcType can be set separately for each member of the element assembly. UDA properties are 
                 set only for element assembly and not for each member.
             </p>
-            <img src="Pictures/IFCElementAssembly1.4.png" alt="IFCElementAssembly component" width="350">
+            <img src="../../Pictures/IFCElementAssembly1.4.png" alt="IFCElementAssembly component" width="350">
             <p>Output parameter <i>ElementAssemblies</i> is a list of plugin internal classes with wrapped information
                 (facility type, facility part, geometry, layers, names colors, non-graphical information) about element
                 assembly. This output should be only inserted to input parameter <i>ElementAssemblies</i> of
@@ -423,7 +423,7 @@
                 Input parameter <i>CRSDescription</i> is string with the informal description of this coordinate reference system according to <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm">	Description attribute</a> of IfcCoordinateReferenceSystem.
                 Input parameter <i></i>GeodeticDatum</i> is string with name by which datum is identified according to <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2/HTML/schema/ifcrepresentationresource/lexical/ifccoordinatereferencesystem.htm"> GeodeticDatum attribute</a>  of  IfcCoordinateReferenceSystem.
             </p>
-            <img src="Pictures/IFCCRS1.4.png" alt="IFCCRS component" width="350">
+            <img src="../../Pictures/IFCCRS1.4.png" alt="IFCCRS component" width="350">
             <p>Output parameter <i>CRS</i> is a internal classes with wrapped information
                 about coordinate reference system. This output should be only inserted to input parameter <i>CRS</i> of
                 <b>IFCExport</b> component.</p>
@@ -438,12 +438,12 @@
                 proper attributes matched correctly.
             </p>
             <p><b>IFCExport</b></p>
-            <img src="Pictures/IFCExportFlowChart1.4.png" alt="IFCExportFlowChart" width="1200">
-            <img src="Pictures/DataStructureIFCExport_1.4_1.png" alt="IFCDataStructure1" width="1200">
-            <img src="Pictures/DataStructureIFCExport_1.4_2.png" alt="IFCDataStructure2" width="1200">
+            <img src="../../Pictures/IFCExportFlowChart1.4.png" alt="IFCExportFlowChart" width="1200">
+            <img src="../../Pictures/DataStructureIFCExport_1.4_1.png" alt="IFCDataStructure1" width="1200">
+            <img src="../../Pictures/DataStructureIFCExport_1.4_2.png" alt="IFCDataStructure2" width="1200">
             <p><b>IFCElementAssembly</b></p>
-            <img src="Pictures/IFCElementAssemblyFlowChart1.4.png" alt="IFCElementAssemblyFlowChart" width="1200">
-            <img src="Pictures/DataStructureIFCElementAssembly_1.4.png" alt="IFCDataStructure3 " width="1200">
+            <img src="../../Pictures/IFCElementAssemblyFlowChart1.4.png" alt="IFCElementAssemblyFlowChart" width="1200">
+            <img src="../../Pictures/DataStructureIFCElementAssembly_1.4.png" alt="IFCDataStructure3 " width="1200">
         </section>
     </section>
     <section id="part4">
@@ -453,7 +453,7 @@
             appears. Here, you can set up different options for IFC export. Various export settings
             can be also created and saved for future use.
         </p>
-        <img src="Pictures/SettingsIFC_1.2.gif" alt="OpenSettings" width="600">
+        <img src="../../Pictures/SettingsIFC_1.2.gif" alt="OpenSettings" width="600">
         <p>
             The dialog consists of four tabs with various settings for IFC export. The top dropdown menu contains
             predefined and saved profiles. If the user has not set any setting profiles, the default profile is always
@@ -556,10 +556,10 @@
                 perform enough tests to ensure all user exports will work absolutely smoothly. If you observe any errors
                 or inaccuracies, please contact the <a href="#part11">author</a>.</b>
         </p>
-        <img src="Pictures/IFC_validation1.4.png" alt="IFC validation" width="800">
-        <img src="Pictures/IFC_validation4.3.png" alt="IFC validation" width="800">
-        <img src="Pictures/IFC_validation.png" alt="IFC validation" width="800">
-        <img src="Pictures/Tesselation_error.png" alt="Tessellation_error" width="800">
+        <img src="../../Pictures/IFC_validation1.4.png" alt="IFC validation" width="800">
+        <img src="../../Pictures/IFC_validation4.3.png" alt="IFC validation" width="800">
+        <img src="../../Pictures/IFC_validation.png" alt="IFC validation" width="800">
+        <img src="../../Pictures/Tesselation_error.png" alt="Tessellation_error" width="800">
     </section>
     <section id="part6">
         <h2>Best practices</h2>
