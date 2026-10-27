@@ -63,9 +63,15 @@
                 <li><a href="#part51">Create cross-sections</a></li>
             </ul>
         </li>
-        <li><a href="#part6">LandXML Settings</a></li>
-        <li><a href="#part7">Best practices</a></li>
-        <li><a href="#part8">Sample files</a></li>
+        <li>
+            <a href="#part6">Export to XML</a>
+            <ul class="sublist">
+                <li><a href="#part61">Curve export</a></li>
+                <li><a href="#part62">Surface export</a></li>
+            </ul>
+        <li><a href="#part7">LandXML Settings</a></li>
+        <li><a href="#part8">Best practices</a></li>
+        <li><a href="#part9">Sample files</a></li>
     </ul>
     <section id="part1">
         <h2>Introduction</h2>
@@ -100,7 +106,7 @@
         <section id="part14">
             <h3>Version</h3>
             <p class="paragraph-list">
-                Version: 1.4.4<br>
+                Version: 1.5.0<br>
                 Developed for Rhino 6 and higher.<br>
             </p>
         </section>
@@ -119,12 +125,12 @@
             and set similar units in the Rhino.
         </p>
         <p>
-            Used coordinate systems are country/region dependend. Therefore, if coordinate system is used in XML file and coordinate system's EPSG code 
+            Used coordinate systems are country/region dependend. Therefore, if coordinate system is used in XML file and coordinate system's EPSG code
             is present or added as user unput, code is read and checked against existing coordinate system found <a href="https://spatialreference.org/ref/epsg/">here</a>.
             If coordinate system is valid and usable (i.e. coordinaate system is cartesian and its axis directed to world's directions (west, east, north, south)) coordinates are
             transformed accordingly. Commonly used coordinate system for different regions can be found at <a href="https://epsg.io/">https://epsg.io/</a>.
             Vertical coordinate system transformation is implemented only for horizontaly coordinates (X and Y coordinates). Vertical coordinate system transformation is not implemented.
-            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. In case implementation of 
+            Otherwise, no transformation of coordinates is done, and components <b>SurfaceNames</b> and <b>AlignmentNames</b> will produce a warning message. In case implementation of
             coordinate system is incorrect contact the author.
         </p>
         <img src="Pictures/EPSGError_1.3.6.gif" alt="Coordinate system warning" />
@@ -259,14 +265,14 @@
             Cross-sections in LandXML represents section curves at defined stationing. Cross-sections can represent <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_CrossSectSurf.html#Link07F1F4F0">surface profiles</a> on defined stationings or <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_DesignCrossSectSurf.html#Link07F1F810">parts of designed structure (assemblies/subassemblies)</a> (road, railway etc.). Each cross-section consists of sub-cross-section curves. In general, cross-sections can be defined in different ways.
             Some of the sub-cross-section curves can be defined incorrectly (duplicate points, curve defined by two diplicate points etc.). In that case point/sub-cross-section curve is skipped. and warning message is produced.
         </p>
-        <p>   
+        <p>
             <section id="part51">
                 <h3>Create cross-sections</h3>
                 <p>
                     To import cross-sections from .XML, start by selecting alignment (horizontal profile) name from <b>AlignmentNames</b> component output. Based on the selected alignment, corresponding cross-sections imported and placed in XY plane. Vertical position of the cross-sections is dependent on
                     point Z coordinates written in .XML file.
                 </p>
-                    <img src="Pictures/CreateCrossSection.png" alt="Import cross section" width="600">
+                <img src="Pictures/CreateCrossSection.png" alt="Import cross section" width="600">
                 <p>
                     The <b>CreateCrossSection</b> component has four inputs and six outputs. The first input parameter, <i>AlignmentNames</i>, is a list of strings containing names of the alignments for which we want cross-sections to be imported.
                     Input parameter <i>StartSta</i> and <i>EndSta</i>, are list and are optional. Using these parameters, user can set the stationing interval on which cross-section will be imported. If one of the inputs is not setted alignment start or end stationing will be used.
@@ -278,10 +284,41 @@
                     Output parameter <i>DesignCrossSectionsCurves</i> is a Data Tree of all imported <a href="http://www.landxml.org/schema/LandXML-1.2/documentation/LandXML-1.2Doc_DesignCrossSectSurf.html#Link07F1F810">designed cross-sections</a> on the selected stationing interval. Each branch corresponds to one stationing where the section is defined.
                     Parameter <i>DesignSectionCurveNames</i> is a Data Tree with the names of all imported designed sub-cross-sections on selected stationing interval. Parameter <i>DesignCrossSectionsStationings</i> is a Data Tree with the stationing of all imported designed cross-sections on the selected stationing interval.
                 </p>
-            </section>        
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/gIac8qJ4m0U?si=umXZhFrdFtT8EC3b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/gIac8qJ4m0U?si=umXZhFrdFtT8EC3b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
+
+
     <section id="part6">
+        <h2>Export to XML</h2>
+        <p>
+            Fill me.
+        </p>
+        <section id="part61">
+            <h3>Curve export</h3>
+            <!--<p>To import a surface from an .XML file, you must first select the surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>
+            <img src="Pictures/SurfaceNames_1.3.6.png" alt="Read surface names" width="600">
+            <p>
+                The <b>SurfaceNames</b> component has two inputs and two outputs. First input parameter, <i>PathToXML</i> is string containing path to .XML file.
+                The input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas, see <a href="#part12">About LandXML</a> section.
+                The <i>EPSGCode</i> input is optional and should be used if EPSG code (coordinate system) in XML file is missing or is incorrect. EPSG code is usually four digit number representing coordinate system.
+                For more info about EPSG code and and coordinate systems visit <a href="https://epsg.io/">https://epsg.io/</a> website.
+            </p>
+            <p>
+                The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a
+                plugin class with the information about the general .XML data and coordinate system.
+            </p>-->
+        </section>
+        <section id="part62">
+            <h3>Surface export</h3>
+            <!--<p>Next step is to select which surfaces user wants to import. This is fully up to user, and the selection should be performed according to user's habits.</p>
+        <img src="Pictures/SurfaceSelection_1.3.6.png" alt="Different surface selection" width="700">-->
+        </section>
+    </section>
+
+
+
+    <section id="part7">
         <h2>LandXML Settings</h2>
         <p>
             After clicking the <i>LandXML Settings</i> button in top menu bar, the plugin setings option dialog apperas. Here, you can set up different options for surface and alignment. Various import settings
@@ -308,7 +345,8 @@
             In <i>Surface</i> tab following options are present:
             <ul class="paragraph-list-bullets">
                 <li><b>Mesh/Brep</b>: If checked, surfaces are imported as meshes. Otherwise, surfaces are imported as surface or breps.
-                <li><b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
+                <li>
+                    <b>Join to polysurface</b>: Surface triangles/quads are joined into one single polysurface. This is applied only if Brep is selected as a product of surface import. If surface is incorrectly defined in .XML file, joining can result in multiple polysurfaces.
                     If surface consist of huge number of triangles/quads, joining can be very demanding on computational time.
                 <li><b>Ignore invisible faces</b>: If checked, surface's invisible faces (mark with attribute i in LandXML) are ignored during import.'</li>
                 <li><b>Tolerance</b>: Tolerance used for position of surface point inside boundary curve and for triangle/quad creation. If <i>0</i> is inserted, then value of <a href="https://developer.rhino3d.com/api/rhinocommon/rhino.rhinomath/zerotolerance">RhinoMath.ZeroTolerance</a> is used.
@@ -332,8 +370,7 @@
         <p>**If value is equal or smaller then 0, maximum number of processors is used.</p>
         <p>***Alignment's defining points are calculated from horizontal (X, Y coordinates) and horizontal (Z coordinate) profile with specific algorithm. Algorithm divide profile curve to defined number of segments where Z coordinates are searched.</p>
     </section>
-
-    <section id="part7">
+    <section id="part8">
         <h2>Best practices</h2>
         <ul class="paragraph-list-bullets">
             <li>Always check result and compare it with original data.
@@ -352,7 +389,7 @@
         </ul>
     </section>
 
-    <section id="part8">
+    <section id="part9">
         <h2>Sample files</h2>
         <p>Sample <a href="https://github.com/OndrejJanota91/EndPointsOnline/tree/main/SampleFiles">files</a> on GitHub.</p>
     </section>
