@@ -66,8 +66,9 @@
         <li>
             <a href="#part6">Export to XML</a>
             <ul class="sublist">
-                <li><a href="#part61">Curve export</a></li>
-                <li><a href="#part62">Surface export</a></li>
+                <li><a href="#part61">Units</a></li>
+                <li><a href="#part62">Curve export</a></li>
+                <li><a href="#part63">Surface export</a></li>
             </ul>
         <li><a href="#part7">LandXML Settings</a></li>
         <li><a href="#part8">Best practices</a></li>
@@ -287,32 +288,65 @@
             </section>
             <iframe width="800" height="450" src="https://www.youtube.com/embed/gIac8qJ4m0U?si=umXZhFrdFtT8EC3b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
-
-
     <section id="part6">
         <h2>Export to XML</h2>
-        <p>
-            Fill me.
-        </p>
+
         <section id="part61">
-            <h3>Curve export</h3>
-            <!--<p>To import a surface from an .XML file, you must first select the surfaces for import from the .XML file. To read all surface names in .XML file use <b>SurfaceNames</b> component.</p>
-            <img src="Pictures/SurfaceNames_1.3.6.png" alt="Read surface names" width="600">
+            <h3>Export units</h3>
             <p>
-                The <b>SurfaceNames</b> component has two inputs and two outputs. First input parameter, <i>PathToXML</i> is string containing path to .XML file.
-                The input parameter <i>Header</i> is optional and should be used only if for unimplemented LandXML schemas. For implemented schemas, see <a href="#part12">About LandXML</a> section.
-                The <i>EPSGCode</i> input is optional and should be used if EPSG code (coordinate system) in XML file is missing or is incorrect. EPSG code is usually four digit number representing coordinate system.
-                For more info about EPSG code and and coordinate systems visit <a href="https://epsg.io/">https://epsg.io/</a> website.
+                In current version units cannot be defined and are following:
+                <ul class="paragraph-list-bullets">
+                    <li><b>areaUnit</b>: squareMeter
+                    <li><b>linearUnit</b>: meter
+                    <li><b>volumeUnit</b>: cubicMeter
+                    <li><b>temperatureUnit</b>: celsius
+                    <li><b>pressureUnit</b>: milliBars
+                    <li><b>angularUnit</b>: decimal degrees 
+                    <li><b>directionUnit</b>: decimal degrees
+                </ul>
+            </p>
+
+        </section>
+        <img src="Pictures/ExportXMLComponents.png" alt="ExportXMLComponents" width="600">
+        <section id="part62">
+            <h3>Curve export</h3>
+            <p>
+                To export curve to XML file, you must first define sets of points represent curves. How points are created
+                is up to the user as all exported curves are written in XML as polylines in 3D space. Different curve divisions can be applied to
+                to fulfill user needs. For final export use XMLExportCurve component.
+            </p>
+            <img src="Pictures/ExportCurveToXML.png" alt="ExportCurveToXML" width="600">
+            <p>
+                The <b>ExportXMLCurve</b> inputs defines needed data to properly create XML file. First input parameter <i>Export</i> is a boolean and starts the export.
+                Following parameters <i>FileName</i> and <i>Directory</i> defines where the export file will be saved and how will be named.
+                <i>ProjectName</i> parameter defines name of the project written into XML file. <i>LandXMLSchema</i> is version of the scheme. Valid schemes are
+                <b>1.0</b>, <b>1.1</b> and <b>1.2</b>. Input parameter <i>CurvePoints</i> is a Data Tree where each branch contains list of points which defines one curve.
+                The <i>CurveNames</i> input is a list of strings with names of curves to be written into XML file. Generic value for curve name is used if the number of names does not match the number
+                of branches in <i>CurvePoints</i> input (generic name is used only for non defined curve names).
             </p>
             <p>
-                The output parameter <i>SurfaceNames</i> is a list of all surfaces present in the .XML file. Second output parameter <i>Namespace</i> is a
-                plugin class with the information about the general .XML data and coordinate system.
-            </p>-->
+                The output parameter <i>FilaPath</i> is path to exported file if export was successfull.
+            </p>
         </section>
-        <section id="part62">
+        <section id="part63">
             <h3>Surface export</h3>
-            <!--<p>Next step is to select which surfaces user wants to import. This is fully up to user, and the selection should be performed according to user's habits.</p>
-        <img src="Pictures/SurfaceSelection_1.3.6.png" alt="Different surface selection" width="700">-->
+            <p>
+                To export surface to XML file, you must first define meshes which represent surfaces. How mesh is created
+                is up to the user as all exported surfaces are written in XML as TIN surface (represented by quads or triangles). Different surface mesh options can be applied to
+                to fulfill user needs. For final export use XMLExportSurface component.
+            </p>
+            <img src="Pictures/ExportSurfaceToXML.png" alt="ExportSurfaceToXML" width="600">
+            <p>
+                The <b>ExportXMLSurface</b> inputs defines needed data to properly create XML file. First input parameter <i>Export</i> is a boolean and starts the export.
+                Following parameters <i>FileName</i> and <i>Directory</i> defines where the export file will be saved and how will be named.
+                <i>ProjectName</i> parameter defines name of the project written into XML file. <i>LandXMLSchema</i> is version of the scheme. Valid schemes are
+                <b>1.0</b>, <b>1.1</b> and <b>1.2</b>. Input parameter <i>Meshes</i> is a List where each item contains mesh to be exported.
+                The <i>SurfaceNames</i> input is a list of strings with anmes of surfaces to be written into XML file. Generic value for surface names is used if the number of names does not match
+                the number of items in <i>SurfaceNames</i> input (generic name is used only for non defined surface names).
+            </p>
+            <p>
+                The output parameter <i>FilaPath</i> is path to exported file if export was successfull.
+            </p>
         </section>
     </section>
 
